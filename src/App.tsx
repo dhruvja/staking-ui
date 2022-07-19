@@ -44,7 +44,6 @@ const network = clusterApiUrl("devnet");
 
 const connection = new Connection(network, "confirmed");
 
-
 require("@solana/wallet-adapter-react-ui/styles.css");
 
 function App() {
@@ -69,10 +68,11 @@ function App() {
   );
 
   const getProvider = () => {
+    if (!window.solana) return;
     const provider = new AnchorProvider(
       connection,
       window.solana,
-      'processed'
+      AnchorProvider.defaultOptions()
     );
     return provider;
   };
