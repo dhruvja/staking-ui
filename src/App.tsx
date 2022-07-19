@@ -7,7 +7,12 @@ import {
   ConnectionProvider,
   WalletProvider,
 } from "@solana/wallet-adapter-react";
-import { clusterApiUrl } from "@solana/web3.js";
+import {
+  Connection,
+  PublicKey,
+  clusterApiUrl,
+  Transaction,
+} from "@solana/web3.js";
 import {
   GlowWalletAdapter,
   PhantomWalletAdapter,
@@ -15,10 +20,30 @@ import {
   SolflareWalletAdapter,
   TorusWalletAdapter,
 } from "@solana/wallet-adapter-wallets";
+import { Program, AnchorProvider, web3 } from "@project-serum/anchor";
 import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
-
 import Navbar from "./Navbar";
 import StakeButton from "./StakeButton";
+import kp from "./keypair.json";
+import general from "./idl/general.json";
+
+const { SystemProgram } = web3;
+
+// Create a keypair for the account that will hold the GIF data.
+const arr = Object.values(kp._keypair.secretKey);
+const secret = new Uint8Array(arr);
+const baseAccount = web3.Keypair.fromSecretKey(secret);
+
+// Get our program's id from the IDL file.
+const programID = new PublicKey(general.metadata.address);
+
+// Set our network to devnet.
+const network = clusterApiUrl("devnet");
+
+// Controls how we want to acknowledge when a transaction is "done".
+
+const connection = new Connection(network, "confirmed");
+
 
 require("@solana/wallet-adapter-react-ui/styles.css");
 
@@ -42,6 +67,15 @@ function App() {
     ],
     [network]
   );
+
+  const getProvider = () => {
+    const provider = new AnchorProvider(
+      connection,
+      window.solana,
+      'processed'
+    );
+    return provider;
+  };
 
   const confirmSuccess = useCallback(() => {
     setIsOk(true);
