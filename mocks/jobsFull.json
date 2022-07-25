@@ -1,0 +1,1451 @@
+[
+  {
+    "data": {
+      "jobForCompany": {
+        "jobAd": {
+          "id": "0d4b5e2c-4712-4866-a4f8-c3dcc7338dc2",
+          "company": {
+            "id": "0ee88a70-5041-430e-9fbb-4ec2cd31ddcb",
+            "name": "BitGo",
+            "photoUrl": "https://assets.website-files.com/61571d3b8fe2e30679056424/61571d3b8fe2e3a2920564bf_bitgo_logo.png",
+            "description": "Many believe that BitGo is the most secure and intelligent way to trade digital assets \nand that no one is better positioned to serve institutional investors in this space. \nToday, BitGo has over $64 billion of assets under custody, second only to Coinbase! \n\nIt’s that special, fast growing company that you'll have wanted to be a part \nof - Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, \nand Valor Equity Partners (who are all backers) seem to agree! Their strategic investment not only validates \nBitGo’s unique positioning to disrupt legacy financial systems, but also the market opportunity."
+          },
+          "title": "Staff Software Engineer (Backend), Blockchain OS",
+          "description": "BitGo is looking for a Staff Software Engineer to join our Blockchain OS team and help us build resilient, robust services and are responsible for working on critical projects with limited or no supervision. This role can be worked remotely so long as your home base is in North America.",
+          "responsibilities": "- Collaborate closely with all engineering teams and product managers to ensure consistency in understanding of technical requirements and overall work quality\n- Design and build strong, resilient, and robust APIs to power our application services\n- Have mastery in core technologies and tools, understand all phases of the company software development life cycle, and demonstrate initiative and integrity in all aspects of work. \n- Demonstrate good analytical skills, have a basic understanding of overall company organization, as well as a strong understanding of business partner relationships and operations.\n- Develop and coordinate software unit testing and system testing and validation procedures, and documentation\n- Coordinate software deployments and monitor applications to ensure specifications are met \n- Own functionality and scalability features by taking responsibility from inception to deployment and customer integration\n- Expose and document functionality to the UI, third-party developers, and our internal and external tooling\n- Provide mentorship to your peers in the broader engineering team through code reviews and education on best practices\n- Capable of building proofs-of-concept(POC) with fellow engineers and/or stakeholders while ensuring the current milestones are met\n- Monitor and troubleshoot production software issues and provide solutions while being a part of on-call rotation\n- Follow legal policies as directed",
+          "requirements": "- Minimum of 8 years in building enterprise level applications on a cross-functional Agile Software Development team\n- Strong development experience with any of the JVM languages, preferably Java or Kotlin\n- Experience building web services, preferably using REST\n- Development experience building microservices in Spring\n- Experience with Asynchronous messaging technologies such as Apache Kafka, JMS  or RabbitMQ\n- Experience working with public cloud development, preferably AWS\n- Strong relational database experience \n- Experience in an agile development environment with continuous integration and continuous delivery, using tools such as Git, Docker and Kubernetes\n- Experience with production troubleshooting and analysis using log/debugging tools such as Grafana, ELK, Splunk or New Relic\n- Highly proficient in understanding new technologies accomplishing projects goals successfully",
+          "jobSkills": null,
+          "preferred": "- Experience with NoSQL databases, preferably Mongo\n- Experience with Web technologies e.g. JavaScript / TypeScript / React / Node\n- Experience with functional programming languages/paradigms\n- Proficiency with IDE-based development, especially in IntelliJ or Eclipse\n- Understanding of and strong interest in cryptocurrencies and blockchain",
+          "benefits": "- Competitive base salary, bonus and stock options\n- 100% company paid health insurance for employee, partner and dependents\n- Up to 4% 401k company match\n- Paid parental leave, Paid vacation\n- Free commuter/parking pass; 5 min from Caltrain\n- Free custom lunches, dinners and snacks \n- Computer equipment and workplace furniture to suit your needs\n- Great colleagues and inspiring startup environment",
+          "format": "full_time",
+          "date": "2022-05-10 20:36:51.059894 +0000 UTC",
+          "location": "United States, Canada - Remote",
+          "isRemote": false,
+          "currency": "$",
+          "minSalary": 200000,
+          "maxSalary": 300000,
+          "status": "active",
+          "field": "engineering",
+          "experience": "senior"
+        },
+        "applications": []
+      }
+    }
+  },
+  {
+    "data": {
+      "jobForCompany": {
+        "jobAd": {
+          "id": "5a68c9fb-05e8-4ddd-9530-ce48c6a18c9a",
+          "company": {
+            "id": "0ee88a70-5041-430e-9fbb-4ec2cd31ddcb",
+            "name": "BitGo",
+            "photoUrl": "https://assets.website-files.com/61571d3b8fe2e30679056424/61571d3b8fe2e3a2920564bf_bitgo_logo.png",
+            "description": "Many believe that BitGo is the most secure and intelligent way to trade digital assets \nand that no one is better positioned to serve institutional investors in this space. \nToday, BitGo has over $64 billion of assets under custody, second only to Coinbase! \n\nIt’s that special, fast growing company that you'll have wanted to be a part \nof - Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, \nand Valor Equity Partners (who are all backers) seem to agree! Their strategic investment not only validates \nBitGo’s unique positioning to disrupt legacy financial systems, but also the market opportunity."
+          },
+          "title": "Senior Software Engineer (Backend), Bitcoin",
+          "description": "BitGo is looking for a **Sr. Software Engineer (Backend)** who will join our Bitcoin Team. BitGo processes a significant amount\nof cryptocurrency transactions so our applications need to be fast, accurate, scalable and secure.\nOur integrated platforms interact with a number of exchanges, agencies, and governments around\nthe world, and we use the best technology the industry offers to build them.\n\nWe are looking for teammates who share and practice our values of open communication, collaboration, accountability, and craftsmanship, \nand who feel passionate about  our mission to deliver trust in digital assets.",
+          "responsibilities": "- Enhance our multi-signature Bitcoin wallets with the latest and greatest features that Bitcoin has to offer, at the scale of billions of dollars per month\n- Own functionality and scalability features by taking responsibility from inception to deployment and customer integration\n- Improve, extend and maintain existing software which integrates with the Bitcoin blockchain and bitcoind fullnode\n- Expose and document API features for usage by the customer facing BitGo wallet UI, third-party developers, and our internal and external tooling\n- Collaborate closely with all engineering teams to ensure consistency in understanding of technical requirements and overall work quality\n- Provide mentorship to your peers in the broader engineering team through sharing your knowledge and passion for Bitcoin",
+          "requirements": "- Strong understanding of fundamental Bitcoin blockchain mechanics, including bitcoind RPC commands, P2SH scripts and multisig opcodes, Segwit (wrapped and native), CPFP, RBF, UTXO selection and BIP 32 key derivation\n- Familiarity with emerging Bitcoin features, such as BIP 340/341/342/350 (Taproot/Schnorr/bech32m) and Lightning\n- Passion for enabling cutting-edge Bitcoin features at scale\n- At least 5 years of back-end or protocol-level software development experience\n- Believes in testing twice (or more), and shipping once\n- Ability to work independently in a fast-paced environment",
+          "jobSkills": [
+            "nodejs",
+            "typescript",
+            "javascript",
+            "bitcoin",
+            "java",
+            "docker"
+          ],
+          "preferred": "- Active or previous contributor to Bitcoin Core, Lightning or other Bitcoin-related open source software\n- Ability to program and debug Node.JS, JavaScript, Typescript, or Java\n- Strong experience with RESTful API design\n- Comfortable with git and Github-based code review\n- Familiarity with Kubernetes, Docker",
+          "benefits": "- Competitive base salary, bonus and stock options\n- 100% company paid health insurance for employee, partner and dependents\n- Up to 4% 401k company match\n- Paid parental leave, Paid vacation\n- Free commuter/parking pass; 5 min from Caltrain\n- Free custom lunches, dinners and snacks \n- Computer equipment and workplace furniture to suit your needs\n- Great colleagues and inspiring startup environment",
+          "format": "full_time",
+          "date": "2022-05-10 21:06:14.539181 +0000 UTC",
+          "location": "United States, Canada - Remote",
+          "isRemote": false,
+          "currency": "$",
+          "minSalary": 150000,
+          "maxSalary": 200000,
+          "status": "active",
+          "field": "engineering",
+          "experience": "senior"
+        },
+        "applications": [
+          {
+            "id": "8e2b3518-4b56-453f-9af3-ce524c8f9cd9",
+            "date": "2022-07-11 14:56:02.95581 +0000 UTC",
+            "status": "in_review",
+            "notes": [],
+            "hire": null,
+            "rejection": null,
+            "fosterScore": 0,
+            "candidate": {
+              "id": "f89e8483-cf1d-4669-8040-31a242fcca2c",
+              "name": "Alexis Sanchez",
+              "role": "candidate",
+              "photoUrl": "https://imagedelivery.net/bFAXoVj7gNHeh9C_oNxhIQ/497c42e4-cf02-403f-ad5a-68dbd3f7ba00/public",
+              "linkedin": "linkedin.com/in/eduardo-jose-bravo-bravo/",
+              "location": "Santiago de Chile, Chile ",
+              "field": [
+                "engineering",
+                "operations"
+              ],
+              "jobTitle": "SRE Engineer",
+              "companyName": "El halcon milenario",
+              "walletInfo": null,
+              "experience": "mid_level",
+              "candidateSkills": null,
+              "techSkills": [
+                "Posgresql",
+                "React"
+              ],
+              "softSkills": [
+                "Empatico",
+                "Comunicativo"
+              ],
+              "about": "Apasionado por la programacion y el futbol",
+              "web": "https://ncc-1701-v3.github.io/Learning_React_Components/",
+              "github": "github.com/NCC-1701-v3",
+              "available": null
+            },
+            "jobAd": {
+              "id": "5a68c9fb-05e8-4ddd-9530-ce48c6a18c9a",
+              "company": {
+                "id": "0ee88a70-5041-430e-9fbb-4ec2cd31ddcb",
+                "name": "BitGo",
+                "photoUrl": "https://assets.website-files.com/61571d3b8fe2e30679056424/61571d3b8fe2e3a2920564bf_bitgo_logo.png",
+                "description": "Many believe that BitGo is the most secure and intelligent way to trade digital assets \nand that no one is better positioned to serve institutional investors in this space. \nToday, BitGo has over $64 billion of assets under custody, second only to Coinbase! \n\nIt’s that special, fast growing company that you'll have wanted to be a part \nof - Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, \nand Valor Equity Partners (who are all backers) seem to agree! Their strategic investment not only validates \nBitGo’s unique positioning to disrupt legacy financial systems, but also the market opportunity."
+              },
+              "title": "Senior Software Engineer (Backend), Bitcoin",
+              "description": "BitGo is looking for a **Sr. Software Engineer (Backend)** who will join our Bitcoin Team. BitGo processes a significant amount\nof cryptocurrency transactions so our applications need to be fast, accurate, scalable and secure.\nOur integrated platforms interact with a number of exchanges, agencies, and governments around\nthe world, and we use the best technology the industry offers to build them.\n\nWe are looking for teammates who share and practice our values of open communication, collaboration, accountability, and craftsmanship, \nand who feel passionate about  our mission to deliver trust in digital assets.",
+              "responsibilities": "- Enhance our multi-signature Bitcoin wallets with the latest and greatest features that Bitcoin has to offer, at the scale of billions of dollars per month\n- Own functionality and scalability features by taking responsibility from inception to deployment and customer integration\n- Improve, extend and maintain existing software which integrates with the Bitcoin blockchain and bitcoind fullnode\n- Expose and document API features for usage by the customer facing BitGo wallet UI, third-party developers, and our internal and external tooling\n- Collaborate closely with all engineering teams to ensure consistency in understanding of technical requirements and overall work quality\n- Provide mentorship to your peers in the broader engineering team through sharing your knowledge and passion for Bitcoin",
+              "requirements": "- Strong understanding of fundamental Bitcoin blockchain mechanics, including bitcoind RPC commands, P2SH scripts and multisig opcodes, Segwit (wrapped and native), CPFP, RBF, UTXO selection and BIP 32 key derivation\n- Familiarity with emerging Bitcoin features, such as BIP 340/341/342/350 (Taproot/Schnorr/bech32m) and Lightning\n- Passion for enabling cutting-edge Bitcoin features at scale\n- At least 5 years of back-end or protocol-level software development experience\n- Believes in testing twice (or more), and shipping once\n- Ability to work independently in a fast-paced environment",
+              "jobSkills": [
+                "nodejs",
+                "typescript",
+                "javascript",
+                "bitcoin",
+                "java",
+                "docker"
+              ],
+              "preferred": "- Active or previous contributor to Bitcoin Core, Lightning or other Bitcoin-related open source software\n- Ability to program and debug Node.JS, JavaScript, Typescript, or Java\n- Strong experience with RESTful API design\n- Comfortable with git and Github-based code review\n- Familiarity with Kubernetes, Docker",
+              "benefits": "- Competitive base salary, bonus and stock options\n- 100% company paid health insurance for employee, partner and dependents\n- Up to 4% 401k company match\n- Paid parental leave, Paid vacation\n- Free commuter/parking pass; 5 min from Caltrain\n- Free custom lunches, dinners and snacks \n- Computer equipment and workplace furniture to suit your needs\n- Great colleagues and inspiring startup environment",
+              "format": "full_time",
+              "date": "2022-05-10 21:06:14.539181 +0000 UTC",
+              "location": "United States, Canada - Remote",
+              "isRemote": false,
+              "currency": "$",
+              "minSalary": 150000,
+              "maxSalary": 200000,
+              "status": "active",
+              "field": "engineering",
+              "experience": "senior"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "data": {
+      "jobForCompany": {
+        "jobAd": {
+          "id": "40a553a9-fde7-4c79-8e22-89c25354d6bf",
+          "company": {
+            "id": "0ee88a70-5041-430e-9fbb-4ec2cd31ddcb",
+            "name": "BitGo",
+            "photoUrl": "https://assets.website-files.com/61571d3b8fe2e30679056424/61571d3b8fe2e3a2920564bf_bitgo_logo.png",
+            "description": "Many believe that BitGo is the most secure and intelligent way to trade digital assets \nand that no one is better positioned to serve institutional investors in this space. \nToday, BitGo has over $64 billion of assets under custody, second only to Coinbase! \n\nIt’s that special, fast growing company that you'll have wanted to be a part \nof - Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, \nand Valor Equity Partners (who are all backers) seem to agree! Their strategic investment not only validates \nBitGo’s unique positioning to disrupt legacy financial systems, but also the market opportunity."
+          },
+          "title": "Engineering Manager, DeFi",
+          "description": "BitGo is looking for an **Engineering Manager** who will lead our DeFi team in the United States to help us integrate and explore the latest technologies in the DeFi space.\n\nWe are looking for teammates who share and practice our values: open communication, collaboration, taking ownership, and a high level of craftsmanship.\nWe are looking for coworkers who share our vision and mission: deliver trust in digital assets. ",
+          "responsibilities": "- Collaborate with management, product teams, and other key stakeholders to build BitGo’s DeFi long-term roadmap\n- Lead the team on the design and development of new services that integrate with different DeFi projects (DAOs, bridges, NFTs, DEXs, etc) for multiple blockchains\n- Guide other internal teams integration efforts with the DeFi projects\n- Manage team goals, project timelines, and delivery dates while ensuring proper allocation of resources and budgets within the team\n- Lead and develop a team of talented and high-impact engineers, providing cultural, technical, and hands-on leadership\n- Grow engineers by actively shaping a culture of open communication, craftsmanship, ownership, and accountability\n- Be fully accountable to and drive accountability for KPIs pertaining to service health and uptime, software quality, and test coverage\n- Drive a rigorous practice of thorough documentation and knowledge sharing\n- Resolve escalations arising from operations and work with various teams to solve problems\n- Align teams to broader company objectives and client expectations",
+          "requirements": "- 7+ years of professional experience as a software engineer, 3+ years in a managerial role leading engineers\n- Excellent understanding of the underlying technology for blockchains\n- Proven ability to lead highly technical teams in an unknown space\n- Experience with architectural patterns of large, high-volume applications\n- Experience sourcing and hiring top engineering talent, including managerial talent\n- Proven understanding of business goals and strategy and how that drives direction within an engineering department\n- Proven ability to balance business requirements from various independent stakeholders with problems that impede work execution and delivery, while driving the highest ROI initiatives\n- Strong working knowledge of modern software development methodologies, software design patterns, and SDLC\n- A self-starter capable of adapting quickly and being decisive\n- Engineering degree in Computer Science or equivalent\n- Effective written and verbal communication skills",
+          "jobSkills": null,
+          "preferred": "- Strong DeFi or trading knowledge\n- Active contributor and thought leader in the Blockchain community\n- Ability to translate a complex arrangement of software components into a cohesive architecture that yields clean, efficient, and highly maintainable code\n- Shipped multiple projects and services to large scale consumers",
+          "benefits": "- Competitive base salary, bonus and stock options\n- 100% company paid health insurance for employee, partner and dependents\n- Up to 4% 401k company match\n- Paid parental leave, Paid vacation\n- Free commuter/parking pass; 5 min from Caltrain\n- Free custom lunches, dinners and snacks \n- Computer equipment and workplace furniture to suit your needs\n- Great colleagues and inspiring startup environment",
+          "format": "full_time",
+          "date": "2022-05-10 20:59:57.443537 +0000 UTC",
+          "location": "United States, Canada - Remote",
+          "isRemote": false,
+          "currency": "$",
+          "minSalary": 200000,
+          "maxSalary": 300000,
+          "status": "finished",
+          "field": "engineering",
+          "experience": "senior"
+        },
+        "applications": [
+          {
+            "id": "01ef3043-f815-4185-ab15-ad0f91f6efca",
+            "date": "2022-05-10 21:46:56.839628 +0000 UTC",
+            "status": "rejected",
+            "notes": [
+              {
+                "id": "218ec305-f221-4d16-9c51-01312653429e",
+                "date": "2022-05-13 15:34:51.058629 +0000 UTC"
+              }
+            ],
+            "hire": null,
+            "rejection": null,
+            "fosterScore": 0,
+            "candidate": {
+              "id": "bc407735-b41c-45d6-a55e-de206d896801",
+              "name": "Owen Mecham ",
+              "role": "candidate",
+              "photoUrl": null,
+              "linkedin": "https://www.linkedin.com/mwlite/in/owen-mecham",
+              "location": "Lehi, Utah",
+              "field": [
+                "engineering"
+              ],
+              "jobTitle": "Director of Engineering ",
+              "companyName": "ADESA / Carvana",
+              "walletInfo": null,
+              "experience": "senior",
+              "candidateSkills": null,
+              "techSkills": [
+                "Angular ",
+                "Typescript",
+                ".net / C#",
+                "MicroFrontends and Module Federation ",
+                "Cloud Architectures",
+                "Event Driven Systems",
+                "Azure",
+                "Javascript",
+                "UI / UX",
+                "DevOps"
+              ],
+              "softSkills": [
+                "Excellent Communicator",
+                "Empathetic Manager",
+                "Technical Liason for Business Users",
+                "Public Speaking / Presenting ",
+                "Technical Conference Organizer",
+                "Pluralsight Tutorial Author ",
+                "Product Focused"
+              ],
+              "about": null,
+              "web": null,
+              "github": null,
+              "available": null
+            },
+            "jobAd": {
+              "id": "40a553a9-fde7-4c79-8e22-89c25354d6bf",
+              "company": {
+                "id": "0ee88a70-5041-430e-9fbb-4ec2cd31ddcb",
+                "name": "BitGo",
+                "photoUrl": "https://assets.website-files.com/61571d3b8fe2e30679056424/61571d3b8fe2e3a2920564bf_bitgo_logo.png",
+                "description": "Many believe that BitGo is the most secure and intelligent way to trade digital assets \nand that no one is better positioned to serve institutional investors in this space. \nToday, BitGo has over $64 billion of assets under custody, second only to Coinbase! \n\nIt’s that special, fast growing company that you'll have wanted to be a part \nof - Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, \nand Valor Equity Partners (who are all backers) seem to agree! Their strategic investment not only validates \nBitGo’s unique positioning to disrupt legacy financial systems, but also the market opportunity."
+              },
+              "title": "Engineering Manager, DeFi",
+              "description": "BitGo is looking for an **Engineering Manager** who will lead our DeFi team in the United States to help us integrate and explore the latest technologies in the DeFi space.\n\nWe are looking for teammates who share and practice our values: open communication, collaboration, taking ownership, and a high level of craftsmanship.\nWe are looking for coworkers who share our vision and mission: deliver trust in digital assets. ",
+              "responsibilities": "- Collaborate with management, product teams, and other key stakeholders to build BitGo’s DeFi long-term roadmap\n- Lead the team on the design and development of new services that integrate with different DeFi projects (DAOs, bridges, NFTs, DEXs, etc) for multiple blockchains\n- Guide other internal teams integration efforts with the DeFi projects\n- Manage team goals, project timelines, and delivery dates while ensuring proper allocation of resources and budgets within the team\n- Lead and develop a team of talented and high-impact engineers, providing cultural, technical, and hands-on leadership\n- Grow engineers by actively shaping a culture of open communication, craftsmanship, ownership, and accountability\n- Be fully accountable to and drive accountability for KPIs pertaining to service health and uptime, software quality, and test coverage\n- Drive a rigorous practice of thorough documentation and knowledge sharing\n- Resolve escalations arising from operations and work with various teams to solve problems\n- Align teams to broader company objectives and client expectations",
+              "requirements": "- 7+ years of professional experience as a software engineer, 3+ years in a managerial role leading engineers\n- Excellent understanding of the underlying technology for blockchains\n- Proven ability to lead highly technical teams in an unknown space\n- Experience with architectural patterns of large, high-volume applications\n- Experience sourcing and hiring top engineering talent, including managerial talent\n- Proven understanding of business goals and strategy and how that drives direction within an engineering department\n- Proven ability to balance business requirements from various independent stakeholders with problems that impede work execution and delivery, while driving the highest ROI initiatives\n- Strong working knowledge of modern software development methodologies, software design patterns, and SDLC\n- A self-starter capable of adapting quickly and being decisive\n- Engineering degree in Computer Science or equivalent\n- Effective written and verbal communication skills",
+              "jobSkills": null,
+              "preferred": "- Strong DeFi or trading knowledge\n- Active contributor and thought leader in the Blockchain community\n- Ability to translate a complex arrangement of software components into a cohesive architecture that yields clean, efficient, and highly maintainable code\n- Shipped multiple projects and services to large scale consumers",
+              "benefits": "- Competitive base salary, bonus and stock options\n- 100% company paid health insurance for employee, partner and dependents\n- Up to 4% 401k company match\n- Paid parental leave, Paid vacation\n- Free commuter/parking pass; 5 min from Caltrain\n- Free custom lunches, dinners and snacks \n- Computer equipment and workplace furniture to suit your needs\n- Great colleagues and inspiring startup environment",
+              "format": "full_time",
+              "date": "2022-05-10 20:59:57.443537 +0000 UTC",
+              "location": "United States, Canada - Remote",
+              "isRemote": false,
+              "currency": "$",
+              "minSalary": 200000,
+              "maxSalary": 300000,
+              "status": "finished",
+              "field": "engineering",
+              "experience": "senior"
+            }
+          },
+          {
+            "id": "0ff3e93d-3b3e-4ef3-b33a-5bf6a5eec150",
+            "date": "2022-05-27 22:00:34.095227 +0000 UTC",
+            "status": "rejected",
+            "notes": [],
+            "hire": null,
+            "rejection": null,
+            "fosterScore": 0,
+            "candidate": {
+              "id": "f89e8483-cf1d-4669-8040-31a242fcca2c",
+              "name": "Alexis Sanchez",
+              "role": "candidate",
+              "photoUrl": "https://imagedelivery.net/bFAXoVj7gNHeh9C_oNxhIQ/497c42e4-cf02-403f-ad5a-68dbd3f7ba00/public",
+              "linkedin": "linkedin.com/in/eduardo-jose-bravo-bravo/",
+              "location": "Santiago de Chile, Chile ",
+              "field": [
+                "engineering",
+                "operations"
+              ],
+              "jobTitle": "SRE Engineer",
+              "companyName": "El halcon milenario",
+              "walletInfo": null,
+              "experience": "mid_level",
+              "candidateSkills": null,
+              "techSkills": [
+                "Posgresql",
+                "React"
+              ],
+              "softSkills": [
+                "Empatico",
+                "Comunicativo"
+              ],
+              "about": "Apasionado por la programacion y el futbol",
+              "web": "https://ncc-1701-v3.github.io/Learning_React_Components/",
+              "github": "github.com/NCC-1701-v3",
+              "available": null
+            },
+            "jobAd": {
+              "id": "40a553a9-fde7-4c79-8e22-89c25354d6bf",
+              "company": {
+                "id": "0ee88a70-5041-430e-9fbb-4ec2cd31ddcb",
+                "name": "BitGo",
+                "photoUrl": "https://assets.website-files.com/61571d3b8fe2e30679056424/61571d3b8fe2e3a2920564bf_bitgo_logo.png",
+                "description": "Many believe that BitGo is the most secure and intelligent way to trade digital assets \nand that no one is better positioned to serve institutional investors in this space. \nToday, BitGo has over $64 billion of assets under custody, second only to Coinbase! \n\nIt’s that special, fast growing company that you'll have wanted to be a part \nof - Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, \nand Valor Equity Partners (who are all backers) seem to agree! Their strategic investment not only validates \nBitGo’s unique positioning to disrupt legacy financial systems, but also the market opportunity."
+              },
+              "title": "Engineering Manager, DeFi",
+              "description": "BitGo is looking for an **Engineering Manager** who will lead our DeFi team in the United States to help us integrate and explore the latest technologies in the DeFi space.\n\nWe are looking for teammates who share and practice our values: open communication, collaboration, taking ownership, and a high level of craftsmanship.\nWe are looking for coworkers who share our vision and mission: deliver trust in digital assets. ",
+              "responsibilities": "- Collaborate with management, product teams, and other key stakeholders to build BitGo’s DeFi long-term roadmap\n- Lead the team on the design and development of new services that integrate with different DeFi projects (DAOs, bridges, NFTs, DEXs, etc) for multiple blockchains\n- Guide other internal teams integration efforts with the DeFi projects\n- Manage team goals, project timelines, and delivery dates while ensuring proper allocation of resources and budgets within the team\n- Lead and develop a team of talented and high-impact engineers, providing cultural, technical, and hands-on leadership\n- Grow engineers by actively shaping a culture of open communication, craftsmanship, ownership, and accountability\n- Be fully accountable to and drive accountability for KPIs pertaining to service health and uptime, software quality, and test coverage\n- Drive a rigorous practice of thorough documentation and knowledge sharing\n- Resolve escalations arising from operations and work with various teams to solve problems\n- Align teams to broader company objectives and client expectations",
+              "requirements": "- 7+ years of professional experience as a software engineer, 3+ years in a managerial role leading engineers\n- Excellent understanding of the underlying technology for blockchains\n- Proven ability to lead highly technical teams in an unknown space\n- Experience with architectural patterns of large, high-volume applications\n- Experience sourcing and hiring top engineering talent, including managerial talent\n- Proven understanding of business goals and strategy and how that drives direction within an engineering department\n- Proven ability to balance business requirements from various independent stakeholders with problems that impede work execution and delivery, while driving the highest ROI initiatives\n- Strong working knowledge of modern software development methodologies, software design patterns, and SDLC\n- A self-starter capable of adapting quickly and being decisive\n- Engineering degree in Computer Science or equivalent\n- Effective written and verbal communication skills",
+              "jobSkills": null,
+              "preferred": "- Strong DeFi or trading knowledge\n- Active contributor and thought leader in the Blockchain community\n- Ability to translate a complex arrangement of software components into a cohesive architecture that yields clean, efficient, and highly maintainable code\n- Shipped multiple projects and services to large scale consumers",
+              "benefits": "- Competitive base salary, bonus and stock options\n- 100% company paid health insurance for employee, partner and dependents\n- Up to 4% 401k company match\n- Paid parental leave, Paid vacation\n- Free commuter/parking pass; 5 min from Caltrain\n- Free custom lunches, dinners and snacks \n- Computer equipment and workplace furniture to suit your needs\n- Great colleagues and inspiring startup environment",
+              "format": "full_time",
+              "date": "2022-05-10 20:59:57.443537 +0000 UTC",
+              "location": "United States, Canada - Remote",
+              "isRemote": false,
+              "currency": "$",
+              "minSalary": 200000,
+              "maxSalary": 300000,
+              "status": "finished",
+              "field": "engineering",
+              "experience": "senior"
+            }
+          },
+          {
+            "id": "77df43b9-7362-442d-8097-2745e34bb213",
+            "date": "2022-06-04 10:55:36.179081 +0000 UTC",
+            "status": "rejected",
+            "notes": [],
+            "hire": null,
+            "rejection": null,
+            "fosterScore": 0,
+            "candidate": {
+              "id": "44cd91eb-00d7-4dc6-9f1d-1ac8fcca0228",
+              "name": "Dhruv D Jain",
+              "role": "candidate",
+              "photoUrl": "https://media-exp1.licdn.com/dms/image/C5603AQFO59eij5OQXg/profile-displayphoto-shrink_800_800/0/1624808725373?e=1659571200&v=beta&t=1NML5krijcGGZ9d1bEPvQi-ViF4AqeX9a0TrwKrg7WU",
+              "linkedin": "https://in.linkedin.com/in/dhruv-d-jain-01b01b123",
+              "location": "Bangalore, India",
+              "field": [
+                "engineering",
+                "finance",
+                "marketing",
+                "product"
+              ],
+              "jobTitle": "Web3 Developer",
+              "companyName": "Dorse",
+              "walletInfo": {
+                "id": "853d6fd1-6833-422a-a98e-192b2aafe545",
+                "blockchain": "solana",
+                "walletAddress": "AGdZqUDzmXZYMkmv17d2MevwsNyNYkLjUsbq19eZcawg"
+              },
+              "experience": "early_career",
+              "candidateSkills": null,
+              "techSkills": [],
+              "softSkills": [],
+              "about": "I am an aspiring web3 developer",
+              "web": null,
+              "github": "https://github.com/dhruvja",
+              "available": null
+            },
+            "jobAd": {
+              "id": "40a553a9-fde7-4c79-8e22-89c25354d6bf",
+              "company": {
+                "id": "0ee88a70-5041-430e-9fbb-4ec2cd31ddcb",
+                "name": "BitGo",
+                "photoUrl": "https://assets.website-files.com/61571d3b8fe2e30679056424/61571d3b8fe2e3a2920564bf_bitgo_logo.png",
+                "description": "Many believe that BitGo is the most secure and intelligent way to trade digital assets \nand that no one is better positioned to serve institutional investors in this space. \nToday, BitGo has over $64 billion of assets under custody, second only to Coinbase! \n\nIt’s that special, fast growing company that you'll have wanted to be a part \nof - Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, \nand Valor Equity Partners (who are all backers) seem to agree! Their strategic investment not only validates \nBitGo’s unique positioning to disrupt legacy financial systems, but also the market opportunity."
+              },
+              "title": "Engineering Manager, DeFi",
+              "description": "BitGo is looking for an **Engineering Manager** who will lead our DeFi team in the United States to help us integrate and explore the latest technologies in the DeFi space.\n\nWe are looking for teammates who share and practice our values: open communication, collaboration, taking ownership, and a high level of craftsmanship.\nWe are looking for coworkers who share our vision and mission: deliver trust in digital assets. ",
+              "responsibilities": "- Collaborate with management, product teams, and other key stakeholders to build BitGo’s DeFi long-term roadmap\n- Lead the team on the design and development of new services that integrate with different DeFi projects (DAOs, bridges, NFTs, DEXs, etc) for multiple blockchains\n- Guide other internal teams integration efforts with the DeFi projects\n- Manage team goals, project timelines, and delivery dates while ensuring proper allocation of resources and budgets within the team\n- Lead and develop a team of talented and high-impact engineers, providing cultural, technical, and hands-on leadership\n- Grow engineers by actively shaping a culture of open communication, craftsmanship, ownership, and accountability\n- Be fully accountable to and drive accountability for KPIs pertaining to service health and uptime, software quality, and test coverage\n- Drive a rigorous practice of thorough documentation and knowledge sharing\n- Resolve escalations arising from operations and work with various teams to solve problems\n- Align teams to broader company objectives and client expectations",
+              "requirements": "- 7+ years of professional experience as a software engineer, 3+ years in a managerial role leading engineers\n- Excellent understanding of the underlying technology for blockchains\n- Proven ability to lead highly technical teams in an unknown space\n- Experience with architectural patterns of large, high-volume applications\n- Experience sourcing and hiring top engineering talent, including managerial talent\n- Proven understanding of business goals and strategy and how that drives direction within an engineering department\n- Proven ability to balance business requirements from various independent stakeholders with problems that impede work execution and delivery, while driving the highest ROI initiatives\n- Strong working knowledge of modern software development methodologies, software design patterns, and SDLC\n- A self-starter capable of adapting quickly and being decisive\n- Engineering degree in Computer Science or equivalent\n- Effective written and verbal communication skills",
+              "jobSkills": null,
+              "preferred": "- Strong DeFi or trading knowledge\n- Active contributor and thought leader in the Blockchain community\n- Ability to translate a complex arrangement of software components into a cohesive architecture that yields clean, efficient, and highly maintainable code\n- Shipped multiple projects and services to large scale consumers",
+              "benefits": "- Competitive base salary, bonus and stock options\n- 100% company paid health insurance for employee, partner and dependents\n- Up to 4% 401k company match\n- Paid parental leave, Paid vacation\n- Free commuter/parking pass; 5 min from Caltrain\n- Free custom lunches, dinners and snacks \n- Computer equipment and workplace furniture to suit your needs\n- Great colleagues and inspiring startup environment",
+              "format": "full_time",
+              "date": "2022-05-10 20:59:57.443537 +0000 UTC",
+              "location": "United States, Canada - Remote",
+              "isRemote": false,
+              "currency": "$",
+              "minSalary": 200000,
+              "maxSalary": 300000,
+              "status": "finished",
+              "field": "engineering",
+              "experience": "senior"
+            }
+          },
+          {
+            "id": "890269b7-9de1-4a21-8b67-3457d28c6e33",
+            "date": "2022-06-29 08:19:44.308846 +0000 UTC",
+            "status": "in_review",
+            "notes": [],
+            "hire": null,
+            "rejection": null,
+            "fosterScore": 0,
+            "candidate": {
+              "id": "d119207c-e5fb-4881-a735-8125a2e8ab83",
+              "name": "Joon",
+              "role": "candidate",
+              "photoUrl": null,
+              "linkedin": "https://www.linkedin.com/in/joon-w/",
+              "location": "South Korea, Seoul",
+              "field": [
+                "engineering"
+              ],
+              "jobTitle": "Frontend Engineer",
+              "companyName": "Ignite(formerly Tendermint)",
+              "walletInfo": null,
+              "experience": "mid_level",
+              "candidateSkills": null,
+              "techSkills": [
+                "React",
+                "Redux",
+                "Typescript",
+                "Nextjs"
+              ],
+              "softSkills": [
+                "Teamwork",
+                "communication"
+              ],
+              "about": "Frontend Engineer specializing in the blockchain space",
+              "web": null,
+              "github": "https://github.com/fl-y",
+              "available": null
+            },
+            "jobAd": {
+              "id": "40a553a9-fde7-4c79-8e22-89c25354d6bf",
+              "company": {
+                "id": "0ee88a70-5041-430e-9fbb-4ec2cd31ddcb",
+                "name": "BitGo",
+                "photoUrl": "https://assets.website-files.com/61571d3b8fe2e30679056424/61571d3b8fe2e3a2920564bf_bitgo_logo.png",
+                "description": "Many believe that BitGo is the most secure and intelligent way to trade digital assets \nand that no one is better positioned to serve institutional investors in this space. \nToday, BitGo has over $64 billion of assets under custody, second only to Coinbase! \n\nIt’s that special, fast growing company that you'll have wanted to be a part \nof - Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, \nand Valor Equity Partners (who are all backers) seem to agree! Their strategic investment not only validates \nBitGo’s unique positioning to disrupt legacy financial systems, but also the market opportunity."
+              },
+              "title": "Engineering Manager, DeFi",
+              "description": "BitGo is looking for an **Engineering Manager** who will lead our DeFi team in the United States to help us integrate and explore the latest technologies in the DeFi space.\n\nWe are looking for teammates who share and practice our values: open communication, collaboration, taking ownership, and a high level of craftsmanship.\nWe are looking for coworkers who share our vision and mission: deliver trust in digital assets. ",
+              "responsibilities": "- Collaborate with management, product teams, and other key stakeholders to build BitGo’s DeFi long-term roadmap\n- Lead the team on the design and development of new services that integrate with different DeFi projects (DAOs, bridges, NFTs, DEXs, etc) for multiple blockchains\n- Guide other internal teams integration efforts with the DeFi projects\n- Manage team goals, project timelines, and delivery dates while ensuring proper allocation of resources and budgets within the team\n- Lead and develop a team of talented and high-impact engineers, providing cultural, technical, and hands-on leadership\n- Grow engineers by actively shaping a culture of open communication, craftsmanship, ownership, and accountability\n- Be fully accountable to and drive accountability for KPIs pertaining to service health and uptime, software quality, and test coverage\n- Drive a rigorous practice of thorough documentation and knowledge sharing\n- Resolve escalations arising from operations and work with various teams to solve problems\n- Align teams to broader company objectives and client expectations",
+              "requirements": "- 7+ years of professional experience as a software engineer, 3+ years in a managerial role leading engineers\n- Excellent understanding of the underlying technology for blockchains\n- Proven ability to lead highly technical teams in an unknown space\n- Experience with architectural patterns of large, high-volume applications\n- Experience sourcing and hiring top engineering talent, including managerial talent\n- Proven understanding of business goals and strategy and how that drives direction within an engineering department\n- Proven ability to balance business requirements from various independent stakeholders with problems that impede work execution and delivery, while driving the highest ROI initiatives\n- Strong working knowledge of modern software development methodologies, software design patterns, and SDLC\n- A self-starter capable of adapting quickly and being decisive\n- Engineering degree in Computer Science or equivalent\n- Effective written and verbal communication skills",
+              "jobSkills": null,
+              "preferred": "- Strong DeFi or trading knowledge\n- Active contributor and thought leader in the Blockchain community\n- Ability to translate a complex arrangement of software components into a cohesive architecture that yields clean, efficient, and highly maintainable code\n- Shipped multiple projects and services to large scale consumers",
+              "benefits": "- Competitive base salary, bonus and stock options\n- 100% company paid health insurance for employee, partner and dependents\n- Up to 4% 401k company match\n- Paid parental leave, Paid vacation\n- Free commuter/parking pass; 5 min from Caltrain\n- Free custom lunches, dinners and snacks \n- Computer equipment and workplace furniture to suit your needs\n- Great colleagues and inspiring startup environment",
+              "format": "full_time",
+              "date": "2022-05-10 20:59:57.443537 +0000 UTC",
+              "location": "United States, Canada - Remote",
+              "isRemote": false,
+              "currency": "$",
+              "minSalary": 200000,
+              "maxSalary": 300000,
+              "status": "finished",
+              "field": "engineering",
+              "experience": "senior"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "data": {
+      "jobForCompany": {
+        "jobAd": {
+          "id": "a2cab20f-51ed-4311-8ae8-02972779a7be",
+          "company": {
+            "id": "0ee88a70-5041-430e-9fbb-4ec2cd31ddcb",
+            "name": "BitGo",
+            "photoUrl": "https://assets.website-files.com/61571d3b8fe2e30679056424/61571d3b8fe2e3a2920564bf_bitgo_logo.png",
+            "description": "Many believe that BitGo is the most secure and intelligent way to trade digital assets \nand that no one is better positioned to serve institutional investors in this space. \nToday, BitGo has over $64 billion of assets under custody, second only to Coinbase! \n\nIt’s that special, fast growing company that you'll have wanted to be a part \nof - Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, \nand Valor Equity Partners (who are all backers) seem to agree! Their strategic investment not only validates \nBitGo’s unique positioning to disrupt legacy financial systems, but also the market opportunity."
+          },
+          "title": "Senior Software Engineer (Backend), Blockchain OS",
+          "description": "BitGo is looking for a Software Engineer to join our Blockchain OS team and help us build highly reliable and scalable systems. This role can be worked remotely so long as your home base is in North America.We are looking for teammates who share and practice our values: open communication, transparency, taking ownership, and a high level of craftsmanship.We are looking for coworkers who share our vision and mission: deliver trust in digital assets. ",
+          "responsibilities": "- Capable of designing and implementing full system architectures with an emphasis on redundancy, scalability and durability. \n- Collaborate with other engineers and take responsibility for all facets of the development process, while actively participating in design and code reviews. \n- Design and build strong, resilient, and robust APIs to power our application services\n- Develop and coordinate software unit testing and system testing and validation procedures, and documentation\n- Provide support and mentor team members to improve overall team velocity.\n- Provide maintenance support and enhance performance to existing application code \n- Monitor and troubleshoot production software issues and provide solutions while being a part of on-call rotation\n- Own functionality and scalability features by taking responsibility from inception to deployment \n- Expose and document functionality to the UI, third-party developers, and our internal and external tooling\n- Capable of building proofs-of-concept(POC) with fellow engineers and/or stakeholders while ensuring the current milestones are met\n- Follow legal policies as directed",
+          "requirements": "- Minimum of 5 years in building enterprise level applications on a cross-functional Agile Software Development team\n- Strong development experience with any of the JVM languages, preferably Java or Kotlin\n- Experience building web services, preferably using REST\n- Development experience building microservices in Spring\n- Experience with Asynchronous messaging technologies such as Apache Kafka, JMS  or RabbitMQ\n- Experience developing SaaS applications in the cloud, preferably AWS\n- Strong relational database experience \n- Strong work ethics and willingness to work hard to achieve employer objectives\n- Strong teamwork and communication skills",
+          "jobSkills": null,
+          "preferred": "- Experience in an agile development environment with continuous integration and continuous delivery, using tools such as Git, Docker and Kubernetes\n- Experience with production troubleshooting and analysis using log/debugging tools such as Grafana, ELK, Splunk or New Relic\n- Experience with Web technologies e.g. JavaScript / TypeScript / React / Node\n- Experience with NoSQL databases, preferably Mongo\n- Proficiency with IDE-based development, especially in IntelliJ or Eclipse\n- Understanding of and strong interest in cryptocurrencies and blockchain",
+          "benefits": "- Competitive base salary, bonus and stock options\n- 100% company paid health insurance for employee, partner and dependents\n- Up to 4% 401k company match\n- Paid parental leave, Paid vacation\n- Free commuter/parking pass; 5 min from Caltrain\n- Free custom lunches, dinners and snacks \n- Computer equipment and workplace furniture to suit your needs\n- Great colleagues and inspiring startup environment",
+          "format": "full_time",
+          "date": "2022-05-10 20:34:17.421929 +0000 UTC",
+          "location": "United States, Canada - Remote",
+          "isRemote": false,
+          "currency": "$",
+          "minSalary": 150000,
+          "maxSalary": 200000,
+          "status": "active",
+          "field": "engineering",
+          "experience": "senior"
+        },
+        "applications": []
+      }
+    }
+  },
+  {
+    "data": {
+      "jobForCompany": {
+        "jobAd": {
+          "id": "79d3d5ad-c372-4ddb-b35b-5e6556878485",
+          "company": {
+            "id": "0ee88a70-5041-430e-9fbb-4ec2cd31ddcb",
+            "name": "BitGo",
+            "photoUrl": "https://assets.website-files.com/61571d3b8fe2e30679056424/61571d3b8fe2e3a2920564bf_bitgo_logo.png",
+            "description": "Many believe that BitGo is the most secure and intelligent way to trade digital assets \nand that no one is better positioned to serve institutional investors in this space. \nToday, BitGo has over $64 billion of assets under custody, second only to Coinbase! \n\nIt’s that special, fast growing company that you'll have wanted to be a part \nof - Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, \nand Valor Equity Partners (who are all backers) seem to agree! Their strategic investment not only validates \nBitGo’s unique positioning to disrupt legacy financial systems, but also the market opportunity."
+          },
+          "title": "Software Engineer (Backend), Blockchain Integration Team",
+          "description": "BitGo is looking for a **Software Engineer** to join our blockchain integration team and help us build\na robust and scalable system to integrate new and existing blockchains .\nThis role can be worked remotely so long as your home base is in North America.",
+          "responsibilities": "- Design and build scalable, well abstracted, and robust APIs, libraries, and services to integration blockchains into our custody platforms. \n- Own functionality and scalability features by taking responsibility from research, implementation to deployment.\n- Build integration libraries and SDKs to interface with our server and APIs\n- Expose and document functionality to the UI, third-party developers, and our internal and external tooling\n- Collaborate closely with all engineering teams and product managers to ensure consistency in understanding of technical requirements and overall work quality",
+          "requirements": "- At least 3 years of back-end, server-side software development\n- Strong experience with TypeScript/Node.JS\n- Great with unit and functional testing and debugging\n- Great at providing simple and extensible abstractions to complex systems.\n- Experience in Git/GitHub and branching methodologies, code review tools, CI tools, etc.\n- Bachelor’s degree in computer science, applied mathematics, or another technical discipline from a top university\n- Understanding of and strong interest in cryptocurrencies and blockchain\n- Great at algorithm design, problem solving, and complexity analysis\n- Ability to work independently in a fast-paced environment",
+          "jobSkills": null,
+          "preferred": "- Understanding of and experience working in the blockchain industry\n- Experience with microservices and service-oriented architectures\n- Ability to work full-stack and familiarity with React and Databases (MongoDB)\n- Familiarity with Docker and Kubernetes",
+          "benefits": "- Competitive base salary, bonus and stock options\n- 100% company paid health insurance for employee, partner and dependents\n- Up to 4% 401k company match\n- Paid parental leave, Paid vacation\n- Free commuter/parking pass; 5 min from Caltrain\n- Free custom lunches, dinners and snacks \n- Computer equipment and workplace furniture to suit your needs\n- Great colleagues and inspiring startup environment",
+          "format": "full_time",
+          "date": "2022-05-10 20:43:58.361882 +0000 UTC",
+          "location": "United States, Canada - Remote",
+          "isRemote": false,
+          "currency": "$",
+          "minSalary": 150000,
+          "maxSalary": 170000,
+          "status": "active",
+          "field": "engineering",
+          "experience": "mid_level"
+        },
+        "applications": []
+      }
+    }
+  },
+  {
+    "data": {
+      "jobForCompany": {
+        "jobAd": {
+          "id": "0236350c-be6c-46c6-9ed9-fff454dce641",
+          "company": {
+            "id": "0ee88a70-5041-430e-9fbb-4ec2cd31ddcb",
+            "name": "BitGo",
+            "photoUrl": "https://assets.website-files.com/61571d3b8fe2e30679056424/61571d3b8fe2e3a2920564bf_bitgo_logo.png",
+            "description": "Many believe that BitGo is the most secure and intelligent way to trade digital assets \nand that no one is better positioned to serve institutional investors in this space. \nToday, BitGo has over $64 billion of assets under custody, second only to Coinbase! \n\nIt’s that special, fast growing company that you'll have wanted to be a part \nof - Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, \nand Valor Equity Partners (who are all backers) seem to agree! Their strategic investment not only validates \nBitGo’s unique positioning to disrupt legacy financial systems, but also the market opportunity."
+          },
+          "title": "Senior Software Engineer, Javascript SDK",
+          "description": "BitGo is looking for a **Senior Software Engineer** to join the SDK team within the Blockchain Unit to help us build our next generation of SDKs, \nnew features and applications for our enterprise clients.\nBitGo processes a significant amount of cryptocurrency transactions so our applications need to be fast, accurate, scalable, and secure.\n\nOur integrated platforms interact with a number of exchanges, agencies, and governments around the world,\nand we use the best technology the industry offers to build them.",
+          "responsibilities": "- Build strong, resilient, and modular open-source and internal libraries to power our blockchain services: hot and cold wallets, indexing, staking, and broadcasting services among others\n- Own the core SDK functionality and scalability features by taking responsibility from inception to deployment and customer integration\n- Expose and document functionality to the open-source dev community\n- Collaborate closely with all engineering teams and the open-source community to ensure consistency in understanding technical requirements\n- Take direct responsibility for the quality, the release process, and distribution of the SDK\n- Provide mentorship to your peers in the broader engineering team through code reviews and education on best practices",
+          "requirements": "- At least 5 years of experience developing SDKs, libraries, or backend development\n- Strong experience with JavaScript and/or Typescript in both browser and NodeJS runtimes\n- Knowledge of best practices around monorepo packages\n- Experience in Git/GitHub and branching methodologies, code review tools, CI tools, JIRA, Confluence, etc.\n- Great with unit and functional testing and debugging\n- Bachelor’s degree in computer science, applied mathematics, or another technical discipline from a top university\n- Great at algorithm design, problem solving, and complexity analysis",
+          "jobSkills": [
+            "typescript",
+            "javascript"
+          ],
+          "preferred": "- Experience in microservices architecture\n- Strong experience with the NPM release process and semantic versioning\n- Experience with RESTful API design\n- Familiarity with Docker\n- Understanding and strong interest in cryptocurrencies and the blockchain industry\n- Understanding and experience working in the financial industry",
+          "benefits": "- Competitive base salary, bonus and stock options\n- 100% company paid health insurance for employee, partner and dependents\n- Up to 4% 401k company match\n- Paid parental leave, Paid vacation\n- Free commuter/parking pass; 5 min from Caltrain\n- Free custom lunches, dinners and snacks \n- Computer equipment and workplace furniture to suit your needs\n- Great colleagues and inspiring startup environment",
+          "format": "full_time",
+          "date": "2022-05-10 21:02:43.892034 +0000 UTC",
+          "location": "United States, Canada - Remote",
+          "isRemote": false,
+          "currency": "$",
+          "minSalary": 150000,
+          "maxSalary": 200000,
+          "status": "active",
+          "field": "engineering",
+          "experience": "senior"
+        },
+        "applications": []
+      }
+    }
+  },
+  {
+    "data": {
+      "jobForCompany": {
+        "jobAd": {
+          "id": "97ff20aa-e1ca-4db9-9a9f-8119be395efa",
+          "company": {
+            "id": "0ee88a70-5041-430e-9fbb-4ec2cd31ddcb",
+            "name": "BitGo",
+            "photoUrl": "https://assets.website-files.com/61571d3b8fe2e30679056424/61571d3b8fe2e3a2920564bf_bitgo_logo.png",
+            "description": "Many believe that BitGo is the most secure and intelligent way to trade digital assets \nand that no one is better positioned to serve institutional investors in this space. \nToday, BitGo has over $64 billion of assets under custody, second only to Coinbase! \n\nIt’s that special, fast growing company that you'll have wanted to be a part \nof - Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, \nand Valor Equity Partners (who are all backers) seem to agree! Their strategic investment not only validates \nBitGo’s unique positioning to disrupt legacy financial systems, but also the market opportunity."
+          },
+          "title": "Senior Frontend Engineer, Blockchain Team",
+          "description": "We are searching for a **Senior Frontend Engineer** to work in the Blockchain unit along with our `Bitcoin`, `Ethereum`, `DeFi`, `Blockchain OS`, and `Staking` teams. As a Senior Frontend Engineer, you will help the teams develop the UI and UX for entirely new projects and maintain the current ones.",
+          "responsibilities": "- Work closely with different blockchain experts to improve our UI functionality on a variety of projects for multiple coins\n- Collaborate closely with different blockchain experts and product managers to plan and develop entirely new UIs for upcoming projects\n- Develop features with clean, maintainable, and reusable code\n- Improve existing user experiences\n- Cross-team communications with stakeholders to understand implementation requirements and limitations\n- Provide mentorship to your peers in the broader engineering team through code reviews and education on best practices\n- Provide maintenance support and enhance performance to existing applications",
+          "requirements": "## Skills & Experience\n\nWe are looking for teammates who share and practice our values: open communication, transparency, taking ownership, and a high level of craftsmanship. We are looking for coworkers who share our vision and mission: deliver trust in digital assets. \n\n- At least 5 years of frontend software development\n- Strong experience with React\n- Advanced knowledge of JavaScript, CSS, and HTML\n- Experience working with modern JavaScript frameworks\n- Experience working with Node.js and Express applications\n- Experience working with design systems\n- Experience with unit, integration, and end-to-end testing\n- Ability to work independently in a fast-paced environment",
+          "jobSkills": [
+            "nodejs",
+            "javascript",
+            "css",
+            "html"
+          ],
+          "preferred": "- A portfolio showcasing past work\n- Understanding of and strong interest in cryptocurrencies and blockchain\n- Experience with blockchain in a work environment (e.g. previous internship/job at a cryptocurrency company)\n- Experience working with GraphQL/Apollo Client\n- Formik",
+          "benefits": "- Competitive base salary, bonus and stock options\n- 100% company paid health insurance for employee, partner and dependents\n- Up to 4% 401k company match\n- Paid parental leave, Paid vacation\n- Free commuter/parking pass\n- Free custom lunches, dinners and snacks \n- Computer equipment and workplace furniture to suit your needs\n- Great colleagues and inspiring startup environment\n- Benefits may vary based on location",
+          "format": "full_time",
+          "date": "2022-05-17 17:18:48.160899 +0000 UTC",
+          "location": "United States, Canada - Remote",
+          "isRemote": false,
+          "currency": "$",
+          "minSalary": 180000,
+          "maxSalary": 200000,
+          "status": "active",
+          "field": "engineering",
+          "experience": "senior"
+        },
+        "applications": [
+          {
+            "id": "52110e87-025d-49cf-9eec-6a06c05a23fa",
+            "date": "2022-05-20 12:56:30.142046 +0000 UTC",
+            "status": "rejected",
+            "notes": [],
+            "hire": null,
+            "rejection": null,
+            "fosterScore": 0,
+            "candidate": {
+              "id": "ac44074c-a7c0-4083-8d2e-65f81170e0b4",
+              "name": "momo",
+              "role": "candidate",
+              "photoUrl": null,
+              "linkedin": "https://",
+              "location": "egypt",
+              "field": [
+                "engineering"
+              ],
+              "jobTitle": "huhi",
+              "companyName": "uuvu",
+              "walletInfo": null,
+              "experience": "early_career",
+              "candidateSkills": null,
+              "techSkills": [],
+              "softSkills": [],
+              "about": null,
+              "web": null,
+              "github": "https://",
+              "available": null
+            },
+            "jobAd": {
+              "id": "97ff20aa-e1ca-4db9-9a9f-8119be395efa",
+              "company": {
+                "id": "0ee88a70-5041-430e-9fbb-4ec2cd31ddcb",
+                "name": "BitGo",
+                "photoUrl": "https://assets.website-files.com/61571d3b8fe2e30679056424/61571d3b8fe2e3a2920564bf_bitgo_logo.png",
+                "description": "Many believe that BitGo is the most secure and intelligent way to trade digital assets \nand that no one is better positioned to serve institutional investors in this space. \nToday, BitGo has over $64 billion of assets under custody, second only to Coinbase! \n\nIt’s that special, fast growing company that you'll have wanted to be a part \nof - Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, \nand Valor Equity Partners (who are all backers) seem to agree! Their strategic investment not only validates \nBitGo’s unique positioning to disrupt legacy financial systems, but also the market opportunity."
+              },
+              "title": "Senior Frontend Engineer, Blockchain Team",
+              "description": "We are searching for a **Senior Frontend Engineer** to work in the Blockchain unit along with our `Bitcoin`, `Ethereum`, `DeFi`, `Blockchain OS`, and `Staking` teams. As a Senior Frontend Engineer, you will help the teams develop the UI and UX for entirely new projects and maintain the current ones.",
+              "responsibilities": "- Work closely with different blockchain experts to improve our UI functionality on a variety of projects for multiple coins\n- Collaborate closely with different blockchain experts and product managers to plan and develop entirely new UIs for upcoming projects\n- Develop features with clean, maintainable, and reusable code\n- Improve existing user experiences\n- Cross-team communications with stakeholders to understand implementation requirements and limitations\n- Provide mentorship to your peers in the broader engineering team through code reviews and education on best practices\n- Provide maintenance support and enhance performance to existing applications",
+              "requirements": "## Skills & Experience\n\nWe are looking for teammates who share and practice our values: open communication, transparency, taking ownership, and a high level of craftsmanship. We are looking for coworkers who share our vision and mission: deliver trust in digital assets. \n\n- At least 5 years of frontend software development\n- Strong experience with React\n- Advanced knowledge of JavaScript, CSS, and HTML\n- Experience working with modern JavaScript frameworks\n- Experience working with Node.js and Express applications\n- Experience working with design systems\n- Experience with unit, integration, and end-to-end testing\n- Ability to work independently in a fast-paced environment",
+              "jobSkills": [
+                "nodejs",
+                "javascript",
+                "css",
+                "html"
+              ],
+              "preferred": "- A portfolio showcasing past work\n- Understanding of and strong interest in cryptocurrencies and blockchain\n- Experience with blockchain in a work environment (e.g. previous internship/job at a cryptocurrency company)\n- Experience working with GraphQL/Apollo Client\n- Formik",
+              "benefits": "- Competitive base salary, bonus and stock options\n- 100% company paid health insurance for employee, partner and dependents\n- Up to 4% 401k company match\n- Paid parental leave, Paid vacation\n- Free commuter/parking pass\n- Free custom lunches, dinners and snacks \n- Computer equipment and workplace furniture to suit your needs\n- Great colleagues and inspiring startup environment\n- Benefits may vary based on location",
+              "format": "full_time",
+              "date": "2022-05-17 17:18:48.160899 +0000 UTC",
+              "location": "United States, Canada - Remote",
+              "isRemote": false,
+              "currency": "$",
+              "minSalary": 180000,
+              "maxSalary": 200000,
+              "status": "active",
+              "field": "engineering",
+              "experience": "senior"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "data": {
+      "jobForCompany": {
+        "jobAd": {
+          "id": "aeb89385-02b0-4933-a697-1f170e81d1e0",
+          "company": {
+            "id": "0ee88a70-5041-430e-9fbb-4ec2cd31ddcb",
+            "name": "BitGo",
+            "photoUrl": "https://assets.website-files.com/61571d3b8fe2e30679056424/61571d3b8fe2e3a2920564bf_bitgo_logo.png",
+            "description": "Many believe that BitGo is the most secure and intelligent way to trade digital assets \nand that no one is better positioned to serve institutional investors in this space. \nToday, BitGo has over $64 billion of assets under custody, second only to Coinbase! \n\nIt’s that special, fast growing company that you'll have wanted to be a part \nof - Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, \nand Valor Equity Partners (who are all backers) seem to agree! Their strategic investment not only validates \nBitGo’s unique positioning to disrupt legacy financial systems, but also the market opportunity."
+          },
+          "title": "Engineering Manager, Developer Experience Team",
+          "description": "BitGo is looking for an **Engineering Manager** who will join our **Developer Experience** team in the United States or Canada to help us create a best-in-class experience for developers building software on the BitGo Platform.",
+          "responsibilities": "- Collaborate with management, product teams, and other key stakeholders to build the SDK and Development Portal long-term roadmap\n- Improve third party developer experience for BitGo’s open source offering\n- Collaborate with engineering teams and product managers to develop content for developers\n- Curate and standardize usability and ergonomics of the BitGo API\n- Design, develop, evangelize and educate on the BitGoJS SDK components\n- Produce and maintain developer-facing documentation and interactive learning elements in the BitGo Developer Portal\n- Assist and guide developers who reach out to BitGo for support in building software on the platform\n- Manage team goals, project timelines, and delivery dates while ensuring proper allocation of resources and budgets within the team\n- Lead and develop a team of talented and high-impact engineers, providing cultural, technical, and hands-on leadership\n- Grow engineers by actively shaping a culture of open communication, craftsmanship, ownership, and accountability\n- Be fully accountable to and drive accountability for KPIs pertaining to service health and uptime, software quality, and test coverage\n- Drive a rigorous practice of thorough documentation and knowledge sharing\n- Resolve escalations arising from operations and work with various teams to solve problems\n- Align teams to broader company objectives and client expectations",
+          "requirements": "## Skills & Experience\n\nWe are looking for teammates who share and practice our values: open communication, collaboration, taking ownership, and a high level of craftsmanship. We are looking for coworkers who share our vision and mission: deliver trust in digital assets. \n\n- 5+ years of professional experience as a software engineer, 3+ years in a managerial role leading engineers\n- Experience leading or maintaining Open Source projects\n- Experience working with developer communities\n- Experience sourcing and hiring top engineering talent, including managerial talent\n- Proven understanding of business goals and strategy and how that drives direction within an engineering department\n- Proven ability to balance business requirements from various independent stakeholders with problems that impede work execution and delivery, while driving the highest ROI initiatives\n- Strong working knowledge of modern software development methodologies, software design patterns, and SDLC\n- A self-starter capable of adapting quickly and being decisive\n- Engineering degree in Computer Science or equivalent\n- Effective written and verbal communication skills",
+          "jobSkills": null,
+          "preferred": "- Experience with architectural patterns of large, high-volume applications\n- Ability to translate a complex arrangement of software components into a cohesive architecture that yields clean, efficient, and highly maintainable code\n- Shipped multiple projects and services to large scale consumers",
+          "benefits": "- Competitive base salary, bonus and stock options\n- 100% company paid health insurance for employee, partner and dependents\n- 4% 401k company match\n- Paid parental leave, paid vacation\n- Free commute and parking pass; 5 min from Caltrain\n- Free custom lunches, dinners and snacks \n- Computer equipment and workplace furniture to suit your needs\n- Great colleagues and inspiring startup environment",
+          "format": "full_time",
+          "date": "2022-05-17 17:16:23.727259 +0000 UTC",
+          "location": "United States, Canada - Remote",
+          "isRemote": false,
+          "currency": "$",
+          "minSalary": 200000,
+          "maxSalary": 300000,
+          "status": "finished",
+          "field": "engineering",
+          "experience": "senior"
+        },
+        "applications": []
+      }
+    }
+  },
+  {
+    "data": {
+      "jobForCompany": {
+        "jobAd": {
+          "id": "133414fb-b3cb-4607-be0d-b91976cd4c3a",
+          "company": {
+            "id": "0ee88a70-5041-430e-9fbb-4ec2cd31ddcb",
+            "name": "BitGo",
+            "photoUrl": "https://assets.website-files.com/61571d3b8fe2e30679056424/61571d3b8fe2e3a2920564bf_bitgo_logo.png",
+            "description": "Many believe that BitGo is the most secure and intelligent way to trade digital assets \nand that no one is better positioned to serve institutional investors in this space. \nToday, BitGo has over $64 billion of assets under custody, second only to Coinbase! \n\nIt’s that special, fast growing company that you'll have wanted to be a part \nof - Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, \nand Valor Equity Partners (who are all backers) seem to agree! Their strategic investment not only validates \nBitGo’s unique positioning to disrupt legacy financial systems, but also the market opportunity."
+          },
+          "title": "Senior Software Engineer (Backend), Blockchain Integration Team",
+          "description": "BitGo is looking for a **Senior Software Engineer** to join our blockchain integration team and help us build\na robust and scalable system to integrate new and existing blockchains .\nThis role can be worked remotely so long as your home base is in North America.",
+          "responsibilities": "- Design and build scalable, well abstracted, and robust APIs, libraries, and services to integration blockchains into our custody platforms. \n- Own functionality and scalability features by taking responsibility from research, implementation to deployment.\n- Build integration libraries and SDKs to interface with our server and APIs\n- Expose and document functionality to the UI, third-party developers, and our internal and external tooling\n- Collaborate closely with all engineering teams and product managers to ensure consistency in understanding of technical requirements and overall work quality\n- Provide mentorship to your peers in the broader engineering team through code reviews and education on best practices",
+          "requirements": "- At least 5 years of back-end, server-side software development\n- Strong experience with TypeScript/Node.JS\n- Great with unit and functional testing and debugging\n- Great at providing simple and extensible abstractions to complex systems.\n- Experience in Git/GitHub and branching methodologies, code review tools, CI tools, etc.\n- Bachelor’s degree in computer science, applied mathematics, or another technical discipline from a top university\n- Understanding of and strong interest in cryptocurrencies and blockchain\n- Great at algorithm design, problem solving, and complexity analysis\n- Ability to work independently in a fast-paced environment",
+          "jobSkills": null,
+          "preferred": "- Understanding of and experience working in the blockchain industry- Experience with microservices and service-oriented architectures- Ability to work full-stack and familiarity with React and Databases (MongoDB)- Familiarity with Docker and Kubernetes",
+          "benefits": "- Competitive base salary, bonus and stock options- 100% company paid health insurance for employee, partner and dependents- Up to 4% 401k company match- Paid parental leave, Paid vacation- Free commuter/parking pass; 5 min from Caltrain- Free custom lunches, dinners and snacks - Computer equipment and workplace furniture to suit your needs- Great colleagues and inspiring startup environment",
+          "format": "full_time",
+          "date": "2022-05-10 20:46:30.085736 +0000 UTC",
+          "location": "United States, Canada - Remote",
+          "isRemote": false,
+          "currency": "$",
+          "minSalary": 150000,
+          "maxSalary": 200000,
+          "status": "active",
+          "field": "engineering",
+          "experience": "senior"
+        },
+        "applications": []
+      }
+    }
+  },
+  {
+    "data": {
+      "jobForCompany": {
+        "jobAd": {
+          "id": "51d9e7c1-1b6d-4dc7-bdd4-a5f4b4381167",
+          "company": {
+            "id": "0ee88a70-5041-430e-9fbb-4ec2cd31ddcb",
+            "name": "BitGo",
+            "photoUrl": "https://assets.website-files.com/61571d3b8fe2e30679056424/61571d3b8fe2e3a2920564bf_bitgo_logo.png",
+            "description": "Many believe that BitGo is the most secure and intelligent way to trade digital assets \nand that no one is better positioned to serve institutional investors in this space. \nToday, BitGo has over $64 billion of assets under custody, second only to Coinbase! \n\nIt’s that special, fast growing company that you'll have wanted to be a part \nof - Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, \nand Valor Equity Partners (who are all backers) seem to agree! Their strategic investment not only validates \nBitGo’s unique positioning to disrupt legacy financial systems, but also the market opportunity."
+          },
+          "title": "Software Engineer (Backend) - Blockchain OS",
+          "description": "BitGo is looking for a Software Engineer to join our Blockchain OS team and help us build highly reliable and scalable systems. \nThis role can be worked remotely so long as your home base is in North America.\n\nWe are looking for teammates who share and practice our values: open communication, transparency, taking ownership, and a high level of craftsmanship.\nWe are looking for coworkers who share our vision and mission: deliver trust in digital assets. ",
+          "responsibilities": "- Design and build strong, resilient, and robust APIs to power our application services\n- Collaborate with other engineers and take responsibility for all facets of the development process, while actively participating in design and code reviews. \n- Develop and coordinate software unit testing and system testing and validation procedures, and documentation\n- Provide maintenance support and enhance performance to existing application code \n- Monitor and troubleshoot production software issues and provide solutions while being a part of on-call rotation\n- Expose and document functionality to the UI, third-party developers, and our internal and external tooling\n- Follow legal policies as directed",
+          "requirements": "- Minimum of 3 years in building backend, server side applications\n- Strong development experience with any of the JVM languages, preferably Java or Kotlin\n- Experience building web services, preferably using REST\n- Experience with unit and functional testing and debugging\n- Experience with Asynchronous messaging technologies such as Apache Kafka, JMS  or RabbitMQ\n- Experience developing SaaS applications in the cloud, preferably AWS\n- Strong experience with SQL databases like Postgres and MySQL\n- Strong work ethics and willingness to work hard to achieve employer objectives\n- Great at algorithm design, problem solving, and complexity analysis\n- Strong teamwork and communication skills",
+          "jobSkills": null,
+          "preferred": "- Experience in an agile development environment with continuous integration and continuous delivery, using tools such as Git, Docker and Kubernetes\n- Experience with production troubleshooting and analysis using log/debugging tools such as Grafana, ELK, Splunk or New Relic\n- Experience with Web technologies e.g. JavaScript / TypeScript / React / Node\n- Experience with NoSQL databases, preferably Mongo\n- Proficiency with IDE-based development, especially in IntelliJ or Eclipse\n- Understanding of and strong interest in cryptocurrencies and blockchain",
+          "benefits": "- Competitive base salary, bonus and stock options\n- 100% company paid health insurance for employee, partner and dependents\n- Up to 4% 401k company match\n- Paid parental leave, Paid vacation\n- Free commuter/parking pass; 5 min from Caltrain\n- Free custom lunches, dinners and snacks \n- Computer equipment and workplace furniture to suit your needs\n- Great colleagues and inspiring startup environment",
+          "format": "full_time",
+          "date": "2022-05-10 20:30:05.363746 +0000 UTC",
+          "location": "United States, Canada - Remote",
+          "isRemote": false,
+          "currency": "$",
+          "minSalary": 150000,
+          "maxSalary": 170000,
+          "status": "active",
+          "field": "engineering",
+          "experience": "mid_level"
+        },
+        "applications": []
+      }
+    }
+  },
+  {
+    "data": {
+      "jobForCompany": {
+        "jobAd": {
+          "id": "cad39670-7a52-4f3f-a57d-ff90f297370f",
+          "company": {
+            "id": "0ee88a70-5041-430e-9fbb-4ec2cd31ddcb",
+            "name": "BitGo",
+            "photoUrl": "https://assets.website-files.com/61571d3b8fe2e30679056424/61571d3b8fe2e3a2920564bf_bitgo_logo.png",
+            "description": "Many believe that BitGo is the most secure and intelligent way to trade digital assets \nand that no one is better positioned to serve institutional investors in this space. \nToday, BitGo has over $64 billion of assets under custody, second only to Coinbase! \n\nIt’s that special, fast growing company that you'll have wanted to be a part \nof - Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, \nand Valor Equity Partners (who are all backers) seem to agree! Their strategic investment not only validates \nBitGo’s unique positioning to disrupt legacy financial systems, but also the market opportunity."
+          },
+          "title": "Software Engineer, CuEx",
+          "description": "Long story short: Know anyone based out of the US with 5 years of experience with backend engineering, Javascript/Typescript, and experience with crypto/blockchain? We'd love to talk to them!//BitGo is the leader in digital asset financial services, providing institutional investors with liquidity, custody, and security solutions. In 2020, BitGo launched Prime Trading and Lending, as well as BitGo Portfolio and Tax, providing clients with a full-stack solution for digital assets. In 2018, it launched BitGo Trust Company, the first qualified custodian purpose-built for storing digital assets. BitGo processes over 20% of all global Bitcoin transactions, and supports over 400 coins and tokens. BitGo’s customer base includes the world's largest cryptocurrency exchanges and institutional investors and spans more than 50 countries. BitGo is backed by Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, and Valor Equity Partners.BitGo is looking for a Senior Software Engineer to join our blockchain team and help us build a robust and scalable system to integrate new and existing blockchains .This role can be worked remotely so long as your home base is in North America.",
+          "responsibilities": "- Work closely with different blockchain experts to improve functionality on a variety of projects for multiple coins\n- Develop enhancements and fix product features \n- Collaborate closely with the technical support team to detect trends among support tickets to identify common root causes\n- Develop tooling to automate the detection and resolution of inconsistencies, as well as automate root cause analysis of issues and inconsistencies.",
+          "requirements": "- At least 3 years of back-end, server-side software development\n- Great with unit and functional testing and debugging\n- Great at providing simple and extensible abstractions to complex systems.\n- Experience in Git/GitHub and branching methodologies, code review tools, CI tools, etc.\n- Bachelor’s degree in computer science, applied mathematics, or another technical discipline from a top university\n- Understanding of and strong interest in cryptocurrencies and blockchain\n- Great at algorithm design, problem solving, and complexity analysis\n- Ability to work independently in a fast-paced environment",
+          "jobSkills": null,
+          "preferred": "- Strong programming skills in Javascript & Typescript\n- Understanding of and experience working in the blockchain industry\n- Experience with microservices and service-oriented architectures\n- Ability to work full-stack and familiarity with React and Databases (MongoDB)\n- Familiarity with Docker and Kubernetes",
+          "benefits": "- Competitive base salary, bonus, and stock options \n- 100% company-paid health insurance for employees, partner, and dependents \n- 4% 401k company match \n- Paid parental leave, paid vacation \n- Computer equipment and workplace furniture to suit your needs \n- Great colleagues and inspiring startup environment\n",
+          "format": "full_time",
+          "date": "2022-05-10 20:51:00.511147 +0000 UTC",
+          "location": "United States - Remote",
+          "isRemote": false,
+          "currency": "$",
+          "minSalary": 150000,
+          "maxSalary": 170000,
+          "status": "active",
+          "field": "engineering",
+          "experience": "mid_level"
+        },
+        "applications": [
+          {
+            "id": "83339cb1-badb-4de6-a338-75a821fc0b2d",
+            "date": "2022-05-16 06:50:55.499348 +0000 UTC",
+            "status": "rejected",
+            "notes": [],
+            "hire": null,
+            "rejection": null,
+            "fosterScore": 0,
+            "candidate": {
+              "id": "ebb56716-ec7a-40d2-832a-1aba85c99027",
+              "name": "Sebastian Leon",
+              "role": "candidate",
+              "photoUrl": "https://media-exp1.licdn.com/dms/image/C5603AQGmTFY9oyfQfA/profile-displayphoto-shrink_800_800/0/1643694567877?e=1658361600&v=beta&t=oxfUqOyGVJNnstDKJW2N_1GhOkiI_dWxu1SHkevBXxg",
+              "linkedin": "https://www.linkedin.com/in/sebleon/",
+              "location": "San Francisco",
+              "field": [
+                "engineering",
+                "product",
+                "people"
+              ],
+              "jobTitle": "Co-Founder, CEO",
+              "companyName": "LeetDevs",
+              "walletInfo": null,
+              "experience": "senior",
+              "candidateSkills": null,
+              "techSkills": [],
+              "softSkills": [],
+              "about": null,
+              "web": null,
+              "github": null,
+              "available": null
+            },
+            "jobAd": {
+              "id": "cad39670-7a52-4f3f-a57d-ff90f297370f",
+              "company": {
+                "id": "0ee88a70-5041-430e-9fbb-4ec2cd31ddcb",
+                "name": "BitGo",
+                "photoUrl": "https://assets.website-files.com/61571d3b8fe2e30679056424/61571d3b8fe2e3a2920564bf_bitgo_logo.png",
+                "description": "Many believe that BitGo is the most secure and intelligent way to trade digital assets \nand that no one is better positioned to serve institutional investors in this space. \nToday, BitGo has over $64 billion of assets under custody, second only to Coinbase! \n\nIt’s that special, fast growing company that you'll have wanted to be a part \nof - Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, \nand Valor Equity Partners (who are all backers) seem to agree! Their strategic investment not only validates \nBitGo’s unique positioning to disrupt legacy financial systems, but also the market opportunity."
+              },
+              "title": "Software Engineer, CuEx",
+              "description": "Long story short: Know anyone based out of the US with 5 years of experience with backend engineering, Javascript/Typescript, and experience with crypto/blockchain? We'd love to talk to them!//BitGo is the leader in digital asset financial services, providing institutional investors with liquidity, custody, and security solutions. In 2020, BitGo launched Prime Trading and Lending, as well as BitGo Portfolio and Tax, providing clients with a full-stack solution for digital assets. In 2018, it launched BitGo Trust Company, the first qualified custodian purpose-built for storing digital assets. BitGo processes over 20% of all global Bitcoin transactions, and supports over 400 coins and tokens. BitGo’s customer base includes the world's largest cryptocurrency exchanges and institutional investors and spans more than 50 countries. BitGo is backed by Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, and Valor Equity Partners.BitGo is looking for a Senior Software Engineer to join our blockchain team and help us build a robust and scalable system to integrate new and existing blockchains .This role can be worked remotely so long as your home base is in North America.",
+              "responsibilities": "- Work closely with different blockchain experts to improve functionality on a variety of projects for multiple coins\n- Develop enhancements and fix product features \n- Collaborate closely with the technical support team to detect trends among support tickets to identify common root causes\n- Develop tooling to automate the detection and resolution of inconsistencies, as well as automate root cause analysis of issues and inconsistencies.",
+              "requirements": "- At least 3 years of back-end, server-side software development\n- Great with unit and functional testing and debugging\n- Great at providing simple and extensible abstractions to complex systems.\n- Experience in Git/GitHub and branching methodologies, code review tools, CI tools, etc.\n- Bachelor’s degree in computer science, applied mathematics, or another technical discipline from a top university\n- Understanding of and strong interest in cryptocurrencies and blockchain\n- Great at algorithm design, problem solving, and complexity analysis\n- Ability to work independently in a fast-paced environment",
+              "jobSkills": null,
+              "preferred": "- Strong programming skills in Javascript & Typescript\n- Understanding of and experience working in the blockchain industry\n- Experience with microservices and service-oriented architectures\n- Ability to work full-stack and familiarity with React and Databases (MongoDB)\n- Familiarity with Docker and Kubernetes",
+              "benefits": "- Competitive base salary, bonus, and stock options \n- 100% company-paid health insurance for employees, partner, and dependents \n- 4% 401k company match \n- Paid parental leave, paid vacation \n- Computer equipment and workplace furniture to suit your needs \n- Great colleagues and inspiring startup environment\n",
+              "format": "full_time",
+              "date": "2022-05-10 20:51:00.511147 +0000 UTC",
+              "location": "United States - Remote",
+              "isRemote": false,
+              "currency": "$",
+              "minSalary": 150000,
+              "maxSalary": 170000,
+              "status": "active",
+              "field": "engineering",
+              "experience": "mid_level"
+            }
+          },
+          {
+            "id": "71753d64-1033-4aa7-88ef-f9230d570d5b",
+            "date": "2022-07-24 20:06:53.31643 +0000 UTC",
+            "status": "in_review",
+            "notes": [],
+            "hire": null,
+            "rejection": null,
+            "fosterScore": 0,
+            "candidate": {
+              "id": "77e27a51-f4ba-4550-9fa7-df3bc7df320d",
+              "name": "Eduardo Bravo",
+              "role": "candidate",
+              "photoUrl": "https://imagedelivery.net/bFAXoVj7gNHeh9C_oNxhIQ/eb9c7796-0f9d-4829-84d6-15645daf0600/public",
+              "linkedin": "linkedin.com/eduardob",
+              "location": "Merida, Venezuela",
+              "field": [
+                "engineering",
+                "product"
+              ],
+              "jobTitle": "Software Engineer",
+              "companyName": "USS Enterprise",
+              "walletInfo": null,
+              "experience": "senior",
+              "candidateSkills": null,
+              "techSkills": [
+                "Postgresql",
+                "Rust"
+              ],
+              "softSkills": [
+                "Sociable "
+              ],
+              "about": "Tengo la vision, de lograr emparejar las desigualdades sociales a través de la tecnología ",
+              "web": null,
+              "github": "github.com/edb",
+              "available": null
+            },
+            "jobAd": {
+              "id": "cad39670-7a52-4f3f-a57d-ff90f297370f",
+              "company": {
+                "id": "0ee88a70-5041-430e-9fbb-4ec2cd31ddcb",
+                "name": "BitGo",
+                "photoUrl": "https://assets.website-files.com/61571d3b8fe2e30679056424/61571d3b8fe2e3a2920564bf_bitgo_logo.png",
+                "description": "Many believe that BitGo is the most secure and intelligent way to trade digital assets \nand that no one is better positioned to serve institutional investors in this space. \nToday, BitGo has over $64 billion of assets under custody, second only to Coinbase! \n\nIt’s that special, fast growing company that you'll have wanted to be a part \nof - Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, \nand Valor Equity Partners (who are all backers) seem to agree! Their strategic investment not only validates \nBitGo’s unique positioning to disrupt legacy financial systems, but also the market opportunity."
+              },
+              "title": "Software Engineer, CuEx",
+              "description": "Long story short: Know anyone based out of the US with 5 years of experience with backend engineering, Javascript/Typescript, and experience with crypto/blockchain? We'd love to talk to them!//BitGo is the leader in digital asset financial services, providing institutional investors with liquidity, custody, and security solutions. In 2020, BitGo launched Prime Trading and Lending, as well as BitGo Portfolio and Tax, providing clients with a full-stack solution for digital assets. In 2018, it launched BitGo Trust Company, the first qualified custodian purpose-built for storing digital assets. BitGo processes over 20% of all global Bitcoin transactions, and supports over 400 coins and tokens. BitGo’s customer base includes the world's largest cryptocurrency exchanges and institutional investors and spans more than 50 countries. BitGo is backed by Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, and Valor Equity Partners.BitGo is looking for a Senior Software Engineer to join our blockchain team and help us build a robust and scalable system to integrate new and existing blockchains .This role can be worked remotely so long as your home base is in North America.",
+              "responsibilities": "- Work closely with different blockchain experts to improve functionality on a variety of projects for multiple coins\n- Develop enhancements and fix product features \n- Collaborate closely with the technical support team to detect trends among support tickets to identify common root causes\n- Develop tooling to automate the detection and resolution of inconsistencies, as well as automate root cause analysis of issues and inconsistencies.",
+              "requirements": "- At least 3 years of back-end, server-side software development\n- Great with unit and functional testing and debugging\n- Great at providing simple and extensible abstractions to complex systems.\n- Experience in Git/GitHub and branching methodologies, code review tools, CI tools, etc.\n- Bachelor’s degree in computer science, applied mathematics, or another technical discipline from a top university\n- Understanding of and strong interest in cryptocurrencies and blockchain\n- Great at algorithm design, problem solving, and complexity analysis\n- Ability to work independently in a fast-paced environment",
+              "jobSkills": null,
+              "preferred": "- Strong programming skills in Javascript & Typescript\n- Understanding of and experience working in the blockchain industry\n- Experience with microservices and service-oriented architectures\n- Ability to work full-stack and familiarity with React and Databases (MongoDB)\n- Familiarity with Docker and Kubernetes",
+              "benefits": "- Competitive base salary, bonus, and stock options \n- 100% company-paid health insurance for employees, partner, and dependents \n- 4% 401k company match \n- Paid parental leave, paid vacation \n- Computer equipment and workplace furniture to suit your needs \n- Great colleagues and inspiring startup environment\n",
+              "format": "full_time",
+              "date": "2022-05-10 20:51:00.511147 +0000 UTC",
+              "location": "United States - Remote",
+              "isRemote": false,
+              "currency": "$",
+              "minSalary": 150000,
+              "maxSalary": 170000,
+              "status": "active",
+              "field": "engineering",
+              "experience": "mid_level"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "data": {
+      "jobForCompany": {
+        "jobAd": {
+          "id": "29770c65-904b-43a5-8cfd-7992592a394f",
+          "company": {
+            "id": "0ee88a70-5041-430e-9fbb-4ec2cd31ddcb",
+            "name": "BitGo",
+            "photoUrl": "https://assets.website-files.com/61571d3b8fe2e30679056424/61571d3b8fe2e3a2920564bf_bitgo_logo.png",
+            "description": "Many believe that BitGo is the most secure and intelligent way to trade digital assets \nand that no one is better positioned to serve institutional investors in this space. \nToday, BitGo has over $64 billion of assets under custody, second only to Coinbase! \n\nIt’s that special, fast growing company that you'll have wanted to be a part \nof - Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, \nand Valor Equity Partners (who are all backers) seem to agree! Their strategic investment not only validates \nBitGo’s unique positioning to disrupt legacy financial systems, but also the market opportunity."
+          },
+          "title": "Software Engineer, ETH",
+          "description": "Long story short: Know anyone based out of the US/Canada with 2 years of experience with backend engineering, Node.js, and an interest/ or experience in Ethereum? We'd love to talk to them! \n\n//\n\nBitGo is the leader in digital asset financial services, providing institutional investors with custody liquidity, and security solutions. Active in both centralized and decentralized finance, BitGo offers market leading trading, lending, and borrowing services through its prime brokerage services and acts as the custodian for WBTC, with more than $10 billion in custody and circulation. \n\nIn 2020, BitGo launched BitGo Portfolio and Tax, providing clients with a full-stack solution for digital assets. In 2018, it launched BitGo Trust Company, the first qualified custodian purpose-built for storing digital assets. BitGo processes approximately 20% of all global Bitcoin transactions and supports over 400 coins and tokens.\n\nBitGo’s customer base includes the world’s largest cryptocurrency exchanges and institutional investors and spans more than 50 countries. BitGo is backed by Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, and Valor Equity Partners.\n\nBitGo is looking for a **Software Engineer** who will join our Ethereum team. This role can be worked remotely so long as your home base is in North America.",
+          "responsibilities": "- Pioneer the onboarding of new Ethereum-based tokens, protocols (L2, Bridges, Roll-ups), and network upgrades (Hard forks, Ethereum 2.0)\n- Contribute to stability and scalability of Bitgo’s Ethereum infrastructure and transaction processing services\n- Author logic for signing, broadcasting and reducing fees of Ethereum transactions\n- Work closely with the Product Manager to resolve any blockers that hinder daily operations",
+          "requirements": "- Security focused, highly motivated with an entrepreneurial mindset\n- 2+ years of software engineering experience on the server-side \n- Having worked with some NodeJS required. Heavy experience is a plus\n- Strong experience with taking a set of requirements and implementing them fully with minimal guidance\n- Interested in Ethereum and the cryptocurrencies ecosystem \n- Experience with RESTful programming conventions\n- Experience with SQL/NoSQL   \n- A depth of knowledge and implementation experience",
+          "jobSkills": [
+            "nodejs"
+          ],
+          "preferred": "- Some understanding of solidity, Ethereum transaction fees, and the Ethereum transaction model\n- Understanding or experience with MongoDB, Kubernetes, Docker, Drone, or asynchronous programming methods/tools",
+          "benefits": "- Competitive base salary, bonus and stock options\n- 100% company paid health insurance for employee, partner and dependents\n- 4% 401k company match\n- Paid parental leave, paid vacation \n- Computer equipment and workplace furniture to suit your needs\n- Great colleagues and inspiring startup environment",
+          "format": "full_time",
+          "date": "2022-05-03 22:32:33.873834 +0000 UTC",
+          "location": "United States, Canada - Remote",
+          "isRemote": false,
+          "currency": "$",
+          "minSalary": 150000,
+          "maxSalary": 170000,
+          "status": "active",
+          "field": "engineering",
+          "experience": "mid_level"
+        },
+        "applications": [
+          {
+            "id": "30908966-a347-4ca3-a11f-a7654fe81b0d",
+            "date": "2022-07-04 14:01:57.186701 +0000 UTC",
+            "status": "in_review",
+            "notes": [],
+            "hire": null,
+            "rejection": null,
+            "fosterScore": 0,
+            "candidate": {
+              "id": "77e27a51-f4ba-4550-9fa7-df3bc7df320d",
+              "name": "Eduardo Bravo",
+              "role": "candidate",
+              "photoUrl": "https://imagedelivery.net/bFAXoVj7gNHeh9C_oNxhIQ/eb9c7796-0f9d-4829-84d6-15645daf0600/public",
+              "linkedin": "linkedin.com/eduardob",
+              "location": "Merida, Venezuela",
+              "field": [
+                "engineering",
+                "product"
+              ],
+              "jobTitle": "Software Engineer",
+              "companyName": "USS Enterprise",
+              "walletInfo": null,
+              "experience": "senior",
+              "candidateSkills": null,
+              "techSkills": [
+                "Postgresql",
+                "Rust"
+              ],
+              "softSkills": [
+                "Sociable "
+              ],
+              "about": "Tengo la vision, de lograr emparejar las desigualdades sociales a través de la tecnología ",
+              "web": null,
+              "github": "github.com/edb",
+              "available": null
+            },
+            "jobAd": {
+              "id": "29770c65-904b-43a5-8cfd-7992592a394f",
+              "company": {
+                "id": "0ee88a70-5041-430e-9fbb-4ec2cd31ddcb",
+                "name": "BitGo",
+                "photoUrl": "https://assets.website-files.com/61571d3b8fe2e30679056424/61571d3b8fe2e3a2920564bf_bitgo_logo.png",
+                "description": "Many believe that BitGo is the most secure and intelligent way to trade digital assets \nand that no one is better positioned to serve institutional investors in this space. \nToday, BitGo has over $64 billion of assets under custody, second only to Coinbase! \n\nIt’s that special, fast growing company that you'll have wanted to be a part \nof - Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, \nand Valor Equity Partners (who are all backers) seem to agree! Their strategic investment not only validates \nBitGo’s unique positioning to disrupt legacy financial systems, but also the market opportunity."
+              },
+              "title": "Software Engineer, ETH",
+              "description": "Long story short: Know anyone based out of the US/Canada with 2 years of experience with backend engineering, Node.js, and an interest/ or experience in Ethereum? We'd love to talk to them! \n\n//\n\nBitGo is the leader in digital asset financial services, providing institutional investors with custody liquidity, and security solutions. Active in both centralized and decentralized finance, BitGo offers market leading trading, lending, and borrowing services through its prime brokerage services and acts as the custodian for WBTC, with more than $10 billion in custody and circulation. \n\nIn 2020, BitGo launched BitGo Portfolio and Tax, providing clients with a full-stack solution for digital assets. In 2018, it launched BitGo Trust Company, the first qualified custodian purpose-built for storing digital assets. BitGo processes approximately 20% of all global Bitcoin transactions and supports over 400 coins and tokens.\n\nBitGo’s customer base includes the world’s largest cryptocurrency exchanges and institutional investors and spans more than 50 countries. BitGo is backed by Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, and Valor Equity Partners.\n\nBitGo is looking for a **Software Engineer** who will join our Ethereum team. This role can be worked remotely so long as your home base is in North America.",
+              "responsibilities": "- Pioneer the onboarding of new Ethereum-based tokens, protocols (L2, Bridges, Roll-ups), and network upgrades (Hard forks, Ethereum 2.0)\n- Contribute to stability and scalability of Bitgo’s Ethereum infrastructure and transaction processing services\n- Author logic for signing, broadcasting and reducing fees of Ethereum transactions\n- Work closely with the Product Manager to resolve any blockers that hinder daily operations",
+              "requirements": "- Security focused, highly motivated with an entrepreneurial mindset\n- 2+ years of software engineering experience on the server-side \n- Having worked with some NodeJS required. Heavy experience is a plus\n- Strong experience with taking a set of requirements and implementing them fully with minimal guidance\n- Interested in Ethereum and the cryptocurrencies ecosystem \n- Experience with RESTful programming conventions\n- Experience with SQL/NoSQL   \n- A depth of knowledge and implementation experience",
+              "jobSkills": [
+                "nodejs"
+              ],
+              "preferred": "- Some understanding of solidity, Ethereum transaction fees, and the Ethereum transaction model\n- Understanding or experience with MongoDB, Kubernetes, Docker, Drone, or asynchronous programming methods/tools",
+              "benefits": "- Competitive base salary, bonus and stock options\n- 100% company paid health insurance for employee, partner and dependents\n- 4% 401k company match\n- Paid parental leave, paid vacation \n- Computer equipment and workplace furniture to suit your needs\n- Great colleagues and inspiring startup environment",
+              "format": "full_time",
+              "date": "2022-05-03 22:32:33.873834 +0000 UTC",
+              "location": "United States, Canada - Remote",
+              "isRemote": false,
+              "currency": "$",
+              "minSalary": 150000,
+              "maxSalary": 170000,
+              "status": "active",
+              "field": "engineering",
+              "experience": "mid_level"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "data": {
+      "jobForCompany": {
+        "jobAd": {
+          "id": "79811c76-b56c-4db2-bacb-9033ea466f5f",
+          "company": {
+            "id": "0ee88a70-5041-430e-9fbb-4ec2cd31ddcb",
+            "name": "BitGo",
+            "photoUrl": "https://assets.website-files.com/61571d3b8fe2e30679056424/61571d3b8fe2e3a2920564bf_bitgo_logo.png",
+            "description": "Many believe that BitGo is the most secure and intelligent way to trade digital assets \nand that no one is better positioned to serve institutional investors in this space. \nToday, BitGo has over $64 billion of assets under custody, second only to Coinbase! \n\nIt’s that special, fast growing company that you'll have wanted to be a part \nof - Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, \nand Valor Equity Partners (who are all backers) seem to agree! Their strategic investment not only validates \nBitGo’s unique positioning to disrupt legacy financial systems, but also the market opportunity."
+          },
+          "title": "Senior Software Engineer, CuEx",
+          "description": "Long story short: Know anyone based out of the US with 5 years of experience with backend engineering, Javascript/Typescript, and experience with crypto/blockchain? We'd love to talk to them!\n\n--\n\nBitGo is the leader in digital asset financial services, providing institutional investors with liquidity, custody, and security solutions. In 2020, BitGo launched Prime Trading and Lending, as well as BitGo Portfolio and Tax, providing clients with a full-stack solution for digital assets. In 2018, it launched BitGo Trust Company, the first qualified custodian purpose-built for storing digital assets. BitGo processes over 20% of all global Bitcoin transactions and supports over 400 coins and tokens. BitGo’s customer base includes the world's largest cryptocurrency exchanges and institutional investors and spans more than 50 countries. BitGo is backed by Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, and Valor Equity Partners.\n\nBitGo is looking for a Senior Software Engineer to join our blockchain team and help us build a robust and scalable system to integrate new and existing blockchains.\n\nThis role can be worked remotely so long as your home base is in North America.",
+          "responsibilities": "- Work closely with different blockchain experts to improve functionality on a variety of projects for multiple coins\n- Develop enhancements and fix product features \n- Collaborate closely with the technical support team to detect trends among support tickets to identify common root causes\n- Develop tooling to automate the detection and resolution of inconsistencies, as well as automate root cause analysis of issues and inconsistencies.\n- Lead projects and mentor junior developers",
+          "requirements": "- At least 5 years of back-end, server-side software development\n- Great with unit and functional testing and debugging\n- Great at providing simple and extensible abstractions to complex systems.\n- Experience in Git/GitHub and branching methodologies, code review tools, CI tools, etc.\n- Bachelor’s degree in computer science, applied mathematics, or another technical discipline from a top university\n- Understanding of and strong interest in cryptocurrencies and blockchain\n- Great at algorithm design, problem solving, and complexity analysis\n- Ability to work independently in a fast-paced environment\n- Has lead projects and mentored junior developers",
+          "jobSkills": null,
+          "preferred": "- Strong programming skills in Javascript & Typescript\n- Understanding of and experience working in the blockchain industry\n- Experience with microservices and service-oriented architectures\n- Ability to work full-stack and familiarity with React and Databases (MongoDB)\n- Familiarity with Docker and Kubernetes",
+          "benefits": "- Strong programming skills in Javascript & Typescript\n- Understanding of and experience working in the blockchain industry\n- Experience with microservices and service-oriented architectures\n- Ability to work full-stack and familiarity with React and Databases (MongoDB)\n- Familiarity with Docker and Kubernetes",
+          "format": "full_time",
+          "date": "2022-05-05 03:37:38.687584 +0000 UTC",
+          "location": "United States - Remote",
+          "isRemote": false,
+          "currency": "$",
+          "minSalary": 180000,
+          "maxSalary": 200000,
+          "status": "active",
+          "field": "engineering",
+          "experience": "senior"
+        },
+        "applications": [
+          {
+            "id": "90b12855-d3d0-4b29-8609-bed669512478",
+            "date": "2022-05-10 20:56:41.27622 +0000 UTC",
+            "status": "rejected",
+            "notes": [],
+            "hire": null,
+            "rejection": null,
+            "fosterScore": 0,
+            "candidate": {
+              "id": "c883c262-d357-47d6-9eac-ebaece480858",
+              "name": "Andres Mechali",
+              "role": "candidate",
+              "photoUrl": "https://imagedelivery.net/bFAXoVj7gNHeh9C_oNxhIQ/3f9a1bbf-91a7-4cf9-5750-2d4ddf348100/public",
+              "linkedin": "http://linkedin.com/andres",
+              "location": "Buenos Aires, Argentina",
+              "field": [
+                "engineering"
+              ],
+              "jobTitle": "Software Engineer",
+              "companyName": "Evil Corp",
+              "walletInfo": {
+                "id": "4e1280ff-0b70-4e5b-9c84-2e0235001cbc",
+                "blockchain": "solana",
+                "walletAddress": "CYgotRU1mQBjELkPLU3YeLguu6FN58tyyKywu5DDmgUe"
+              },
+              "experience": "senior",
+              "candidateSkills": null,
+              "techSkills": [
+                "rust",
+                "solidity"
+              ],
+              "softSkills": [
+                "charisma"
+              ],
+              "about": "kadhsfi fiasdif asehfi salidflkasdlkf lkasdflijselifliasjefopi aslidfis dflkjSDF LKS dklfjSLAI FLKAJSklfj AKLFLKASDFHGFKJHkls dfg hsdjkhgklda lkg jlakdfgja kdlfhgkl dsaljkfg lkadfklg aksdlfglk adsflkg \nkadhsfi fiasdif asehfi salidflkasdlkf lkasdflijselifliasjefopi aslidfis dflkjSDF LKS dklfjSLAI FLKAJSklfj AKLFLKASDFHGFKJHkls dfg hsdjkhgklda lkg jlakdfgja kdlfhgkl dsaljkfg lkadfklg aksdlfglk adsflkg ",
+              "web": null,
+              "github": null,
+              "available": null
+            },
+            "jobAd": {
+              "id": "79811c76-b56c-4db2-bacb-9033ea466f5f",
+              "company": {
+                "id": "0ee88a70-5041-430e-9fbb-4ec2cd31ddcb",
+                "name": "BitGo",
+                "photoUrl": "https://assets.website-files.com/61571d3b8fe2e30679056424/61571d3b8fe2e3a2920564bf_bitgo_logo.png",
+                "description": "Many believe that BitGo is the most secure and intelligent way to trade digital assets \nand that no one is better positioned to serve institutional investors in this space. \nToday, BitGo has over $64 billion of assets under custody, second only to Coinbase! \n\nIt’s that special, fast growing company that you'll have wanted to be a part \nof - Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, \nand Valor Equity Partners (who are all backers) seem to agree! Their strategic investment not only validates \nBitGo’s unique positioning to disrupt legacy financial systems, but also the market opportunity."
+              },
+              "title": "Senior Software Engineer, CuEx",
+              "description": "Long story short: Know anyone based out of the US with 5 years of experience with backend engineering, Javascript/Typescript, and experience with crypto/blockchain? We'd love to talk to them!\n\n--\n\nBitGo is the leader in digital asset financial services, providing institutional investors with liquidity, custody, and security solutions. In 2020, BitGo launched Prime Trading and Lending, as well as BitGo Portfolio and Tax, providing clients with a full-stack solution for digital assets. In 2018, it launched BitGo Trust Company, the first qualified custodian purpose-built for storing digital assets. BitGo processes over 20% of all global Bitcoin transactions and supports over 400 coins and tokens. BitGo’s customer base includes the world's largest cryptocurrency exchanges and institutional investors and spans more than 50 countries. BitGo is backed by Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, and Valor Equity Partners.\n\nBitGo is looking for a Senior Software Engineer to join our blockchain team and help us build a robust and scalable system to integrate new and existing blockchains.\n\nThis role can be worked remotely so long as your home base is in North America.",
+              "responsibilities": "- Work closely with different blockchain experts to improve functionality on a variety of projects for multiple coins\n- Develop enhancements and fix product features \n- Collaborate closely with the technical support team to detect trends among support tickets to identify common root causes\n- Develop tooling to automate the detection and resolution of inconsistencies, as well as automate root cause analysis of issues and inconsistencies.\n- Lead projects and mentor junior developers",
+              "requirements": "- At least 5 years of back-end, server-side software development\n- Great with unit and functional testing and debugging\n- Great at providing simple and extensible abstractions to complex systems.\n- Experience in Git/GitHub and branching methodologies, code review tools, CI tools, etc.\n- Bachelor’s degree in computer science, applied mathematics, or another technical discipline from a top university\n- Understanding of and strong interest in cryptocurrencies and blockchain\n- Great at algorithm design, problem solving, and complexity analysis\n- Ability to work independently in a fast-paced environment\n- Has lead projects and mentored junior developers",
+              "jobSkills": null,
+              "preferred": "- Strong programming skills in Javascript & Typescript\n- Understanding of and experience working in the blockchain industry\n- Experience with microservices and service-oriented architectures\n- Ability to work full-stack and familiarity with React and Databases (MongoDB)\n- Familiarity with Docker and Kubernetes",
+              "benefits": "- Strong programming skills in Javascript & Typescript\n- Understanding of and experience working in the blockchain industry\n- Experience with microservices and service-oriented architectures\n- Ability to work full-stack and familiarity with React and Databases (MongoDB)\n- Familiarity with Docker and Kubernetes",
+              "format": "full_time",
+              "date": "2022-05-05 03:37:38.687584 +0000 UTC",
+              "location": "United States - Remote",
+              "isRemote": false,
+              "currency": "$",
+              "minSalary": 180000,
+              "maxSalary": 200000,
+              "status": "active",
+              "field": "engineering",
+              "experience": "senior"
+            }
+          },
+          {
+            "id": "a8bb3382-93cd-485e-8fa8-54bbb7adff54",
+            "date": "2022-07-20 01:28:41.659124 +0000 UTC",
+            "status": "in_review",
+            "notes": [],
+            "hire": null,
+            "rejection": null,
+            "fosterScore": 0,
+            "candidate": {
+              "id": "22aab6e2-a327-403d-9656-42b0a0aeb19c",
+              "name": "Alan Matison Turing",
+              "role": "candidate",
+              "photoUrl": "https://imagedelivery.net/bFAXoVj7gNHeh9C_oNxhIQ/cb293dff-d998-4aa7-fd38-e9e60a060600/public",
+              "linkedin": "https://www.linkedin.com/in/turing",
+              "location": "Bletchley Park,Inglaterra",
+              "field": [
+                "engineering"
+              ],
+              "jobTitle": "Cryptographer",
+              "companyName": "Boniface",
+              "walletInfo": {
+                "id": "042ee330-2c07-4df1-ac77-60e0cb52bbee",
+                "blockchain": "solana",
+                "walletAddress": "5kjo823BZXE81s2JJLNTcX8d8GMJ8DxuUKMzQqTJoVFr"
+              },
+              "experience": "senior",
+              "candidateSkills": null,
+              "techSkills": [
+                " Cryptography"
+              ],
+              "softSkills": [
+                "Polite"
+              ],
+              "about": "\nWell technically, I laid the foundations of modern computing, so by definition I am the father of computer science.",
+              "web": null,
+              "github": "@turing",
+              "available": null
+            },
+            "jobAd": {
+              "id": "79811c76-b56c-4db2-bacb-9033ea466f5f",
+              "company": {
+                "id": "0ee88a70-5041-430e-9fbb-4ec2cd31ddcb",
+                "name": "BitGo",
+                "photoUrl": "https://assets.website-files.com/61571d3b8fe2e30679056424/61571d3b8fe2e3a2920564bf_bitgo_logo.png",
+                "description": "Many believe that BitGo is the most secure and intelligent way to trade digital assets \nand that no one is better positioned to serve institutional investors in this space. \nToday, BitGo has over $64 billion of assets under custody, second only to Coinbase! \n\nIt’s that special, fast growing company that you'll have wanted to be a part \nof - Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, \nand Valor Equity Partners (who are all backers) seem to agree! Their strategic investment not only validates \nBitGo’s unique positioning to disrupt legacy financial systems, but also the market opportunity."
+              },
+              "title": "Senior Software Engineer, CuEx",
+              "description": "Long story short: Know anyone based out of the US with 5 years of experience with backend engineering, Javascript/Typescript, and experience with crypto/blockchain? We'd love to talk to them!\n\n--\n\nBitGo is the leader in digital asset financial services, providing institutional investors with liquidity, custody, and security solutions. In 2020, BitGo launched Prime Trading and Lending, as well as BitGo Portfolio and Tax, providing clients with a full-stack solution for digital assets. In 2018, it launched BitGo Trust Company, the first qualified custodian purpose-built for storing digital assets. BitGo processes over 20% of all global Bitcoin transactions and supports over 400 coins and tokens. BitGo’s customer base includes the world's largest cryptocurrency exchanges and institutional investors and spans more than 50 countries. BitGo is backed by Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, and Valor Equity Partners.\n\nBitGo is looking for a Senior Software Engineer to join our blockchain team and help us build a robust and scalable system to integrate new and existing blockchains.\n\nThis role can be worked remotely so long as your home base is in North America.",
+              "responsibilities": "- Work closely with different blockchain experts to improve functionality on a variety of projects for multiple coins\n- Develop enhancements and fix product features \n- Collaborate closely with the technical support team to detect trends among support tickets to identify common root causes\n- Develop tooling to automate the detection and resolution of inconsistencies, as well as automate root cause analysis of issues and inconsistencies.\n- Lead projects and mentor junior developers",
+              "requirements": "- At least 5 years of back-end, server-side software development\n- Great with unit and functional testing and debugging\n- Great at providing simple and extensible abstractions to complex systems.\n- Experience in Git/GitHub and branching methodologies, code review tools, CI tools, etc.\n- Bachelor’s degree in computer science, applied mathematics, or another technical discipline from a top university\n- Understanding of and strong interest in cryptocurrencies and blockchain\n- Great at algorithm design, problem solving, and complexity analysis\n- Ability to work independently in a fast-paced environment\n- Has lead projects and mentored junior developers",
+              "jobSkills": null,
+              "preferred": "- Strong programming skills in Javascript & Typescript\n- Understanding of and experience working in the blockchain industry\n- Experience with microservices and service-oriented architectures\n- Ability to work full-stack and familiarity with React and Databases (MongoDB)\n- Familiarity with Docker and Kubernetes",
+              "benefits": "- Strong programming skills in Javascript & Typescript\n- Understanding of and experience working in the blockchain industry\n- Experience with microservices and service-oriented architectures\n- Ability to work full-stack and familiarity with React and Databases (MongoDB)\n- Familiarity with Docker and Kubernetes",
+              "format": "full_time",
+              "date": "2022-05-05 03:37:38.687584 +0000 UTC",
+              "location": "United States - Remote",
+              "isRemote": false,
+              "currency": "$",
+              "minSalary": 180000,
+              "maxSalary": 200000,
+              "status": "active",
+              "field": "engineering",
+              "experience": "senior"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "data": {
+      "jobForCompany": {
+        "jobAd": {
+          "id": "223e0e4c-d4ca-47a0-ab5c-abd204bf3e35",
+          "company": {
+            "id": "0ee88a70-5041-430e-9fbb-4ec2cd31ddcb",
+            "name": "BitGo",
+            "photoUrl": "https://assets.website-files.com/61571d3b8fe2e30679056424/61571d3b8fe2e3a2920564bf_bitgo_logo.png",
+            "description": "Many believe that BitGo is the most secure and intelligent way to trade digital assets \nand that no one is better positioned to serve institutional investors in this space. \nToday, BitGo has over $64 billion of assets under custody, second only to Coinbase! \n\nIt’s that special, fast growing company that you'll have wanted to be a part \nof - Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, \nand Valor Equity Partners (who are all backers) seem to agree! Their strategic investment not only validates \nBitGo’s unique positioning to disrupt legacy financial systems, but also the market opportunity."
+          },
+          "title": "Engineering Team Lead, Blockchain Integration",
+          "description": "BitGo is looking for a **Senior Software Engineer (Team Lead)** to join our blockchain integration team and help us build\na robust and scalable system to integrate new and existing blockchains .\nThis role can be worked remotely so long as your home base is in North America.",
+          "responsibilities": "- Design and build scalable, well abstracted, and robust APIs, libraries, and services to integration blockchains into our custody platforms. \n- Own functionality and scalability features by taking responsibility from research, implementation to deployment.\n- Build integration libraries and SDKs to interface with our server and APIs\n- Expose and document functionality to the UI, third-party developers, and our internal and external tooling\n- Collaborate closely with all engineering teams and product managers to ensure consistency in understanding of technical requirements and overall work quality\n- Provide mentorship to your peers in the broader engineering team through code reviews and education on best practices\n- Lead product development cycle, manage team resources and milestones. \n- Follow or champion for development practices that reinforces ownership, craftsmanship and growth ",
+          "requirements": "- At least 5 years of back-end, server-side software development\n- Strong experience with TypeScript/Node.JS\n- Great with unit and functional testing and debugging\n- Great at providing simple and extensible abstractions to complex systems.\n- Experience in Git/GitHub and branching methodologies, code review tools, CI tools, etc.\n- Bachelor’s degree in computer science, applied mathematics, or another technical discipline from a top university\n- Understanding of and strong interest in cryptocurrencies and blockchain\n- Great at algorithm design, problem solving, and complexity analysis\n- Ability to work independently in a fast-paced environment\n- Previous experience in leading or managing an engineering team ",
+          "jobSkills": null,
+          "preferred": "- Understanding of and experience working in the blockchain industry\n- Understanding of and experience working in the security industry \n- Experience with microservices and service-oriented architectures\n- Ability to work full-stack and familiarity with React and Databases (MongoDB)\n- Familiarity with Docker and Kubernetes",
+          "benefits": "- Competitive base salary, bonus and stock options\n- 100% company paid health insurance for employee, partner and dependents\n- Up to 4% 401k company match\n- Paid parental leave, Paid vacation\n- Free commuter/parking pass; 5 min from Caltrain\n- Free custom lunches, dinners and snacks \n- Computer equipment and workplace furniture to suit your needs\n- Great colleagues and inspiring startup environment",
+          "format": "full_time",
+          "date": "2022-05-10 20:49:18.344897 +0000 UTC",
+          "location": "United States, Canada - Remote",
+          "isRemote": false,
+          "currency": "$",
+          "minSalary": 200000,
+          "maxSalary": 300000,
+          "status": "finished",
+          "field": "engineering",
+          "experience": "senior"
+        },
+        "applications": [
+          {
+            "id": "ee0d322c-b912-41eb-9d71-aff443b91637",
+            "date": "2022-05-27 21:58:51.726212 +0000 UTC",
+            "status": "rejected",
+            "notes": [],
+            "hire": null,
+            "rejection": null,
+            "fosterScore": 0,
+            "candidate": {
+              "id": "f89e8483-cf1d-4669-8040-31a242fcca2c",
+              "name": "Alexis Sanchez",
+              "role": "candidate",
+              "photoUrl": "https://imagedelivery.net/bFAXoVj7gNHeh9C_oNxhIQ/497c42e4-cf02-403f-ad5a-68dbd3f7ba00/public",
+              "linkedin": "linkedin.com/in/eduardo-jose-bravo-bravo/",
+              "location": "Santiago de Chile, Chile ",
+              "field": [
+                "engineering",
+                "operations"
+              ],
+              "jobTitle": "SRE Engineer",
+              "companyName": "El halcon milenario",
+              "walletInfo": null,
+              "experience": "mid_level",
+              "candidateSkills": null,
+              "techSkills": [
+                "Posgresql",
+                "React"
+              ],
+              "softSkills": [
+                "Empatico",
+                "Comunicativo"
+              ],
+              "about": "Apasionado por la programacion y el futbol",
+              "web": "https://ncc-1701-v3.github.io/Learning_React_Components/",
+              "github": "github.com/NCC-1701-v3",
+              "available": null
+            },
+            "jobAd": {
+              "id": "223e0e4c-d4ca-47a0-ab5c-abd204bf3e35",
+              "company": {
+                "id": "0ee88a70-5041-430e-9fbb-4ec2cd31ddcb",
+                "name": "BitGo",
+                "photoUrl": "https://assets.website-files.com/61571d3b8fe2e30679056424/61571d3b8fe2e3a2920564bf_bitgo_logo.png",
+                "description": "Many believe that BitGo is the most secure and intelligent way to trade digital assets \nand that no one is better positioned to serve institutional investors in this space. \nToday, BitGo has over $64 billion of assets under custody, second only to Coinbase! \n\nIt’s that special, fast growing company that you'll have wanted to be a part \nof - Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, \nand Valor Equity Partners (who are all backers) seem to agree! Their strategic investment not only validates \nBitGo’s unique positioning to disrupt legacy financial systems, but also the market opportunity."
+              },
+              "title": "Engineering Team Lead, Blockchain Integration",
+              "description": "BitGo is looking for a **Senior Software Engineer (Team Lead)** to join our blockchain integration team and help us build\na robust and scalable system to integrate new and existing blockchains .\nThis role can be worked remotely so long as your home base is in North America.",
+              "responsibilities": "- Design and build scalable, well abstracted, and robust APIs, libraries, and services to integration blockchains into our custody platforms. \n- Own functionality and scalability features by taking responsibility from research, implementation to deployment.\n- Build integration libraries and SDKs to interface with our server and APIs\n- Expose and document functionality to the UI, third-party developers, and our internal and external tooling\n- Collaborate closely with all engineering teams and product managers to ensure consistency in understanding of technical requirements and overall work quality\n- Provide mentorship to your peers in the broader engineering team through code reviews and education on best practices\n- Lead product development cycle, manage team resources and milestones. \n- Follow or champion for development practices that reinforces ownership, craftsmanship and growth ",
+              "requirements": "- At least 5 years of back-end, server-side software development\n- Strong experience with TypeScript/Node.JS\n- Great with unit and functional testing and debugging\n- Great at providing simple and extensible abstractions to complex systems.\n- Experience in Git/GitHub and branching methodologies, code review tools, CI tools, etc.\n- Bachelor’s degree in computer science, applied mathematics, or another technical discipline from a top university\n- Understanding of and strong interest in cryptocurrencies and blockchain\n- Great at algorithm design, problem solving, and complexity analysis\n- Ability to work independently in a fast-paced environment\n- Previous experience in leading or managing an engineering team ",
+              "jobSkills": null,
+              "preferred": "- Understanding of and experience working in the blockchain industry\n- Understanding of and experience working in the security industry \n- Experience with microservices and service-oriented architectures\n- Ability to work full-stack and familiarity with React and Databases (MongoDB)\n- Familiarity with Docker and Kubernetes",
+              "benefits": "- Competitive base salary, bonus and stock options\n- 100% company paid health insurance for employee, partner and dependents\n- Up to 4% 401k company match\n- Paid parental leave, Paid vacation\n- Free commuter/parking pass; 5 min from Caltrain\n- Free custom lunches, dinners and snacks \n- Computer equipment and workplace furniture to suit your needs\n- Great colleagues and inspiring startup environment",
+              "format": "full_time",
+              "date": "2022-05-10 20:49:18.344897 +0000 UTC",
+              "location": "United States, Canada - Remote",
+              "isRemote": false,
+              "currency": "$",
+              "minSalary": 200000,
+              "maxSalary": 300000,
+              "status": "finished",
+              "field": "engineering",
+              "experience": "senior"
+            }
+          },
+          {
+            "id": "e97ae1ed-98d8-4baf-8272-488f017d8944",
+            "date": "2022-07-05 10:34:16.145856 +0000 UTC",
+            "status": "in_review",
+            "notes": [],
+            "hire": null,
+            "rejection": null,
+            "fosterScore": 0,
+            "candidate": {
+              "id": "77e27a51-f4ba-4550-9fa7-df3bc7df320d",
+              "name": "Eduardo Bravo",
+              "role": "candidate",
+              "photoUrl": "https://imagedelivery.net/bFAXoVj7gNHeh9C_oNxhIQ/eb9c7796-0f9d-4829-84d6-15645daf0600/public",
+              "linkedin": "linkedin.com/eduardob",
+              "location": "Merida, Venezuela",
+              "field": [
+                "engineering",
+                "product"
+              ],
+              "jobTitle": "Software Engineer",
+              "companyName": "USS Enterprise",
+              "walletInfo": null,
+              "experience": "senior",
+              "candidateSkills": null,
+              "techSkills": [
+                "Postgresql",
+                "Rust"
+              ],
+              "softSkills": [
+                "Sociable "
+              ],
+              "about": "Tengo la vision, de lograr emparejar las desigualdades sociales a través de la tecnología ",
+              "web": null,
+              "github": "github.com/edb",
+              "available": null
+            },
+            "jobAd": {
+              "id": "223e0e4c-d4ca-47a0-ab5c-abd204bf3e35",
+              "company": {
+                "id": "0ee88a70-5041-430e-9fbb-4ec2cd31ddcb",
+                "name": "BitGo",
+                "photoUrl": "https://assets.website-files.com/61571d3b8fe2e30679056424/61571d3b8fe2e3a2920564bf_bitgo_logo.png",
+                "description": "Many believe that BitGo is the most secure and intelligent way to trade digital assets \nand that no one is better positioned to serve institutional investors in this space. \nToday, BitGo has over $64 billion of assets under custody, second only to Coinbase! \n\nIt’s that special, fast growing company that you'll have wanted to be a part \nof - Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, \nand Valor Equity Partners (who are all backers) seem to agree! Their strategic investment not only validates \nBitGo’s unique positioning to disrupt legacy financial systems, but also the market opportunity."
+              },
+              "title": "Engineering Team Lead, Blockchain Integration",
+              "description": "BitGo is looking for a **Senior Software Engineer (Team Lead)** to join our blockchain integration team and help us build\na robust and scalable system to integrate new and existing blockchains .\nThis role can be worked remotely so long as your home base is in North America.",
+              "responsibilities": "- Design and build scalable, well abstracted, and robust APIs, libraries, and services to integration blockchains into our custody platforms. \n- Own functionality and scalability features by taking responsibility from research, implementation to deployment.\n- Build integration libraries and SDKs to interface with our server and APIs\n- Expose and document functionality to the UI, third-party developers, and our internal and external tooling\n- Collaborate closely with all engineering teams and product managers to ensure consistency in understanding of technical requirements and overall work quality\n- Provide mentorship to your peers in the broader engineering team through code reviews and education on best practices\n- Lead product development cycle, manage team resources and milestones. \n- Follow or champion for development practices that reinforces ownership, craftsmanship and growth ",
+              "requirements": "- At least 5 years of back-end, server-side software development\n- Strong experience with TypeScript/Node.JS\n- Great with unit and functional testing and debugging\n- Great at providing simple and extensible abstractions to complex systems.\n- Experience in Git/GitHub and branching methodologies, code review tools, CI tools, etc.\n- Bachelor’s degree in computer science, applied mathematics, or another technical discipline from a top university\n- Understanding of and strong interest in cryptocurrencies and blockchain\n- Great at algorithm design, problem solving, and complexity analysis\n- Ability to work independently in a fast-paced environment\n- Previous experience in leading or managing an engineering team ",
+              "jobSkills": null,
+              "preferred": "- Understanding of and experience working in the blockchain industry\n- Understanding of and experience working in the security industry \n- Experience with microservices and service-oriented architectures\n- Ability to work full-stack and familiarity with React and Databases (MongoDB)\n- Familiarity with Docker and Kubernetes",
+              "benefits": "- Competitive base salary, bonus and stock options\n- 100% company paid health insurance for employee, partner and dependents\n- Up to 4% 401k company match\n- Paid parental leave, Paid vacation\n- Free commuter/parking pass; 5 min from Caltrain\n- Free custom lunches, dinners and snacks \n- Computer equipment and workplace furniture to suit your needs\n- Great colleagues and inspiring startup environment",
+              "format": "full_time",
+              "date": "2022-05-10 20:49:18.344897 +0000 UTC",
+              "location": "United States, Canada - Remote",
+              "isRemote": false,
+              "currency": "$",
+              "minSalary": 200000,
+              "maxSalary": 300000,
+              "status": "finished",
+              "field": "engineering",
+              "experience": "senior"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "data": {
+      "jobForCompany": {
+        "jobAd": {
+          "id": "90089e3e-ff02-436e-af2a-2bac655c2650",
+          "company": {
+            "id": "0ee88a70-5041-430e-9fbb-4ec2cd31ddcb",
+            "name": "BitGo",
+            "photoUrl": "https://assets.website-files.com/61571d3b8fe2e30679056424/61571d3b8fe2e3a2920564bf_bitgo_logo.png",
+            "description": "Many believe that BitGo is the most secure and intelligent way to trade digital assets \nand that no one is better positioned to serve institutional investors in this space. \nToday, BitGo has over $64 billion of assets under custody, second only to Coinbase! \n\nIt’s that special, fast growing company that you'll have wanted to be a part \nof - Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, \nand Valor Equity Partners (who are all backers) seem to agree! Their strategic investment not only validates \nBitGo’s unique positioning to disrupt legacy financial systems, but also the market opportunity."
+          },
+          "title": "Senior Frontend Engineer, Blockchain Team",
+          "description": "We are searching for a **Senior Frontend Engineer** to work in the Blockchain unit along with our Bitcoin, Ethereum, DeFi, Blockchain OS, and Staking teams. \nAs a Senior Frontend Engineer, you will help the teams develop the UI and UX for entirely new projects and maintain the current ones.\n\nWe are looking for teammates who share and practice our values: open communication, transparency, taking ownership, \nand a high level of craftsmanship. We are looking for coworkers who share our vision and mission: deliver trust in digital assets. \n\n",
+          "responsibilities": "- Work closely with different blockchain experts to improve our UI functionality on a variety of projects for multiple coins\n- Collaborate closely with different blockchain experts and product managers to plan and develop entirely new UIs for upcoming projects\n- Develop features with clean, maintainable, and reusable code\n- Improve existing user experiences\n- Cross-team communications with stakeholders to understand implementation requirements and limitations\n- Provide mentorship to your peers in the broader engineering team through code reviews and education on best practices\n- Provide maintenance support and enhance performance to existing applications",
+          "requirements": "- At least 5 years of frontend software development\n- Strong experience with React\n- Advanced knowledge of JavaScript, CSS, and HTML\n- Experience working with modern JavaScript frameworks\n- Experience working with Node.js and Express applications\n- Experience working with design systems\n- Experience with unit, integration, and end-to-end testing\n- Ability to work independently in a fast-paced environment",
+          "jobSkills": [
+            "nodejs",
+            "javascript",
+            "react",
+            "css",
+            "html",
+            "graphql"
+          ],
+          "preferred": "- A portfolio showcasing past work\n- Understanding of and strong interest in cryptocurrencies and blockchain\n- Experience with blockchain in a work environment (e.g. previous internship/job at a cryptocurrency company)\n- Experience working with GraphQL/Apollo Client\n- Formik",
+          "benefits": "- Competitive base salary, bonus and stock options\n- 100% company paid health insurance for employee, partner and dependents\n- Up to 4% 401k company match\n- Paid parental leave, Paid vacation\n- Free commuter/parking pass; 5 min from Caltrain\n- Free custom lunches, dinners and snacks \n- Computer equipment and workplace furniture to suit your needs\n- Great colleagues and inspiring startup environment",
+          "format": "full_time",
+          "date": "2022-05-10 21:08:43.504601 +0000 UTC",
+          "location": "United States, Canada - Remote",
+          "isRemote": false,
+          "currency": "$",
+          "minSalary": 150000,
+          "maxSalary": 200000,
+          "status": "active",
+          "field": "engineering",
+          "experience": "senior"
+        },
+        "applications": [
+          {
+            "id": "6d02d019-0653-414d-bfe8-bde506086651",
+            "date": "2022-07-23 13:52:04.804851 +0000 UTC",
+            "status": "in_review",
+            "notes": [],
+            "hire": null,
+            "rejection": null,
+            "fosterScore": 0,
+            "candidate": {
+              "id": "77e27a51-f4ba-4550-9fa7-df3bc7df320d",
+              "name": "Eduardo Bravo",
+              "role": "candidate",
+              "photoUrl": "https://imagedelivery.net/bFAXoVj7gNHeh9C_oNxhIQ/eb9c7796-0f9d-4829-84d6-15645daf0600/public",
+              "linkedin": "linkedin.com/eduardob",
+              "location": "Merida, Venezuela",
+              "field": [
+                "engineering",
+                "product"
+              ],
+              "jobTitle": "Software Engineer",
+              "companyName": "USS Enterprise",
+              "walletInfo": null,
+              "experience": "senior",
+              "candidateSkills": null,
+              "techSkills": [
+                "Postgresql",
+                "Rust"
+              ],
+              "softSkills": [
+                "Sociable "
+              ],
+              "about": "Tengo la vision, de lograr emparejar las desigualdades sociales a través de la tecnología ",
+              "web": null,
+              "github": "github.com/edb",
+              "available": null
+            },
+            "jobAd": {
+              "id": "90089e3e-ff02-436e-af2a-2bac655c2650",
+              "company": {
+                "id": "0ee88a70-5041-430e-9fbb-4ec2cd31ddcb",
+                "name": "BitGo",
+                "photoUrl": "https://assets.website-files.com/61571d3b8fe2e30679056424/61571d3b8fe2e3a2920564bf_bitgo_logo.png",
+                "description": "Many believe that BitGo is the most secure and intelligent way to trade digital assets \nand that no one is better positioned to serve institutional investors in this space. \nToday, BitGo has over $64 billion of assets under custody, second only to Coinbase! \n\nIt’s that special, fast growing company that you'll have wanted to be a part \nof - Goldman Sachs, Craft Ventures, Digital Currency Group, DRW, Galaxy Digital Ventures, Redpoint Ventures, \nand Valor Equity Partners (who are all backers) seem to agree! Their strategic investment not only validates \nBitGo’s unique positioning to disrupt legacy financial systems, but also the market opportunity."
+              },
+              "title": "Senior Frontend Engineer, Blockchain Team",
+              "description": "We are searching for a **Senior Frontend Engineer** to work in the Blockchain unit along with our Bitcoin, Ethereum, DeFi, Blockchain OS, and Staking teams. \nAs a Senior Frontend Engineer, you will help the teams develop the UI and UX for entirely new projects and maintain the current ones.\n\nWe are looking for teammates who share and practice our values: open communication, transparency, taking ownership, \nand a high level of craftsmanship. We are looking for coworkers who share our vision and mission: deliver trust in digital assets. \n\n",
+              "responsibilities": "- Work closely with different blockchain experts to improve our UI functionality on a variety of projects for multiple coins\n- Collaborate closely with different blockchain experts and product managers to plan and develop entirely new UIs for upcoming projects\n- Develop features with clean, maintainable, and reusable code\n- Improve existing user experiences\n- Cross-team communications with stakeholders to understand implementation requirements and limitations\n- Provide mentorship to your peers in the broader engineering team through code reviews and education on best practices\n- Provide maintenance support and enhance performance to existing applications",
+              "requirements": "- At least 5 years of frontend software development\n- Strong experience with React\n- Advanced knowledge of JavaScript, CSS, and HTML\n- Experience working with modern JavaScript frameworks\n- Experience working with Node.js and Express applications\n- Experience working with design systems\n- Experience with unit, integration, and end-to-end testing\n- Ability to work independently in a fast-paced environment",
+              "jobSkills": [
+                "nodejs",
+                "javascript",
+                "react",
+                "css",
+                "html",
+                "graphql"
+              ],
+              "preferred": "- A portfolio showcasing past work\n- Understanding of and strong interest in cryptocurrencies and blockchain\n- Experience with blockchain in a work environment (e.g. previous internship/job at a cryptocurrency company)\n- Experience working with GraphQL/Apollo Client\n- Formik",
+              "benefits": "- Competitive base salary, bonus and stock options\n- 100% company paid health insurance for employee, partner and dependents\n- Up to 4% 401k company match\n- Paid parental leave, Paid vacation\n- Free commuter/parking pass; 5 min from Caltrain\n- Free custom lunches, dinners and snacks \n- Computer equipment and workplace furniture to suit your needs\n- Great colleagues and inspiring startup environment",
+              "format": "full_time",
+              "date": "2022-05-10 21:08:43.504601 +0000 UTC",
+              "location": "United States, Canada - Remote",
+              "isRemote": false,
+              "currency": "$",
+              "minSalary": 150000,
+              "maxSalary": 200000,
+              "status": "active",
+              "field": "engineering",
+              "experience": "senior"
+            }
+          }
+        ]
+      }
+    }
+  }
+]
