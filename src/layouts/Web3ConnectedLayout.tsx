@@ -20,7 +20,7 @@ const Web3ConnectedLayout = () => {
   return (
     <div className="bg-app text-white h-screen w-screen grid grid-rows-[auto,1fr] overflow-hidden">
       <Navbar />
-      <div className="overflow-y-scroll">
+      <div className="overflow-hidden">
         <Outlet />
       </div>
     </div>

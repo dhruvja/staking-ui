@@ -4,6 +4,10 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      colors: {
+        "app-bg": "#121121",
+        "app-border": "#4A465B",
+      },
       fontFamily: {
         sans: ["Roboto Mono", ...defaultTheme.fontFamily.sans],
       },

@@ -3,7 +3,7 @@ export const paths = {
   connect: "/connect",
   applications: "/applications",
   application: {
-    route: "/applications/:id",
+    route: "/applications/:applicationId",
     resolve: (id: string) => `/applications/${id}`,
   },
 };

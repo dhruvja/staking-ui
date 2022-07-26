@@ -5,6 +5,7 @@ import ApplicationPage from "src/pages/ApplicationPage";
 import ApplicationsPage from "src/pages/ApplicationsPage";
 import ConnectPage from "src/pages/ConnectPage";
 import Web3ConnectedLayout from "./layouts/Web3ConnectedLayout";
+import ApplicationsSidebarLayout from "./layouts/ApplicationsSidebarLayout";
 
 const AppRoutes = () => {
   return (
@@ -14,8 +15,14 @@ const AppRoutes = () => {
 
         <Route element={<Web3ConnectedLayout />}>
           <Route path={paths.home} element={<HomePage />} />
-          <Route path={paths.applications} element={<ApplicationsPage />} />
-          <Route path={paths.application.route} element={<ApplicationPage />} />
+
+          <Route element={<ApplicationsSidebarLayout />}>
+            <Route path={paths.applications} element={<ApplicationsPage />} />
+            <Route
+              path={paths.application.route}
+              element={<ApplicationPage />}
+            />
+          </Route>
         </Route>
       </Routes>
     </div>

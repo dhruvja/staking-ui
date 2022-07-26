@@ -17,7 +17,7 @@ import {
 } from "src/utils/web3";
 
 const ApplicationPage = () => {
-  const applicationId = useParams().id ?? "";
+  const applicationId = useParams().applicationId ?? "";
   const application = useApplication(applicationId);
   const [amount, setAmount] = useState<number>(0);
   const wallet = useAnchorWallet();
