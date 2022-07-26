@@ -8,7 +8,8 @@ const ConnectPage = () => {
   const location = useLocation();
 
   if (connected) {
-    const path = (location.state as { from?: string })?.from || paths.home;
+    const path =
+      (location.state as { from?: string })?.from || paths.home.resolve();
     return <Navigate to={path} />;
   }
 

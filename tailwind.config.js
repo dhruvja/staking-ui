@@ -10,6 +10,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ["Roboto Mono", ...defaultTheme.fontFamily.sans],
+        sora: "'Sora'",
       },
       backgroundColor: {
         app: "#121121",

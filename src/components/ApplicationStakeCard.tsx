@@ -13,7 +13,7 @@ const ApplicationStakeCard = ({
     <Link
       to={paths.application.resolve(application.id)}
       key={application.id}
-      className="card p-4 flex gap-6 items-center"
+      className="card px-4 flex gap-6 items-center h-28"
     >
       <Img
         src={application.jobAd.company.photoUrl}
@@ -22,7 +22,7 @@ const ApplicationStakeCard = ({
         error={jobPlaceholderImage}
         className="rounded-md object-cover w-[70px] h-[70px]"
       />
-      <div className="text-sm">
+      <div className="text-sm text-ellipsis overflow-hidden">
         <span>{application.candidate.jobTitle} applied to the position</span>{" "}
         <span className="font-semibold">{application.jobAd.title}</span>{" "}
         <span>at</span>{" "}
