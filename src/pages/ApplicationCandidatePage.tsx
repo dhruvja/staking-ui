@@ -123,7 +123,7 @@ const ApplicationCandidatePage = () => {
       <div className="mt-11 flex flex-col gap-6">
         <div className="bg-card p-4 rounded-2xl flex flex-col gap-3">
           <h5 className="font-sora text-[#D0C9D6] text-sm">About:</h5>
-          <p className="text-xs">{application.candidate.about}</p>
+          <p className="text-xs">{application.candidate.about ?? "-"}</p>
         </div>
       </div>
     </div>
