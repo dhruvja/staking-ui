@@ -15,7 +15,7 @@ import {
 } from "src/utils/web3";
 import { paths } from "src/pagesPaths";
 import { ReactComponent as BackArrowIcon } from "src/images/backArrow.svg";
-import { ReactComponent as SolIcon } from "src/images/solIcon.svg";
+import { ReactComponent as SolIcon } from "src/images/usdcIcon.svg";
 
 const ApplicationStake = () => {
   const [amount, setAmount] = useState<number | "">("");
@@ -200,8 +200,8 @@ const ApplicationStake = () => {
           <div className="flex flex-col items-end">
             <span className="font-sora text-sm text-[#928CA6]">Balance: 0</span>
             <div className="font-medium text-2xl flex gap-2 items-center">
-              <SolIcon />
-              SOL
+              <SolIcon width={23} height={23} />
+              USDC
             </div>
           </div>
         </div>
