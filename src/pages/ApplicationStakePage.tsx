@@ -15,6 +15,7 @@ import {
 } from "src/utils/web3";
 import { paths } from "src/pagesPaths";
 import { ReactComponent as BackArrowIcon } from "src/images/backArrow.svg";
+import { ReactComponent as SolIcon } from "src/images/solIcon.svg";
 
 const ApplicationStake = () => {
   const [amount, setAmount] = useState<number | "">("");
@@ -172,15 +173,15 @@ const ApplicationStake = () => {
       </div>
 
       <div className="mt-10">
-        <div className="border border-[#C4C4C4] rounded-md px-4 py-2">
-          <div className="font-sora text-sm text-[#928CA6] flex justify-between">
-            <span>Total Stake</span>
-            <span>Balance: 0</span>
-          </div>
-          <div className="flex justify-between">
+        <div className="border border-[#C4C4C4] rounded-md px-4 py-2 grid grid-cols-[1fr,auto] gap-2">
+          <div className="flex flex-col items-start">
+            <span className="font-sora text-sm text-[#928CA6]">
+              Total Stake
+            </span>
             <input
               type="text"
               placeholder="0"
+              className="bg-inherit text-[#5362E9] font-medium text-2xl appearance-none focus:outline-none w-full"
               value={amount}
               onChange={(e) => {
                 if (e.target.value === "") {
@@ -192,9 +193,14 @@ const ApplicationStake = () => {
                   setAmount(Number(e.target.value));
                 }
               }}
-              className="bg-inherit text-[#5362E9] font-medium text-2xl appearance-none focus:outline-none"
             />
-            <div className="font-medium text-2xl">SOL</div>
+          </div>
+          <div className="flex flex-col items-end">
+            <span className="font-sora text-sm text-[#928CA6]">Balance: 0</span>
+            <div className="font-medium text-2xl flex gap-2 items-center">
+              <SolIcon />
+              SOL
+            </div>
           </div>
         </div>
       </div>

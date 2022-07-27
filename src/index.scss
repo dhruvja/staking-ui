@@ -47,8 +47,17 @@
       #e63d70 126.83%
     );
 
-    &:hover:enabled {
+    &:hover {
       background: #9a2ed1;
+    }
+
+    &:disabled:hover {
+      background: linear-gradient(
+        90deg,
+        #5362e9 29.17%,
+        #9a2ed1 71.14%,
+        #e63d70 126.83%
+      );
     }
 
     @apply rounded-3xl

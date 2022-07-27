@@ -28,6 +28,7 @@ const ApplicationsSidebarLayout = () => {
             >
               <input
                 type="checkbox"
+                readOnly
                 checked={application.id === applicationId}
                 className="w-2 h-2 appearance-none bg-violet-600 rounded-full absolute -left-3 top-1/2 -translate-y-1/2 hidden checked:block"
               />

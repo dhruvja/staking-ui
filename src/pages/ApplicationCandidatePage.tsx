@@ -83,37 +83,41 @@ const ApplicationCandidatePage = () => {
       <div className="mt-10 flex flex-col gap-4">
         <CandidateTags candidate={application.candidate} />
 
-        <div className="flex gap-2 items-center">
-          <span className="text-sm font-normal font-sora text-[#D0C9D6]">
-            Soft skills:
-          </span>
-          <div className="flex flex-nowrap overflow-scroll uppercase gap-[6px] text-[12px] leading-[16px] font-roboto">
-            {application.candidate.softSkills.map((skill) => (
-              <div
-                key={skill}
-                className="flex whitespace-nowrap items-center justify-center h-[18px] px-2 text-center bg-[#5362E9] rounded-sm"
-              >
-                {skill}
-              </div> /* Auto layout */
-            ))}
+        {application.candidate.softSkills.length > 0 && (
+          <div className="flex gap-2 items-center">
+            <span className="text-sm font-normal font-sora text-[#D0C9D6]">
+              Soft skills:
+            </span>
+            <div className="flex flex-nowrap overflow-scroll uppercase gap-[6px] text-[12px] leading-[16px] font-roboto">
+              {application.candidate.softSkills.map((skill) => (
+                <div
+                  key={skill}
+                  className="flex whitespace-nowrap items-center justify-center h-[18px] px-2 text-center bg-[#5362E9] rounded-sm"
+                >
+                  {skill}
+                </div> /* Auto layout */
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
-        <div className="flex gap-2 items-center">
-          <span className="text-sm font-normal font-sora text-[#D0C9D6]">
-            Tech skills:
-          </span>
-          <div className="flex flex-nowrap overflow-scroll uppercase gap-[6px] text-[12px] leading-[16px] font-roboto">
-            {application.candidate.techSkills.map((skill) => (
-              <div
-                key={skill}
-                className="flex whitespace-nowrap items-center justify-center h-[18px] px-2 text-center bg-[#5362E9] rounded-sm"
-              >
-                {skill}
-              </div> /* Auto layout */
-            ))}
+        {application.candidate.techSkills.length > 0 && (
+          <div className="flex gap-2 items-center">
+            <span className="text-sm font-normal font-sora text-[#D0C9D6]">
+              Tech skills:
+            </span>
+            <div className="flex flex-nowrap overflow-scroll uppercase gap-[6px] text-[12px] leading-[16px] font-roboto">
+              {application.candidate.techSkills.map((skill) => (
+                <div
+                  key={skill}
+                  className="flex whitespace-nowrap items-center justify-center h-[18px] px-2 text-center bg-[#5362E9] rounded-sm"
+                >
+                  {skill}
+                </div> /* Auto layout */
+              ))}
+            </div>
           </div>
-        </div>
+        )}
       </div>
 
       <div className="mt-11 flex flex-col gap-6">
@@ -148,7 +152,10 @@ const CandidateTags = ({ candidate }: CandidateTagsProps): JSX.Element => {
           .map((tag) => {
             if (tag) {
               return (
-                <div className="flex whitespace-nowrap items-center justify-center h-[18px] px-2 text-center bg-[#5362E9] rounded-sm">
+                <div
+                  key={tag}
+                  className="flex whitespace-nowrap items-center justify-center h-[18px] px-2 text-center bg-[#5362E9] rounded-sm"
+                >
                   {tag.replaceAll("_", " ")}
                 </div>
               );

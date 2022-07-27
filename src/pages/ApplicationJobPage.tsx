@@ -101,7 +101,7 @@ const ApplicationJobPage = () => {
       <div className="mt-10 flex flex-col gap-4">
         <JobTags jobAd={application.jobAd} />
 
-        {application.jobAd.jobSkills && (
+        {application.jobAd.jobSkills && application.jobAd.jobSkills.length > 0 && (
           <div className="flex gap-2 items-center">
             <span className="text-sm font-normal font-sora text-[#D0C9D6]">
               Skills:
@@ -113,7 +113,7 @@ const ApplicationJobPage = () => {
                   className="flex whitespace-nowrap items-center justify-center h-[18px] px-2 text-center bg-[#5362E9] rounded-sm"
                 >
                   {skill}
-                </div> /* Auto layout */
+                </div>
               ))}
             </div>
           </div>
@@ -179,7 +179,10 @@ const JobTags = ({ jobAd }: JobTagsProps): JSX.Element => {
           .map((tag) => {
             if (tag) {
               return (
-                <div className="flex whitespace-nowrap items-center justify-center h-[18px] px-2 text-center bg-[#5362E9] rounded-sm">
+                <div
+                  key={tag}
+                  className="flex whitespace-nowrap items-center justify-center h-[18px] px-2 text-center bg-[#5362E9] rounded-sm"
+                >
                   {tag.replaceAll("_", " ")}
                 </div>
               );
