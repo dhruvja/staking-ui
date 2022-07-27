@@ -1,7 +1,7 @@
 import { useAnchorWallet } from "@solana/wallet-adapter-react";
 import { PublicKey } from "@solana/web3.js";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import * as anchor from "@project-serum/anchor";
 import * as spl from "@solana/spl-token";
 import useApplication from "src/hooks/useApplication";
@@ -13,9 +13,11 @@ import {
   getCandidateStakingProgram,
   tokenMint,
 } from "src/utils/web3";
+import { paths } from "src/pagesPaths";
+import { ReactComponent as BackArrowIcon } from "src/images/backArrow.svg";
 
 const ApplicationStake = () => {
-  const [amount, setAmount] = useState<number>(0);
+  const [amount, setAmount] = useState<number | "">("");
   const wallet = useAnchorWallet();
   const provider = useProvider();
 
@@ -27,6 +29,7 @@ const ApplicationStake = () => {
   }
 
   const handleStake = async () => {
+    if (amount === "" || amount === 0) return;
     const applicationProgram = getApplicationProgram(provider);
     const jobProgram = getJobProgram(provider);
     const generalProgram = getGeneralProgram(provider);
@@ -149,21 +152,66 @@ const ApplicationStake = () => {
   };
 
   return (
-    <div>
-      <h2 className="text-xl">Stake</h2>
-      <div className="flex gap-4">
-        <input
-          type="number"
-          placeholder="0"
-          value={amount}
-          onChange={(e) => setAmount(Number(e.target.value))}
-          className="bg-inherit border border-[#C4C4C4] p-3 rounded-md"
-        />
+    <div className="p-10">
+      <div className="flex gap-5 items-center">
+        <Link
+          to={paths.application.resolve(application.id)}
+          className="w-5 h-5"
+        >
+          <BackArrowIcon />
+        </Link>
+        <h2 className="font-sora text-5xl font-semibold text-gradient w-fit">
+          Stake on a Job Post
+        </h2>
+      </div>
+      <div className="mt-5 font-sora text-sm">
+        Doing this you increase the chance ullamco est sit aliqua dolor do amet
+        sint. Info about APY. Velit officia consequat duis enim velit mollit.
+        Exercitation veniam consequat sunt nostrud amet. Exercitation veniam
+        consequat sunt nostrud amet.
+      </div>
+
+      <div className="mt-10">
+        <div className="border border-[#C4C4C4] rounded-md px-4 py-2">
+          <div className="font-sora text-sm text-[#928CA6] flex justify-between">
+            <span>Total Stake</span>
+            <span>Balance: 0</span>
+          </div>
+          <div className="flex justify-between">
+            <input
+              type="text"
+              placeholder="0"
+              value={amount}
+              onChange={(e) => {
+                if (e.target.value === "") {
+                  setAmount("");
+                  return;
+                }
+
+                if (e.target.value.match(/^[0-9]+$/)) {
+                  setAmount(Number(e.target.value));
+                }
+              }}
+              className="bg-inherit text-[#5362E9] font-medium text-2xl appearance-none focus:outline-none"
+            />
+            <div className="font-medium text-2xl">SOL</div>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-10">
+        <span className="font-sora font-semibold text-3xl text-[#9C81EA]">
+          Staked: 34,234.7752
+        </span>
+      </div>
+
+      <div className="mt-28 flex items-center justify-center">
         <button
           onClick={handleStake}
-          className="rounded-3xl bg-violet-700 px-5"
+          className="rounded-3xl btn-degraded px-24 py-2 font-bold text-base"
+          disabled={amount === "" || amount === 0}
         >
-          Stake SOL
+          Stake
         </button>
       </div>
     </div>

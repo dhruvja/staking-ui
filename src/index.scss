@@ -4,6 +4,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .text-gradient {
+    background-image: linear-gradient(
+      90.72deg,
+      #5362e9 -9.33%,
+      #6738ed 48.13%,
+      #b028c8 99.23%
+    );
+    background-clip: text;
+    color: transparent;
+  }
+}
+
 @layer components {
   .card {
     @apply rounded-md bg-[#343141]
@@ -34,11 +47,12 @@
       #e63d70 126.83%
     );
 
-    &:hover {
+    &:hover:enabled {
       background: #9a2ed1;
     }
 
     @apply rounded-3xl
-    transition-colors duration-200 ease-out;
+    transition-colors duration-200 ease-out 
+    disabled:opacity-50;
   }
 }
