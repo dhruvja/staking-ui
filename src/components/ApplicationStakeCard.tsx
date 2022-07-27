@@ -28,9 +28,9 @@ const ApplicationStakeCard = ({
         <span>at</span>{" "}
         <span className="font-semibold">{application.jobAd.company.name}</span>
       </div>
-      <div className="flex flex-col gap-2 items-end">
+      <div className="flex flex-col gap-2 items-end ml-auto">
         <div className="font-medium text-sm">$4,302.34</div>
-        <button className="btn-blue text-xs">STAKE</button>
+        <div className="btn-blue text-xs">STAKE</div>
       </div>
     </Link>
   );
