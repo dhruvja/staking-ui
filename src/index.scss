@@ -6,10 +6,39 @@
 
 @layer components {
   .card {
-    @apply rounded-md bg-[#343141] hover:bg-[#4A465B] active:bg-[#3a3749];
+    @apply rounded-md bg-[#343141]
+     hover:bg-[#4A465B]
+      active:bg-[#3a3749]
+      transition-colors duration-200 ease-out;
   }
 
   .btn-blue {
-    @apply rounded-3xl px-8 py-2 bg-[#5362E9] hover:bg-[#6774ea] active:bg-[#5362E9];
+    @apply rounded-3xl px-8 py-2 bg-[#5362E9]
+     hover:bg-[#6774ea]
+      active:bg-[#5362E9]
+      transition-colors duration-200 ease-out;
+  }
+
+  .btn-transparent {
+    @apply rounded-3xl p-3 border border-white bg-transparent
+     hover:bg-[#5362E9] hover:border-[#5362E9]
+      active:bg-transparent active:border-white
+      transition-colors duration-200 ease-out;
+  }
+
+  .btn-degraded {
+    background: linear-gradient(
+      90deg,
+      #5362e9 29.17%,
+      #9a2ed1 71.14%,
+      #e63d70 126.83%
+    );
+
+    &:hover {
+      background: #9a2ed1;
+    }
+
+    @apply rounded-3xl
+    transition-colors duration-200 ease-out;
   }
 }

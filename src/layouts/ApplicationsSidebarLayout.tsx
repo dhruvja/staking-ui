@@ -17,7 +17,7 @@ const ApplicationsSidebarLayout = () => {
   }, [selectedRef]);
 
   return (
-    <div className="grid grid-cols-[30%,70%] grid-rows-1 h-full">
+    <div className="grid grid-cols-[minmax(449px,30%),1fr] grid-rows-1 h-full">
       <div className="border-r border-app-border h-full">
         <div className="p-5 grid gap-3 h-full overflow-y-scroll">
           {applications.map((application) => (

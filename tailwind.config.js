@@ -7,6 +7,7 @@ module.exports = {
       colors: {
         "app-bg": "#121121",
         "app-border": "#4A465B",
+        secondary: "#DADADA",
       },
       fontFamily: {
         sans: ["Roboto Mono", ...defaultTheme.fontFamily.sans],
