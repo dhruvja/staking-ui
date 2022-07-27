@@ -102,12 +102,14 @@ const ApplicationStake = () => {
     } catch (error) {
       console.log(error);
       const tx = await candidateStakingProgram.methods
-        .initialize(jobAdId, applicationId)
+        .initialize(jobAdId, applicationId, jobBump)
         .accounts({
           baseAccount: candidatePDA,
+          jobAccount: jobPDA,
           escrowWalletState: walletPDA,
           tokenMint: USDCMint,
           authority: wallet!.publicKey,
+          jobProgram: jobProgram.programId,
           systemProgram: anchor.web3.SystemProgram.programId,
           tokenProgram: spl.TOKEN_PROGRAM_ID,
           rent: anchor.web3.SYSVAR_RENT_PUBKEY,

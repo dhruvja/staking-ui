@@ -62,6 +62,21 @@
           "name": "authority",
           "isMut": true,
           "isSigner": true
+        },
+        {
+          "name": "jobAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "jobProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "instruction",
+          "isMut": false,
+          "isSigner": false
         }
       ],
       "args": [
@@ -74,10 +89,56 @@
           "type": "u8"
         },
         {
+          "name": "jobId",
+          "type": "string"
+        },
+        {
+          "name": "jobBump",
+          "type": "u8"
+        },
+        {
           "name": "status",
           "type": {
             "defined": "JobStatus"
           }
+        }
+      ]
+    },
+    {
+      "name": "updateStakeAmount",
+      "accounts": [
+        {
+          "name": "baseAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "authority",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "instruction",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "applicationId",
+          "type": "string"
+        },
+        {
+          "name": "applicationBump",
+          "type": "u8"
+        },
+        {
+          "name": "stakeAmount",
+          "type": "u32"
+        },
+        {
+          "name": "rewardAmount",
+          "type": "u32"
         }
       ]
     }
@@ -104,6 +165,10 @@
           },
           {
             "name": "maxAllowedStaked",
+            "type": "u32"
+          },
+          {
+            "name": "totalRewardAmount",
             "type": "u32"
           }
         ]
@@ -142,6 +207,11 @@
       "code": 6001,
       "name": "InvalidStatus",
       "msg": "Invalid status value"
+    },
+    {
+      "code": 6002,
+      "name": "InvalidCall",
+      "msg": "Program Is not called By CPI"
     }
   ],
   "metadata": {
