@@ -4,6 +4,7 @@ import useApplication from "src/hooks/useApplication";
 import jobPlaceholderImage from "src/images/jobPlaceholder.jpeg";
 import { paths } from "src/pagesPaths";
 import candidateNft from "src/images/candidateNft.svg";
+import { Helmet } from "react-helmet";
 
 const ApplicationPage = () => {
   const applicationId = useParams().applicationId ?? "";
@@ -15,6 +16,15 @@ const ApplicationPage = () => {
 
   return (
     <div className="p-10">
+      <Helmet>
+        <title>Dorse - {application.jobAd.title}</title>
+        <meta
+          name="description"
+          content={`${application.candidate.jobTitle} applied at ${application.jobAd.title}.
+          See the application details and stake.`}
+        />
+      </Helmet>
+
       <div className="flex gap-6">
         <div className="relative h-[70px] w-[70px]">
           <Img

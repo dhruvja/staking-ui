@@ -6,6 +6,7 @@ import { paths } from "src/pagesPaths";
 import { ReactComponent as BackArrowIcon } from "src/images/backArrow.svg";
 import ReactMarkdown from "react-markdown";
 import { JobAd } from "src/types/models";
+import { Helmet } from "react-helmet";
 
 const ApplicationJobPage = () => {
   const applicationId = useParams().applicationId ?? "";
@@ -16,6 +17,11 @@ const ApplicationJobPage = () => {
   }
   return (
     <div className="p-10 overflow-y-scroll">
+      <Helmet>
+        <title>Dorse - {application.jobAd.title}</title>
+        <meta name="description" content={application.jobAd.description} />
+      </Helmet>
+
       <div className="flex gap-5 items-center">
         <div>
           <Link

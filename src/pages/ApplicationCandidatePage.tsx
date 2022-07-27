@@ -7,6 +7,7 @@ import { ReactComponent as BackArrowIcon } from "src/images/backArrow.svg";
 import ReactMarkdown from "react-markdown";
 import { Candidate, JobAd } from "src/types/models";
 import candidateNft from "src/images/candidateNft.svg";
+import { Helmet } from "react-helmet";
 
 const ApplicationCandidatePage = () => {
   const applicationId = useParams().applicationId ?? "";
@@ -17,6 +18,11 @@ const ApplicationCandidatePage = () => {
   }
   return (
     <div className="p-10 overflow-y-scroll">
+      <Helmet>
+        <title>Dorse - {application.candidate.jobTitle}</title>
+        <meta name="description" content={application.candidate.about ?? ""} />
+      </Helmet>
+
       <div className="flex gap-5 items-center">
         <div>
           <Link

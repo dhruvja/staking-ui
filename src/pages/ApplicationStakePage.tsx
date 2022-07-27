@@ -15,7 +15,8 @@ import {
 } from "src/utils/web3";
 import { paths } from "src/pagesPaths";
 import { ReactComponent as BackArrowIcon } from "src/images/backArrow.svg";
-import { ReactComponent as SolIcon } from "src/images/usdcIcon.svg";
+import { ReactComponent as UsdcIcon } from "src/images/usdcIcon.svg";
+import { Helmet } from "react-helmet";
 
 const ApplicationStake = () => {
   const [amount, setAmount] = useState<number | "">("");
@@ -156,6 +157,13 @@ const ApplicationStake = () => {
 
   return (
     <div className="p-10">
+      <Helmet>
+        <title>
+          Dorse - Stake on {application.candidate.jobTitle} for{" "}
+          {application.jobAd.title}
+        </title>
+      </Helmet>
+
       <div className="flex gap-5 items-center">
         <Link
           to={paths.application.resolve(application.id)}
@@ -200,7 +208,7 @@ const ApplicationStake = () => {
           <div className="flex flex-col items-end">
             <span className="font-sora text-sm text-[#928CA6]">Balance: 0</span>
             <div className="font-medium text-2xl flex gap-2 items-center">
-              <SolIcon width={23} height={23} />
+              <UsdcIcon width={23} height={23} />
               USDC
             </div>
           </div>
