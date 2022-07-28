@@ -23,8 +23,20 @@ export const paths = {
     route: "/applications/:applicationId/candidate",
     resolve: (id: string) => `/applications/${id}/candidate`,
   },
-  applicationStake: {
-    route: "/applications/:applicationId/stake",
-    resolve: (id: string) => `/applications/${id}/stake`,
+  myStakedApplications: {
+    route: "/my-stakes",
+    resolve: () => "/my-stakes",
+  },
+  myStakedApplication: {
+    route: "/my-stakes/:applicationId",
+    resolve: (id: string) => `/my-stakes/${id}`,
+  },
+  myStakedApplicationJob: {
+    route: "/my-stakes/:applicationId/job",
+    resolve: (id: string) => `/my-stakes/${id}/job`,
+  },
+  myStakedApplicationCandidate: {
+    route: "/my-stakes/:applicationId/candidate",
+    resolve: (id: string) => `/my-stakes/${id}/candidate`,
   },
 };

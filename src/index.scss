@@ -15,6 +15,16 @@
     background-clip: text;
     color: transparent;
   }
+
+  .bg-tabbar {
+    background: linear-gradient(
+      180deg,
+      rgba(38, 34, 80, 0.69) 0%,
+      rgba(38, 34, 80, 0.85) 57.44%,
+      #17163b 100%
+    );
+    backdrop-filter: blur(26.5855px);
+  }
 }
 
 @layer components {
@@ -27,6 +37,7 @@
 
   .btn-blue {
     @apply rounded-3xl px-8 py-2 bg-[#5362E9] text-white text-center
+    border border-[#5362E9]
     disabled:opacity-50 disabled:cursor-not-allowed 
     hover:bg-[#6774ea] hover:disabled:bg-[#5362E9]
     active:bg-[#5362E9]
@@ -34,7 +45,7 @@
   }
 
   .btn-transparent {
-    @apply rounded-3xl p-3 border border-white bg-transparent
+    @apply rounded-3xl p-3 border border-white bg-transparent text-white
      hover:bg-[#5362E9] hover:border-[#5362E9]
       active:bg-transparent active:border-white
       transition-colors duration-200 ease-out;

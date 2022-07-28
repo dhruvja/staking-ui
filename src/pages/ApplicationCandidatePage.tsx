@@ -1,6 +1,6 @@
 import Img from "react-cool-img";
 import { Link, useParams } from "react-router-dom";
-import useApplication from "src/hooks/useApplication";
+import { useApplication } from "src/hooks/applications";
 import jobPlaceholderImage from "src/images/jobPlaceholder.jpeg";
 import { paths } from "src/pagesPaths";
 import { ReactComponent as BackArrowIcon } from "src/images/backArrow.svg";

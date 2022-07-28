@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet";
-
 import ApplicationStakeCard from "src/components/ApplicationStakeCard";
-import useApplications from "src/hooks/useApplications";
+import { useApplications } from "src/hooks/applications";
 
 const HomePage = () => {
   const applications = useApplications();

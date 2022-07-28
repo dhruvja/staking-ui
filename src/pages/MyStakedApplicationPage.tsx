@@ -1,28 +1,30 @@
 import Img from "react-cool-img";
 import { Link, useParams } from "react-router-dom";
-import { useApplication } from "src/hooks/applications";
 import jobPlaceholderImage from "src/images/jobPlaceholder.jpeg";
 import { paths } from "src/pagesPaths";
 import candidateNft from "src/images/candidateNft.svg";
 import { Helmet } from "react-helmet";
-import StakeModal from "src/modals/StakeModal";
+import { useStakedApplication } from "src/hooks/stake";
+import UnstakeModal from "src/modals/UnstakeModal";
 
-const ApplicationPage = () => {
+const MyStakedApplicationPage = () => {
   const applicationId = useParams().applicationId ?? "";
-  const application = useApplication(applicationId);
+  const stakedApplication = useStakedApplication(applicationId);
 
-  if (!application) {
+  if (!stakedApplication) {
     throw new Error(`Application ${applicationId} not found`);
   }
+
+  const { application, amount } = stakedApplication;
 
   return (
     <div className="p-10">
       <Helmet>
-        <title>Dorse - {application.jobAd.title}</title>
+        <title>Dorse - Staked on {application.jobAd.title}</title>
         <meta
           name="description"
           content={`${application.candidate.jobTitle} applied at ${application.jobAd.title}.
-          See the application details and stake.`}
+          See the your stake.`}
         />
       </Helmet>
 
@@ -48,13 +50,13 @@ const ApplicationPage = () => {
         </h1>
         <div className="ml-auto flex gap-4 items-center">
           <Link
-            to={paths.applicationCandidate.resolve(application.id)}
+            to={paths.myStakedApplicationCandidate.resolve(application.id)}
             className="btn-transparent font-bold"
           >
             THE CANDIDATE
           </Link>
           <Link
-            to={paths.applicationJob.resolve(application.id)}
+            to={paths.myStakedApplicationJob.resolve(application.id)}
             className="btn-transparent font-bold"
           >
             THE JOB
@@ -68,19 +70,19 @@ const ApplicationPage = () => {
       </div>
 
       <div className="mt-24 flex items-center justify-center">
-        <StakeModal application={application}>
+        <UnstakeModal application={application} amount={amount}>
           {(open) => (
             <button
               onClick={open}
-              className="btn-degraded py-3 px-16 font-bold"
+              className="btn-transparent py-3 px-16 font-bold"
             >
-              LET'S STAKE
+              UNSTAKE
             </button>
           )}
-        </StakeModal>
+        </UnstakeModal>
       </div>
     </div>
   );
 };
 
-export default ApplicationPage;
+export default MyStakedApplicationPage;

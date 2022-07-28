@@ -116,3 +116,13 @@ export enum ApplicationStatus {
   InReview = "in_review",
   Rejected = "rejected",
 }
+
+export interface StakedApplication {
+  applicationId: string;
+  date: string;
+  amount: number;
+}
+
+export interface StakedApplicationWithApplication extends StakedApplication {
+  application: Application;
+}

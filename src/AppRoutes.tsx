@@ -6,9 +6,11 @@ import ApplicationsPage from "src/pages/ApplicationsPage";
 import ConnectPage from "src/pages/ConnectPage";
 import Web3ConnectedLayout from "./layouts/Web3ConnectedLayout";
 import ApplicationsSidebarLayout from "./layouts/ApplicationsSidebarLayout";
-import ApplicationStakePage from "./pages/ApplicationStakePage";
 import ApplicationJobPage from "./pages/ApplicationJobPage";
 import ApplicationCandidatePage from "./pages/ApplicationCandidatePage";
+import MyStakedApplicationsSidebarLayout from "./layouts/MyStakedApplicationsSidebarLayout";
+import MyStakesPage from "./pages/MyStakesPage";
+import MyStakedApplicationPage from "./pages/MyStakedApplicationPage";
 
 const AppRoutes = () => {
   return (
@@ -38,10 +40,26 @@ const AppRoutes = () => {
               path={paths.applicationCandidate.route}
               element={<ApplicationCandidatePage />}
             />
+          </Route>
+
+          <Route element={<MyStakedApplicationsSidebarLayout />}>
+            <Route
+              path={paths.myStakedApplications.route}
+              element={<MyStakesPage />}
+            />
+            <Route
+              path={paths.myStakedApplication.route}
+              element={<MyStakedApplicationPage />}
+            />
 
             <Route
-              path={paths.applicationStake.route}
-              element={<ApplicationStakePage />}
+              path={paths.myStakedApplicationJob.route}
+              element={<ApplicationJobPage />}
+            />
+
+            <Route
+              path={paths.myStakedApplicationCandidate.route}
+              element={<ApplicationCandidatePage />}
             />
           </Route>
         </Route>

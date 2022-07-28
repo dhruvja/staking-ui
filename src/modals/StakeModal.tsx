@@ -17,6 +17,7 @@ import {
   tokenMint,
 } from "src/utils/web3";
 import { Application } from "src/types/models";
+import { useStakeApplication } from "src/hooks/stake";
 
 enum StakeModalStep {
   StartStaking = "StartStaking",
@@ -33,6 +34,7 @@ export default function StakeModal(props: {
   const [amount, setAmount] = useState<number | "">("");
   const [isOpen, setIsOpen] = useState(false);
   const [step, setStep] = useState(StakeModalStep.StartStaking);
+  const stakeApplication = useStakeApplication();
 
   const closeModal = () => {
     setIsOpen(false);
@@ -171,6 +173,12 @@ export default function StakeModal(props: {
     setStep(StakeModalStep.SuccessStaking);
   };
 
+  const handleStakeMock = async () => {
+    if (amount === "" || amount === 0) return;
+    stakeApplication(props.application.id, amount);
+    setStep(StakeModalStep.SuccessStaking);
+  };
+
   const steps = {
     [StakeModalStep.StartStaking]: () => (
       <StartStaking
@@ -185,7 +193,7 @@ export default function StakeModal(props: {
         amount={amount}
         closeModal={closeModal}
         goBack={() => setStep(StakeModalStep.StartStaking)}
-        handleStake={handleStake}
+        handleStake={handleStakeMock}
       />
     ),
     [StakeModalStep.SuccessStaking]: () => (
