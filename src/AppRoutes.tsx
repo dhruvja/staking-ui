@@ -11,6 +11,8 @@ import ApplicationCandidatePage from "./pages/ApplicationCandidatePage";
 import MyStakedApplicationsSidebarLayout from "./layouts/MyStakedApplicationsSidebarLayout";
 import MyStakesPage from "./pages/MyStakesPage";
 import MyStakedApplicationPage from "./pages/MyStakedApplicationPage";
+import MyStakedApplicationJobPage from "./pages/MyStakedApplicationJobPage";
+import MyStakedApplicationCandidatePage from "./pages/MyStakedApplicationCandidatePage";
 
 const AppRoutes = () => {
   return (
@@ -54,12 +56,12 @@ const AppRoutes = () => {
 
             <Route
               path={paths.myStakedApplicationJob.route}
-              element={<ApplicationJobPage />}
+              element={<MyStakedApplicationJobPage />}
             />
 
             <Route
               path={paths.myStakedApplicationCandidate.route}
-              element={<ApplicationCandidatePage />}
+              element={<MyStakedApplicationCandidatePage />}
             />
           </Route>
         </Route>
