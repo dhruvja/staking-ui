@@ -115,6 +115,8 @@ export interface Note {
 export enum ApplicationStatus {
   InReview = "in_review",
   Rejected = "rejected",
+  Pending = "pending",
+  Hired = "hired",
 }
 
 export interface StakedApplication {
