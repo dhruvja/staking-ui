@@ -7,6 +7,7 @@ import { ReactComponent as BackArrowIcon } from "src/images/backArrow.svg";
 import ReactMarkdown from "react-markdown";
 import { JobAd } from "src/types/models";
 import { Helmet } from "react-helmet";
+import StakeModal from "src/modals/StakeModal";
 
 const ApplicationJobPage = () => {
   const applicationId = useParams().applicationId ?? "";
@@ -47,12 +48,16 @@ const ApplicationJobPage = () => {
           </span>
         </div>
         <div className="ml-auto">
-          <Link
-            to={paths.applicationStake.resolve(application.id)}
-            className="btn-degraded py-3 px-10 font-bold"
-          >
-            STAKE
-          </Link>
+          <StakeModal application={application}>
+            {(open) => (
+              <button
+                onClick={open}
+                className="btn-degraded py-3 px-10 font-bold"
+              >
+                STAKE
+              </button>
+            )}
+          </StakeModal>
         </div>
       </div>
 

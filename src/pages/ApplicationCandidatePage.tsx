@@ -8,6 +8,7 @@ import ReactMarkdown from "react-markdown";
 import { Candidate, JobAd } from "src/types/models";
 import candidateNft from "src/images/candidateNft.svg";
 import { Helmet } from "react-helmet";
+import StakeModal from "src/modals/StakeModal";
 
 const ApplicationCandidatePage = () => {
   const applicationId = useParams().applicationId ?? "";
@@ -48,12 +49,16 @@ const ApplicationCandidatePage = () => {
           </span>
         </div>
         <div className="ml-auto">
-          <Link
-            to={paths.applicationStake.resolve(application.id)}
-            className="btn-degraded py-3 px-10 font-bold"
-          >
-            STAKE
-          </Link>
+          <StakeModal application={application}>
+            {(open) => (
+              <button
+                onClick={open}
+                className="btn-degraded py-3 px-10 font-bold"
+              >
+                STAKE
+              </button>
+            )}
+          </StakeModal>
         </div>
       </div>
 

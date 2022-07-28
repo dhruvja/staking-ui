@@ -5,6 +5,7 @@ import jobPlaceholderImage from "src/images/jobPlaceholder.jpeg";
 import { paths } from "src/pagesPaths";
 import candidateNft from "src/images/candidateNft.svg";
 import { Helmet } from "react-helmet";
+import StakeModal from "src/modals/StakeModal";
 
 const ApplicationPage = () => {
   const applicationId = useParams().applicationId ?? "";
@@ -67,12 +68,16 @@ const ApplicationPage = () => {
       </div>
 
       <div className="mt-24 flex items-center justify-center">
-        <Link
-          to={paths.applicationStake.resolve(application.id)}
-          className="btn-degraded py-3 px-16 font-bold"
-        >
-          LET'S STAKE
-        </Link>
+        <StakeModal application={application}>
+          {(open) => (
+            <button
+              onClick={open}
+              className="btn-degraded py-3 px-16 font-bold"
+            >
+              LET'S STAKE
+            </button>
+          )}
+        </StakeModal>
       </div>
     </div>
   );
