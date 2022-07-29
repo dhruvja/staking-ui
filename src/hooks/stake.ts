@@ -46,6 +46,14 @@ const useStakedApplicationsStore = create<StakedApplicationsState>()(
 );
 
 export const useStakedApplications = () => {
+  const myStakedApplications = useStakedApplicationsStore(
+    (state) => state.stakedApplications
+  );
+
+  return myStakedApplications;
+};
+
+export const useStakedApplicationsWithApplications = () => {
   const applications = useApplications();
   const myStakedApplications = useStakedApplicationsStore(
     (state) => state.stakedApplications

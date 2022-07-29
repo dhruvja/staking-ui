@@ -1,15 +1,16 @@
 import { useRef, useEffect } from "react";
 import { Outlet, useParams } from "react-router-dom";
 import ApplicationStakeCard from "src/components/ApplicationStakeCard";
-import { useStakedApplications } from "src/hooks/stake";
+import { useStakedApplicationsWithApplications } from "src/hooks/stake";
+import { paths } from "src/pagesPaths";
 import {
   ApplicationStatus,
   StakedApplicationWithApplication,
 } from "src/types/models";
 
 const MyStakedApplicationsSidebarLayout = () => {
-  const applicationId = useParams().applicationId;
-  const stakedApplications = useStakedApplications();
+  const selectedApplicationId = useParams().applicationId;
+  const stakedApplications = useStakedApplicationsWithApplications();
   const selectedRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -44,7 +45,7 @@ const MyStakedApplicationsSidebarLayout = () => {
             <ApplicationList
               applications={pendingApplications}
               selectedRef={selectedRef}
-              applicationId={applicationId}
+              applicationId={selectedApplicationId}
             />
           </div>
 
@@ -53,7 +54,7 @@ const MyStakedApplicationsSidebarLayout = () => {
             <ApplicationList
               applications={hiredApplications}
               selectedRef={selectedRef}
-              applicationId={applicationId}
+              applicationId={selectedApplicationId}
             />
           </div>
 
@@ -62,7 +63,7 @@ const MyStakedApplicationsSidebarLayout = () => {
             <ApplicationList
               applications={rejectedApplications}
               selectedRef={selectedRef}
-              applicationId={applicationId}
+              applicationId={selectedApplicationId}
             />
           </div>
         </div>
@@ -107,7 +108,9 @@ const ApplicationList = (props: {
           />
           <ApplicationStakeCard
             application={stakedApplication.application}
-            isStaked={true}
+            goToLink={paths.myStakedApplication.resolve(
+              stakedApplication.applicationId
+            )}
           />
         </div>
       ))}

@@ -2,6 +2,7 @@ import { useRef, useEffect } from "react";
 import { Outlet, useParams } from "react-router-dom";
 import ApplicationStakeCard from "src/components/ApplicationStakeCard";
 import { useApplications } from "src/hooks/applications";
+import { paths } from "src/pagesPaths";
 
 const ApplicationsSidebarLayout = () => {
   const applicationId = useParams().applicationId;
@@ -32,7 +33,10 @@ const ApplicationsSidebarLayout = () => {
                 checked={application.id === applicationId}
                 className="w-2 h-2 appearance-none bg-violet-600 rounded-full absolute -left-3 top-1/2 -translate-y-1/2 hidden checked:block"
               />
-              <ApplicationStakeCard application={application} />
+              <ApplicationStakeCard
+                application={application}
+                goToLink={paths.application.resolve(application.id)}
+              />
             </div>
           ))}
         </div>
