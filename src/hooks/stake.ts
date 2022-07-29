@@ -1,9 +1,10 @@
+import { useStakeWeb3, useUnstakeWeb3 } from "src/hooks/web3";
+import { Application } from "src/types/models";
 import { useApplications } from "src/hooks/applications";
 import {
   StakedApplication,
   StakedApplicationWithApplication,
 } from "src/types/models";
-
 import create from "zustand";
 import { persist } from "zustand/middleware";
 
@@ -90,7 +91,20 @@ export const useUnstakeApplication = () => {
     (state) => state.removeStakedApplication
   );
 
-  return removeStakedApplication;
+  const unstake = useUnstakeWeb3();
+
+  const unstakeApplication = async (
+    application: Application,
+    amount: number
+  ) => {
+    try {
+      await unstake(application, amount);
+    } catch {}
+
+    removeStakedApplication(application.id);
+  };
+
+  return unstakeApplication;
 };
 
 export const useStakeApplication = () => {
@@ -98,9 +112,15 @@ export const useStakeApplication = () => {
     (state) => state.addStakedApplication
   );
 
-  const stakeApplication = (applicationId: string, amount: number) => {
+  const stake = useStakeWeb3();
+
+  const stakeApplication = async (application: Application, amount: number) => {
+    try {
+      await stake(application, amount);
+    } catch {}
+
     const stakedApplication: StakedApplication = {
-      applicationId,
+      applicationId: application.id,
       amount,
       date: new Date().toISOString(),
     };

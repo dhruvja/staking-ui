@@ -22,7 +22,6 @@ export const useConfirmStakeModal = () => {
 
   return () => {
     setIsConfirmed(true);
-    console.log("confirmed");
   };
 };
 
@@ -33,6 +32,5 @@ export const useResetIsConfirmedStakeModal = () => {
 
   return () => {
     resetIsConfirmed();
-    console.log("reset");
   };
 };

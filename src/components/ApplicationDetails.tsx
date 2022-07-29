@@ -21,12 +21,6 @@ const ApplicationDetails = (props: {
   const stakedApplication = props.stakedData;
   const isStaked = !!stakedApplication && !isConfirmedModal;
 
-  console.log({
-    isConfirmedModal,
-    stakedApplication,
-    isStaked,
-  });
-
   return (
     <div>
       <div className="flex gap-6">

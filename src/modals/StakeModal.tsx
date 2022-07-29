@@ -1,19 +1,6 @@
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { ReactComponent as UsdcIcon } from "src/images/usdcIcon.svg";
-import { useAnchorWallet } from "@solana/wallet-adapter-react";
-import { PublicKey } from "@solana/web3.js";
-import * as anchor from "@project-serum/anchor";
-import * as spl from "@solana/spl-token";
-
-import { useProvider } from "src/hooks/web3";
-import {
-  getApplicationProgram,
-  getJobProgram,
-  getGeneralProgram,
-  getCandidateStakingProgram,
-  tokenMint,
-} from "src/utils/web3";
 import { Application } from "src/types/models";
 import { useStakeApplication } from "src/hooks/stake";
 import {
@@ -31,8 +18,6 @@ export default function StakeModal(props: {
   application: Application;
   children: (open: () => void) => React.ReactNode;
 }) {
-  const wallet = useAnchorWallet();
-  const provider = useProvider();
   const [amount, setAmount] = useState<number | "">("");
   const [isOpen, setIsOpen] = useState(false);
   const [step, setStep] = useState(StakeModalStep.StartStaking);
@@ -56,139 +41,9 @@ export default function StakeModal(props: {
 
   const handleStake = async () => {
     if (amount === "" || amount === 0) return;
-    const applicationProgram = getApplicationProgram(provider);
-    const jobProgram = getJobProgram(provider);
-    const generalProgram = getGeneralProgram(provider);
-    const candidateStakingProgram = getCandidateStakingProgram(provider);
-
-    const applicationId = props.application.id;
-    const jobAdId = props.application.jobAd.id;
-
-    const [generalPDA, generalBump] =
-      await anchor.web3.PublicKey.findProgramAddress(
-        [Buffer.from("general")],
-        generalProgram.programId
-      );
-
-    const [applicationPDA, applicationBump] =
-      await anchor.web3.PublicKey.findProgramAddress(
-        [
-          Buffer.from("application"),
-          Buffer.from(applicationId.substring(0, 18)),
-          Buffer.from(applicationId.substring(18, 36)),
-        ],
-        applicationProgram.programId
-      );
-
-    const [jobPDA, jobBump] = await anchor.web3.PublicKey.findProgramAddress(
-      [
-        Buffer.from("jobfactory"),
-        Buffer.from(jobAdId.substring(0, 18)),
-        Buffer.from(jobAdId.substring(18, 36)),
-      ],
-      jobProgram.programId
-    );
-
-    const [candidatePDA, candidateBump] =
-      await anchor.web3.PublicKey.findProgramAddress(
-        [
-          Buffer.from("candidate"),
-          Buffer.from(applicationId.substring(0, 18)),
-          Buffer.from(applicationId.substring(18, 36)),
-          wallet!.publicKey.toBuffer(),
-        ],
-        candidateStakingProgram.programId
-      );
-
-    const [walletPDA, walletBump] =
-      await anchor.web3.PublicKey.findProgramAddress(
-        [Buffer.from("wallet"), wallet!.publicKey.toBuffer()],
-        candidateStakingProgram.programId
-      );
-
-    const USDCMint = new PublicKey(tokenMint);
-
-    let userTokenAccount = await spl.getAssociatedTokenAddress(
-      USDCMint,
-      wallet!.publicKey,
-      false,
-      spl.TOKEN_PROGRAM_ID,
-      spl.ASSOCIATED_TOKEN_PROGRAM_ID
-    );
-
-    const deposit = new anchor.BN(amount);
-
-    try {
-      const state =
-        await candidateStakingProgram.account.candidateParameter.fetch(
-          candidatePDA
-        );
-      console.log(state.stakedAmount);
-    } catch (error) {
-      console.log(error);
-      const tx = await candidateStakingProgram.methods
-        .initialize(jobAdId, applicationId, jobBump)
-        .accounts({
-          baseAccount: candidatePDA,
-          jobAccount: jobPDA,
-          escrowWalletState: walletPDA,
-          tokenMint: USDCMint,
-          authority: wallet!.publicKey,
-          jobProgram: jobProgram.programId,
-          systemProgram: anchor.web3.SystemProgram.programId,
-          tokenProgram: spl.TOKEN_PROGRAM_ID,
-          rent: anchor.web3.SYSVAR_RENT_PUBKEY,
-        })
-        .rpc();
-      console.log(tx);
-    }
-
-    try {
-      const tx = await candidateStakingProgram.methods
-        .stake(
-          jobAdId,
-          applicationId,
-          candidateBump,
-          generalBump,
-          applicationBump,
-          jobBump,
-          walletBump,
-          deposit
-        )
-        .accounts({
-          baseAccount: candidatePDA,
-          authority: wallet!.publicKey,
-          tokenMint: USDCMint,
-          generalAccount: generalPDA,
-          // jobAccount: jobPDA,
-          applicationAccount: applicationPDA,
-          generalProgram: generalProgram.programId,
-          applicationProgram: applicationProgram.programId,
-          jobProgram: jobProgram.programId,
-          escrowWalletState: walletPDA,
-          walletToWithdrawFrom: userTokenAccount,
-          systemProgram: anchor.web3.SystemProgram.programId,
-          tokenProgram: spl.TOKEN_PROGRAM_ID,
-          rent: anchor.web3.SYSVAR_RENT_PUBKEY,
-        })
-        .rpc();
-      // await getBalance(wallet);
-      console.log(tx);
-    } catch (error) {
-      console.log(error);
-    }
-
-    console.log("stake");
-    setStep(StakeModalStep.SuccessStaking);
-  };
-
-  const handleStakeMock = async () => {
-    if (amount === "" || amount === 0) return;
     confirmModal();
-    stakeApplication(props.application.id, amount);
-    console.log("stake");
+    await stakeApplication(props.application, amount);
     setStep(StakeModalStep.SuccessStaking);
-    console.log("success step");
   };
 
   const steps = {
@@ -205,7 +60,7 @@ export default function StakeModal(props: {
         amount={amount}
         closeModal={closeModal}
         goBack={() => setStep(StakeModalStep.StartStaking)}
-        handleStake={handleStakeMock}
+        handleStake={handleStake}
       />
     ),
     [StakeModalStep.SuccessStaking]: () => (

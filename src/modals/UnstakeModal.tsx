@@ -1,77 +1,27 @@
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import { ReactComponent as UsdcIcon } from "src/images/usdcIcon.svg";
-import { Link, useNavigate } from "react-router-dom";
-import { paths } from "src/pagesPaths";
-import { useAnchorWallet } from "@solana/wallet-adapter-react";
-import { PublicKey } from "@solana/web3.js";
-import * as anchor from "@project-serum/anchor";
-import * as spl from "@solana/spl-token";
-
-import { useProvider } from "src/hooks/web3";
-import {
-  getApplicationProgram,
-  getJobProgram,
-  getGeneralProgram,
-  getCandidateStakingProgram,
-  tokenMint,
-} from "src/utils/web3";
 import { Application } from "src/types/models";
 import { useUnstakeApplication } from "src/hooks/stake";
-
-enum UnstakeModalStep {
-  Confirm = "Confirm",
-  //   Success = "Success",
-}
 
 export default function UnstakeModal(props: {
   application: Application;
   amount: number;
   children: (open: () => void) => React.ReactNode;
 }) {
-  const wallet = useAnchorWallet();
-  const provider = useProvider();
   const [isOpen, setIsOpen] = useState(false);
-  const [step, setStep] = useState(UnstakeModalStep.Confirm);
   const unstakeApplication = useUnstakeApplication();
 
   const closeModal = () => {
     setIsOpen(false);
   };
   const openModal = () => {
-    setStep(UnstakeModalStep.Confirm);
     setIsOpen(true);
   };
 
-  const handleUnstake = async () => {
-    const applicationProgram = getApplicationProgram(provider);
-    const jobProgram = getJobProgram(provider);
-    const generalProgram = getGeneralProgram(provider);
-    const candidateStakingProgram = getCandidateStakingProgram(provider);
-
-    const applicationId = props.application.id;
-    const jobAdId = props.application.jobAd.id;
-  };
-
   const handleUnstakeMock = async () => {
-    unstakeApplication(props.application.id);
-
-    // setStep(UnstakeModalStep.Success);
+    await unstakeApplication(props.application, props.amount);
 
     closeModal();
-  };
-
-  const steps = {
-    [UnstakeModalStep.Confirm]: () => (
-      <Confirm
-        amount={props.amount}
-        closeModal={closeModal}
-        handleUnstake={handleUnstakeMock}
-      />
-    ),
-    // [UnstakeModalStep.Success]: () => (
-    //   <Success closeModal={closeModal} amount={props.amount} />
-    // ),
   };
 
   return (
@@ -104,7 +54,11 @@ export default function UnstakeModal(props: {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-full max-w-xl transform overflow-hidden rounded-2xl bg-[#121121] py-12 px-8 text-left align-middle shadow-xl transition-all">
-                  {steps[step]()}
+                  <Confirm
+                    amount={props.amount}
+                    closeModal={closeModal}
+                    handleUnstake={handleUnstakeMock}
+                  />
                 </Dialog.Panel>
               </Transition.Child>
             </div>
@@ -149,34 +103,6 @@ const Confirm = (props: {
         >
           YES, SURE.
         </button>
-      </div>
-    </>
-  );
-};
-
-const Success = (props: { amount: number; closeModal: () => void }) => {
-  return (
-    <>
-      <Dialog.Title
-        as="h3"
-        className="text-xl font-semibold font-sora text-[#FCFCFD]"
-      >
-        Successfully Unstaked!
-      </Dialog.Title>
-
-      <div className="mt-5 text-sm text-white text-opacity-60">
-        Your transaction has been successful! You staked{" "}
-        <span className="font-bold text-opacity-100">{props.amount} USDC</span>{" "}
-        tokens. Your tokens are now locked in the staking contract.
-      </div>
-
-      <div className="mt-10 flex flex-col items-center justify-center gap-4">
-        <Link
-          to={paths.myStakedApplications.resolve()}
-          className="btn-blue w-full py-4 font-bold text-base rounded-full"
-        >
-          BACK TO MY STAKES
-        </Link>
       </div>
     </>
   );

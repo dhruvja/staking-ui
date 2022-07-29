@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { useStakedApplication } from "src/hooks/stake";
 import { useApplication } from "src/hooks/applications";
@@ -17,7 +17,7 @@ const MyStakedApplicationPage = () => {
   }
 
   if (!stakedApplication) {
-    throw new Error(`Application ${applicationId} not staked`);
+    return <Navigate to={paths.myStakedApplications.resolve()} />;
   }
 
   return (
