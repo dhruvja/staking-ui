@@ -1,10 +1,12 @@
 import { Helmet } from "react-helmet";
 import ApplicationStakeCard from "src/components/ApplicationStakeCard";
 import { useApplications } from "src/hooks/applications";
+import { useSetNavBarTitle } from "src/hooks/navbar";
 import { paths } from "src/pagesPaths";
 
 const HomePage = () => {
   const applications = useApplications();
+  useSetNavBarTitle("Home");
 
   return (
     <div className="p-10 flex flex-col gap-6 h-full overflow-y-scroll">

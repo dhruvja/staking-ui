@@ -4,11 +4,13 @@ import { useStakedApplication } from "src/hooks/stake";
 import { useApplication } from "src/hooks/applications";
 import ApplicationDetails from "src/components/ApplicationDetails";
 import { paths } from "src/pagesPaths";
+import { useSetNavBarTitle } from "src/hooks/navbar";
 
 const MyStakedApplicationPage = () => {
   const applicationId = useParams().applicationId ?? "";
   const stakedApplication = useStakedApplication(applicationId);
   const application = useApplication(applicationId);
+  useSetNavBarTitle("My Stakes");
 
   if (!application) {
     throw new Error(`Application ${applicationId} not found`);

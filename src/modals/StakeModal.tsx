@@ -1,8 +1,6 @@
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { ReactComponent as UsdcIcon } from "src/images/usdcIcon.svg";
-import { Link } from "react-router-dom";
-import { paths } from "src/pagesPaths";
 import { useAnchorWallet } from "@solana/wallet-adapter-react";
 import { PublicKey } from "@solana/web3.js";
 import * as anchor from "@project-serum/anchor";
@@ -18,6 +16,10 @@ import {
 } from "src/utils/web3";
 import { Application } from "src/types/models";
 import { useStakeApplication } from "src/hooks/stake";
+import {
+  useConfirmStakeModal,
+  useResetIsConfirmedStakeModal,
+} from "src/hooks/stakeModal";
 
 enum StakeModalStep {
   StartStaking = "StartStaking",
@@ -36,9 +38,16 @@ export default function StakeModal(props: {
   const [step, setStep] = useState(StakeModalStep.StartStaking);
   const stakeApplication = useStakeApplication();
 
+  const confirmModal = useConfirmStakeModal();
+  const resetConfirmModal = useResetIsConfirmedStakeModal();
+
   const closeModal = () => {
     setIsOpen(false);
+    if (step === StakeModalStep.SuccessStaking) {
+      resetConfirmModal();
+    }
   };
+
   const openModal = () => {
     setAmount("");
     setStep(StakeModalStep.StartStaking);
@@ -175,8 +184,11 @@ export default function StakeModal(props: {
 
   const handleStakeMock = async () => {
     if (amount === "" || amount === 0) return;
+    confirmModal();
     stakeApplication(props.application.id, amount);
+    console.log("stake");
     setStep(StakeModalStep.SuccessStaking);
+    console.log("success step");
   };
 
   const steps = {
@@ -415,12 +427,12 @@ const SuccessStaking = (props: {
       </div>
 
       <div className="mt-10 flex flex-col items-center justify-center gap-4">
-        <Link
-          to={paths.applications.resolve()}
+        <button
+          onClick={props.closeModal}
           className="btn-blue w-full py-4 font-bold text-base rounded-full"
         >
-          BACK TO APPLICATIONS
-        </Link>
+          BACK
+        </button>
       </div>
     </>
   );

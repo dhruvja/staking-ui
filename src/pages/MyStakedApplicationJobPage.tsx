@@ -4,11 +4,13 @@ import { Helmet } from "react-helmet";
 import { useStakedApplication } from "src/hooks/stake";
 import { useApplication } from "src/hooks/applications";
 import JobDetails from "src/components/JobDetails";
+import { useSetNavBarTitle } from "src/hooks/navbar";
 
 const MyStakedApplicationJobPage = () => {
   const applicationId = useParams().applicationId ?? "";
   const stakedApplication = useStakedApplication(applicationId);
   const application = useApplication(applicationId);
+  useSetNavBarTitle("My Stakes");
 
   if (!application) {
     throw new Error(`Application ${applicationId} not found`);

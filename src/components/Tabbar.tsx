@@ -1,13 +1,13 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { ReactComponent as DorseLogo } from "src/images/dorseLogo.svg";
 import { paths } from "src/pagesPaths";
 
 const Tabbar = () => {
   return (
     <div className="bg-tabbar py-16 px-12">
-      <div>
+      <Link to={paths.home.resolve()}>
         <DorseLogo />
-      </div>
+      </Link>
 
       <div className="mt-20 flex flex-col gap-8">
         <NavLink

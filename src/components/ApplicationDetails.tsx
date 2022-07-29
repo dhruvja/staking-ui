@@ -6,6 +6,8 @@ import candidateNft from "src/images/candidateNft.svg";
 import StakeModal from "src/modals/StakeModal";
 import { Application, StakedApplication } from "src/types/models";
 import UnstakeModal from "src/modals/UnstakeModal";
+import { ReactComponent as QuestionMarkIcon } from "src/images/questionMark.svg";
+import { useGetStakeModalIsConfirmed } from "src/hooks/stakeModal";
 
 const ApplicationDetails = (props: {
   application: Application;
@@ -13,9 +15,17 @@ const ApplicationDetails = (props: {
   candidatePageLink: string;
   jobPageLink: string;
 }) => {
+  const isConfirmedModal = useGetStakeModalIsConfirmed();
+
   const application = props.application;
   const stakedApplication = props.stakedData;
-  const isStaked = !!stakedApplication;
+  const isStaked = !!stakedApplication && !isConfirmedModal;
+
+  console.log({
+    isConfirmedModal,
+    stakedApplication,
+    isStaked,
+  });
 
   return (
     <div>
@@ -52,9 +62,42 @@ const ApplicationDetails = (props: {
         </div>
       </div>
 
-      <div className="mt-16 bg-card rounded-md px-5 py-9 flex items-center justify-between">
-        <span className="font-sora font-medium text-base">Total Staked</span>
-        <span className="font-medium text-base">$4,302.34</span>
+      <div className="mt-16 flex justify-evenly">
+        {isStaked && (
+          <div className="flex flex-col gap-3 text-center">
+            <span className="font-medium text-2xl">
+              {stakedApplication.amount}
+            </span>
+            <span className="font-sora text-sm text-[#D0C9D6]">Your stake</span>
+          </div>
+        )}
+
+        <div className="flex flex-col gap-3 text-center">
+          <span className="font-medium text-2xl">0.00022893</span>
+          <span className="font-sora text-sm text-[#D0C9D6]">
+            Available staking amount
+          </span>
+        </div>
+
+        <div className="flex flex-col gap-3 text-center">
+          <span className="font-medium text-2xl">13,532%</span>
+          <span className="font-sora text-sm text-[#D0C9D6]">
+            Expected APY of your stake{" "}
+          </span>
+        </div>
+      </div>
+
+      <div className="mt-16 flex flex-col gap-5">
+        <div className="bg-card rounded-md px-5 py-9 flex items-center justify-between">
+          <span className="font-sora font-medium text-base">Total Staked</span>
+          <span className="font-medium text-base">$4,302.34</span>
+        </div>
+      </div>
+
+      <div className="mt-5 text-[#979797] text-xs flex items-center gap-2 font-sora">
+        <QuestionMarkIcon />
+        You will stake until the application closes and completes its 3 month
+        cycle
       </div>
 
       <div className="mt-24 flex items-center justify-center">

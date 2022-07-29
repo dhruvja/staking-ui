@@ -34,7 +34,6 @@ export default function UnstakeModal(props: {
   const [isOpen, setIsOpen] = useState(false);
   const [step, setStep] = useState(UnstakeModalStep.Confirm);
   const unstakeApplication = useUnstakeApplication();
-  const navigate = useNavigate();
 
   const closeModal = () => {
     setIsOpen(false);
@@ -56,8 +55,10 @@ export default function UnstakeModal(props: {
 
   const handleUnstakeMock = async () => {
     unstakeApplication(props.application.id);
-    navigate(paths.myStakedApplications.resolve());
+
     // setStep(UnstakeModalStep.Success);
+
+    closeModal();
   };
 
   const steps = {

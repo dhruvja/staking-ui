@@ -5,15 +5,18 @@ import { ReactComponent as BackArrowIcon } from "src/images/backArrow.svg";
 import { Application, JobAd, StakedApplication } from "src/types/models";
 import StakeModal from "src/modals/StakeModal";
 import UnstakeModal from "src/modals/UnstakeModal";
+import { useGetStakeModalIsConfirmed } from "src/hooks/stakeModal";
 
 const JobDetails = (props: {
   application: Application;
   stakedData: StakedApplication | undefined;
   goBackLink: string;
 }) => {
+  const isConfirmedModal = useGetStakeModalIsConfirmed();
+
   const application = props.application;
   const stakedData = props.stakedData;
-  const isStaked = stakedData !== undefined;
+  const isStaked = !!stakedData && !isConfirmedModal;
 
   return (
     <div>

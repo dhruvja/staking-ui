@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import { useStakedApplication } from "src/hooks/stake";
 import ApplicationDetails from "src/components/ApplicationDetails";
 import { paths } from "src/pagesPaths";
+import { useGetStakeModalIsConfirmed } from "src/hooks/stakeModal";
 
 const ApplicationPage = () => {
   const applicationId = useParams().applicationId ?? "";

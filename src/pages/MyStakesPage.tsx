@@ -1,6 +1,8 @@
 import { Helmet } from "react-helmet";
+import { useSetNavBarTitle } from "src/hooks/navbar";
 
 const MyStakesPage = () => {
+  useSetNavBarTitle("My Stakes");
   return (
     <div className="flex justify-center items-center">
       <Helmet>
