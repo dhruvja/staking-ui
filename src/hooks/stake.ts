@@ -115,17 +115,19 @@ export const useStakeApplication = () => {
   const stake = useStakeWeb3();
 
   const stakeApplication = async (application: Application, amount: number) => {
-    try {
-      await stake(application, amount);
-    } catch {}
+    const tx = await stake(application, amount);
 
-    const stakedApplication: StakedApplication = {
-      applicationId: application.id,
-      amount,
-      date: new Date().toISOString(),
-    };
+    if (tx) {
+      const stakedApplication: StakedApplication = {
+        applicationId: application.id,
+        amount,
+        date: new Date().toISOString(),
+      };
 
-    addStakedApplication(stakedApplication);
+      addStakedApplication(stakedApplication);
+    }
+
+    return tx;
   };
 
   return stakeApplication;

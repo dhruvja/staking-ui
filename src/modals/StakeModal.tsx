@@ -46,8 +46,11 @@ export default function StakeModal(props: {
   const handleStake = async () => {
     if (amount === "" || amount === 0) return;
     confirmModal();
-    await stakeApplication(props.application, amount);
-    setStep(StakeModalStep.SuccessStaking);
+
+    const tx = await stakeApplication(props.application, amount);
+    if (tx) {
+      setStep(StakeModalStep.SuccessStaking);
+    }
   };
 
   const steps = {

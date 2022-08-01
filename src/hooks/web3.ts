@@ -106,24 +106,31 @@ export const useStakeWeb3 = () => {
         await candidateStakingProgram.account.candidateParameter.fetch(
           candidatePDA
         );
-      console.log(state.stakedAmount);
+      console.log("fetch candidate param", state.stakedAmount);
     } catch (error) {
-      console.log(error);
-      const tx = await candidateStakingProgram.methods
-        .initialize(jobAdId, applicationId, jobBump)
-        .accounts({
-          baseAccount: candidatePDA,
-          jobAccount: jobPDA,
-          escrowWalletState: walletPDA,
-          tokenMint: USDCMint,
-          authority: wallet.publicKey,
-          jobProgram: jobProgram.programId,
-          systemProgram: anchor.web3.SystemProgram.programId,
-          tokenProgram: spl.TOKEN_PROGRAM_ID,
-          rent: anchor.web3.SYSVAR_RENT_PUBKEY,
-        })
-        .rpc();
-      console.log(tx);
+      console.log("fetch candidate param err", error);
+
+      try {
+        const tx = await candidateStakingProgram.methods
+          .initialize(jobAdId, applicationId, jobBump)
+          .accounts({
+            baseAccount: candidatePDA,
+            jobAccount: jobPDA,
+            escrowWalletState: walletPDA,
+            tokenMint: USDCMint,
+            authority: wallet.publicKey,
+            jobProgram: jobProgram.programId,
+            systemProgram: anchor.web3.SystemProgram.programId,
+            tokenProgram: spl.TOKEN_PROGRAM_ID,
+            rent: anchor.web3.SYSVAR_RENT_PUBKEY,
+          })
+          .rpc();
+        console.log("initialize cand prog", tx);
+      } catch (error) {
+        console.log("initialize cand prog err", error);
+
+        return;
+      }
     }
 
     try {
@@ -156,9 +163,12 @@ export const useStakeWeb3 = () => {
         })
         .rpc();
       // await getBalance(wallet);
-      console.log(tx);
+      console.log("stake tx", tx);
+      return tx;
     } catch (error) {
-      console.log(error);
+      console.log("stake tx err ", error);
+
+      return;
     }
   };
 
@@ -309,7 +319,7 @@ export const useBalance = () => {
 
       const tokenMintKey = new anchor.web3.PublicKey(tokenMint);
 
-      let userTokenAccount = await spl.getAssociatedTokenAddress(
+      const userTokenAccount = await spl.getAssociatedTokenAddress(
         tokenMintKey,
         wallet.publicKey,
         false,
@@ -318,6 +328,8 @@ export const useBalance = () => {
       );
 
       try {
+        console.log("userTokenAccount", userTokenAccount);
+
         const balance = await spl.getAccount(connection, userTokenAccount);
         console.log(balance.amount);
 
