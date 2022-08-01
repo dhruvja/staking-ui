@@ -83,9 +83,13 @@ export const useStakeWeb3 = () => {
         candidateStakingProgram.programId
       );
 
-    const [walletPDA, walletBump] =
+      const [walletPDA, walletBump] =
       await anchor.web3.PublicKey.findProgramAddress(
-        [Buffer.from("wallet"), wallet.publicKey.toBuffer()],
+        [
+          Buffer.from("wallet"),
+          Buffer.from(jobAdId.substring(0, 18)),
+          Buffer.from(jobAdId.substring(18, 36)),
+        ],
         candidateStakingProgram.programId
       );
 
@@ -150,7 +154,7 @@ export const useStakeWeb3 = () => {
           authority: wallet.publicKey,
           tokenMint: USDCMint,
           generalAccount: generalPDA,
-          // jobAccount: jobPDA,
+          jobAccount: jobPDA,
           applicationAccount: applicationPDA,
           generalProgram: generalProgram.programId,
           applicationProgram: applicationProgram.programId,
@@ -160,6 +164,7 @@ export const useStakeWeb3 = () => {
           systemProgram: anchor.web3.SystemProgram.programId,
           tokenProgram: spl.TOKEN_PROGRAM_ID,
           rent: anchor.web3.SYSVAR_RENT_PUBKEY,
+          instruction: anchor.web3.SYSVAR_INSTRUCTIONS_PUBKEY,
         })
         .rpc();
       // await getBalance(wallet);
