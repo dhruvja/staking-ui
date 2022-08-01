@@ -83,7 +83,7 @@ export const useStakeWeb3 = () => {
         candidateStakingProgram.programId
       );
 
-      const [walletPDA, walletBump] =
+    const [walletPDA, walletBump] =
       await anchor.web3.PublicKey.findProgramAddress(
         [
           Buffer.from("wallet"),
@@ -103,7 +103,7 @@ export const useStakeWeb3 = () => {
       spl.ASSOCIATED_TOKEN_PROGRAM_ID
     );
 
-    const deposit = new anchor.BN(amount);
+    const deposit = new anchor.BN(amount / 10 ** 6);
 
     try {
       const state =
@@ -315,7 +315,7 @@ export const useBalance = () => {
   const { connection } = useConnection();
   const wallet = useWallet();
 
-  const [balance, setBalance] = useState<BigInt | undefined>(undefined);
+  const [balance, setBalance] = useState<number | undefined>(undefined);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -336,9 +336,8 @@ export const useBalance = () => {
         console.log("userTokenAccount", userTokenAccount);
 
         const balance = await spl.getAccount(connection, userTokenAccount);
-        console.log(balance.amount);
 
-        setBalance(balance.amount);
+        setBalance(Number(balance.amount) / 10 ** 6);
         setIsLoading(false);
       } catch (error) {
         console.log(error);

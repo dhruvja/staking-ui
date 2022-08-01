@@ -125,7 +125,7 @@ const StartStaking = (props: {
   closeModal: () => void;
   goNext: () => void;
   stakeInfo: ApplicationStakeInfo | undefined;
-  balance: BigInt | undefined;
+  balance: number | undefined;
 }) => {
   return (
     <>
