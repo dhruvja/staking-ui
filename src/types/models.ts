@@ -128,3 +128,8 @@ export interface StakedApplication {
 export interface StakedApplicationWithApplication extends StakedApplication {
   application: Application;
 }
+
+export type ApplicationStakeInfo = {
+  maxAllowedStaked: number;
+  stakedAmount: number;
+};

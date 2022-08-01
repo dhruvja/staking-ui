@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Application } from "src/types/models";
 import jobPlaceholderImage from "src/images/jobPlaceholder.jpeg";
 import { useStakedApplication } from "src/hooks/stake";
+import { useApplicationStakeInfo } from "src/hooks/web3";
 
 const ApplicationStakeCard = ({
   application,
@@ -13,6 +14,8 @@ const ApplicationStakeCard = ({
 }) => {
   const staked = useStakedApplication(application.id);
   const isStaked = !!staked;
+
+  const { info } = useApplicationStakeInfo(application.id);
 
   return (
     <Link
@@ -27,14 +30,18 @@ const ApplicationStakeCard = ({
         error={jobPlaceholderImage}
         className="rounded-md object-cover w-[70px] h-[70px]"
       />
+
       <div className="text-sm text-ellipsis overflow-hidden">
         <span>{application.candidate.jobTitle} applied to the position</span>{" "}
         <span className="font-semibold">{application.jobAd.title}</span>{" "}
         <span>at</span>{" "}
         <span className="font-semibold">{application.jobAd.company.name}</span>
       </div>
+
       <div className="flex flex-col gap-2 items-end ml-auto">
-        <div className="font-medium text-sm">$4,302.34</div>
+        {info?.stakedAmount && (
+          <div className="font-medium text-sm">{info.stakedAmount} USDC</div>
+        )}
         {!isStaked && <div className="btn-blue text-xs">STAKE</div>}
       </div>
     </Link>

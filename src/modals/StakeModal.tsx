@@ -1,12 +1,13 @@
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { ReactComponent as UsdcIcon } from "src/images/usdcIcon.svg";
-import { Application } from "src/types/models";
+import { Application, ApplicationStakeInfo } from "src/types/models";
 import { useStakeApplication } from "src/hooks/stake";
 import {
   useConfirmStakeModal,
   useResetIsConfirmedStakeModal,
 } from "src/hooks/stakeModal";
+import { useApplicationStakeInfo, useBalance } from "src/hooks/web3";
 
 enum StakeModalStep {
   StartStaking = "StartStaking",
@@ -21,7 +22,10 @@ export default function StakeModal(props: {
   const [amount, setAmount] = useState<number | "">("");
   const [isOpen, setIsOpen] = useState(false);
   const [step, setStep] = useState(StakeModalStep.StartStaking);
+
   const stakeApplication = useStakeApplication();
+  const { info } = useApplicationStakeInfo(props.application.id);
+  const { balance } = useBalance();
 
   const confirmModal = useConfirmStakeModal();
   const resetConfirmModal = useResetIsConfirmedStakeModal();
@@ -53,6 +57,8 @@ export default function StakeModal(props: {
         setAmount={setAmount}
         closeModal={closeModal}
         goNext={() => setStep(StakeModalStep.ConfirmStaking)}
+        stakeInfo={info}
+        balance={balance}
       />
     ),
     [StakeModalStep.ConfirmStaking]: () => (
@@ -61,6 +67,7 @@ export default function StakeModal(props: {
         closeModal={closeModal}
         goBack={() => setStep(StakeModalStep.StartStaking)}
         handleStake={handleStake}
+        stakeInfo={info}
       />
     ),
     [StakeModalStep.SuccessStaking]: () => (
@@ -114,6 +121,8 @@ const StartStaking = (props: {
   setAmount: (amount: number | "") => void;
   closeModal: () => void;
   goNext: () => void;
+  stakeInfo: ApplicationStakeInfo | undefined;
+  balance: BigInt | undefined;
 }) => {
   return (
     <>
@@ -147,7 +156,9 @@ const StartStaking = (props: {
             />
           </div>
           <div className="flex flex-col items-end">
-            <span className="font-sora text-sm text-[#928CA6]">Balance: 0</span>
+            <span className="font-sora text-sm text-[#928CA6]">
+              Balance: {props.balance?.toString()}
+            </span>
             <div className="font-medium text-2xl text-white flex gap-2 items-center">
               <UsdcIcon width={23} height={23} />
               USDC
@@ -162,7 +173,7 @@ const StartStaking = (props: {
             Available staking amount
           </span>
           <span className="text-[#9C81EA] text-sm font-normal">
-            0.00022893 ETH per USDT
+            {props.stakeInfo?.maxAllowedStaked ?? ""} USDC
           </span>
         </div>
 
@@ -200,6 +211,7 @@ const ConfirmStaking = (props: {
   closeModal: () => void;
   goBack: () => void;
   handleStake: () => void;
+  stakeInfo: ApplicationStakeInfo | undefined;
 }) => {
   return (
     <>
@@ -223,7 +235,7 @@ const ConfirmStaking = (props: {
             Available staking amount
           </span>
           <span className="text-[#9C81EA] text-sm font-normal">
-            0.00022893 ETH per USDT
+            {props.stakeInfo?.maxAllowedStaked ?? ""} USDC
           </span>
         </div>
 

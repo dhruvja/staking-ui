@@ -1,4 +1,5 @@
-import { Application } from "./../types/models";
+import { useEffect, useState } from "react";
+import { Application, ApplicationStakeInfo } from "./../types/models";
 import { useAnchorWallet, useConnection } from "@solana/wallet-adapter-react";
 import { AnchorProvider } from "@project-serum/anchor";
 import { PublicKey } from "@solana/web3.js";
@@ -293,4 +294,81 @@ export const useUnstakeWeb3 = () => {
   };
 
   return unstake;
+};
+
+export const useBalance = () => {
+  const { connection } = useConnection();
+  const wallet = useWallet();
+
+  const [balance, setBalance] = useState<BigInt | undefined>(undefined);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    const getBalance = async () => {
+      setIsLoading(true);
+
+      const tokenMintKey = new anchor.web3.PublicKey(tokenMint);
+
+      let userTokenAccount = await spl.getAssociatedTokenAddress(
+        tokenMintKey,
+        wallet.publicKey,
+        false,
+        spl.TOKEN_PROGRAM_ID,
+        spl.ASSOCIATED_TOKEN_PROGRAM_ID
+      );
+
+      try {
+        const balance = await spl.getAccount(connection, userTokenAccount);
+        console.log(balance.amount);
+
+        setBalance(balance.amount);
+        setIsLoading(false);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    getBalance();
+  }, [connection, wallet]);
+
+  return { balance, isLoading };
+};
+
+export const useApplicationStakeInfo = (applicationId: Application["id"]) => {
+  const provider = useProvider();
+  const applicationProgram = getApplicationProgram(provider);
+
+  const [info, setInfo] = useState<ApplicationStakeInfo | undefined>(undefined);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    const getInfo = async () => {
+      setIsLoading(true);
+
+      const [applicationPDA, applicationBump] =
+        await anchor.web3.PublicKey.findProgramAddress(
+          [
+            Buffer.from("application"),
+            Buffer.from(applicationId.substring(0, 18)),
+            Buffer.from(applicationId.substring(18, 36)),
+          ],
+          applicationProgram.programId
+        );
+      const state = await applicationProgram.account.applicationParameter.fetch(
+        applicationPDA
+      );
+
+      console.log({ state });
+
+      setInfo({
+        maxAllowedStaked: state.maxAllowedStaked as number,
+        stakedAmount: state.stakedAmount as number,
+      });
+      setIsLoading(false);
+    };
+
+    getInfo();
+  }, [applicationId]);
+
+  return { info, isLoading };
 };
