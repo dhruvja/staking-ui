@@ -46,7 +46,7 @@
         },
         {
           "name": "maxAllowedStake",
-          "type": "u32"
+          "type": "u64"
         }
       ]
     },
@@ -134,11 +134,11 @@
         },
         {
           "name": "stakeAmount",
-          "type": "u32"
+          "type": "u64"
         },
         {
           "name": "rewardAmount",
-          "type": "u32"
+          "type": "u64"
         }
       ]
     }
@@ -161,15 +161,19 @@
           },
           {
             "name": "stakedAmount",
-            "type": "u32"
+            "type": "u64"
           },
           {
             "name": "maxAllowedStaked",
-            "type": "u32"
+            "type": "u64"
           },
           {
             "name": "totalRewardAmount",
-            "type": "u32"
+            "type": "u64"
+          },
+          {
+            "name": "updateRewardValueInJob",
+            "type": "bool"
           }
         ]
       }
@@ -200,18 +204,18 @@
   "errors": [
     {
       "code": 6000,
-      "name": "InvalidAuthority",
-      "msg": "You dont have the authority to create the application"
+      "name": "AmountUnderflow",
+      "msg": "Amount underflowed"
     },
     {
       "code": 6001,
-      "name": "InvalidStatus",
-      "msg": "Invalid status value"
+      "name": "StatusNotPending",
+      "msg": "Status isn't Pending"
     },
     {
       "code": 6002,
-      "name": "InvalidCall",
-      "msg": "Program Is not called By CPI"
+      "name": "NotEnoughStakeAvailable",
+      "msg": "Staking available is less than what the user wants to stake"
     }
   ],
   "metadata": {

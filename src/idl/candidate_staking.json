@@ -176,7 +176,7 @@
         },
         {
           "name": "amount",
-          "type": "u32"
+          "type": "u64"
         }
       ]
     },
@@ -289,11 +289,11 @@
           },
           {
             "name": "stakedAmount",
-            "type": "u32"
+            "type": "u64"
           },
           {
             "name": "rewardAmount",
-            "type": "u32"
+            "type": "u64"
           }
         ]
       }
@@ -319,6 +319,16 @@
       "code": 6003,
       "name": "SelectedButCantTransfer",
       "msg": "The staked application is selected but u would have to wait before u can withdraw"
+    },
+    {
+      "code": 6004,
+      "name": "StakeAmountOverflow",
+      "msg": "Stake amount overflow"
+    },
+    {
+      "code": 6005,
+      "name": "RewardAmountOverflow",
+      "msg": "Reward amount overflow"
     }
   ],
   "metadata": {

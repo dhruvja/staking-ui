@@ -42,7 +42,7 @@
         },
         {
           "name": "maxAmountPerApplication",
-          "type": "u32"
+          "type": "u64"
         }
       ]
     },
@@ -76,7 +76,7 @@
         },
         {
           "name": "rewardAmount",
-          "type": "u32"
+          "type": "u64"
         }
       ]
     },
@@ -144,7 +144,7 @@
         },
         {
           "name": "amount",
-          "type": "u32"
+          "type": "u64"
         }
       ]
     }
@@ -165,11 +165,11 @@
           },
           {
             "name": "maxAmountPerApplication",
-            "type": "u32"
+            "type": "u64"
           },
           {
             "name": "totalRewardToBeGiven",
-            "type": "u32"
+            "type": "u64"
           }
         ]
       }
@@ -185,11 +185,11 @@
           },
           {
             "name": "stakedAmount",
-            "type": "u32"
+            "type": "u64"
           },
           {
             "name": "rewardAmount",
-            "type": "u32"
+            "type": "u64"
           }
         ]
       }
@@ -205,6 +205,11 @@
       "code": 6001,
       "name": "InvalidCall",
       "msg": "You dont have the permission to call this"
+    },
+    {
+      "code": 6002,
+      "name": "TotalRewardAmountOverflow",
+      "msg": "Total reward amount overflow"
     }
   ],
   "metadata": {
