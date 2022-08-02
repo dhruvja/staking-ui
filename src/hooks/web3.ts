@@ -147,7 +147,7 @@ export const useStakeWeb3 = () => {
           applicationBump,
           jobBump,
           walletBump,
-          deposit
+          new anchor.BN(deposit)
         )
         .accounts({
           baseAccount: candidatePDA,
@@ -282,7 +282,7 @@ export const useUnstakeWeb3 = () => {
           applicationBump,
           jobBump,
           walletBump,
-          deposit
+          new anchor.BN(deposit)
         )
         .accounts({
           baseAccount: candidatePDA,
