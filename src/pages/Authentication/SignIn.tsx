@@ -78,7 +78,7 @@ const SignIn = (): JSX.Element => {
               >
                 <input
                   placeholder="Email"
-                  className="bg-transparent placeholder-opacity-50 placeholder-[#C4C4C4] text-[#C4C4C4] w-full h-4 mb-[9px]"
+                  className="focus:outline-none bg-transparent placeholder-opacity-50 placeholder-[#C4C4C4] text-[#C4C4C4] w-full h-4 mb-[9px]"
                   {...register("email", {
                     required: true,
                     pattern: emailRegex,
@@ -120,7 +120,7 @@ const SignInPw: FunctionComponent<{ register: any }> = ({ register }) => {
         <input
           type={pwView ? "text" : "password"}
           placeholder="Password"
-          className="bg-transparent placeholder-opacity-50 placeholder-[#C4C4C4] text-[#C4C4C4] w-full h-4 mb-[9px]"
+          className="focus:outline-none bg-transparent placeholder-opacity-50 placeholder-[#C4C4C4] text-[#C4C4C4] w-full h-4 mb-[9px]"
           {...register("password", { required: true })}
         />
         <button
