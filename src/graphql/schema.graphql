@@ -1,0 +1,413 @@
+type User {
+  id: ID!
+  email: String!
+  name: String!
+  roles: [RoleEnum!]
+  activeRole: RoleEnum
+  gender: GenderEnum!
+}
+
+type Company {
+  id: ID!
+  name: String!
+  photoUrl: String
+  web: String
+  description: String
+  # TODO: add more information about the company (employees, history of hirings, etc)
+}
+
+type WalletInfo {
+  id: ID!
+  blockchain: BlockchainEnum!
+  walletAddress: String!
+}
+
+type UserProfile {
+  id: ID!
+  name: String!
+  role: RoleEnum!
+  photoUrl: String
+}
+
+interface Profile {
+  id: ID!
+  name: String!
+  role: RoleEnum!
+  photoUrl: String
+}
+
+type CompanyHrProfile implements Profile {
+  id: ID!
+  name: String!
+  role: RoleEnum!
+  photoUrl: String
+  linkedin: String
+  location: String!
+  jobTitle: String!
+  company: Company!
+  about: String
+}
+
+type CandidateProfile implements Profile {
+  id: ID!
+  name: String!
+  role: RoleEnum!
+  photoUrl: String
+  linkedin: String
+  location: String!
+  field: [String!]!
+  jobTitle: String!
+  companyName: String
+  walletInfo: WalletInfo
+  experience: ExperienceEnum
+  techSkills: [String!]
+  softSkills: [String!]
+  about: String
+  web: String
+  github: String
+  available: Boolean
+}
+
+type StakerProfile implements Profile {
+  id: ID!
+  name: String!
+  role: RoleEnum!
+  photoUrl: String
+  linkedin: String
+  jobTitle: String!
+  walletInfo: [WalletInfo!]!
+  companyName: String
+  about: String
+  github: String
+}
+
+type InternalRecruiterProfile implements Profile {
+  id: ID!
+  name: String!
+  role: RoleEnum!
+  photoUrl: String
+  linkedin: String
+  calendlyUrl: String!
+  location: String!
+  jobTitle: String!
+  about: String
+}
+
+type LoginResponse {
+  user: User!
+  profile: Profile
+  token: String!
+  linkedinPhotoUrl: String
+}
+
+type JobAd {
+  id: ID!
+  company: Company!
+  title: String!
+  description: String!
+  responsibilities: String!
+  requirements: String!
+  preferred: String!
+  benefits: String!
+  format: JobTypeEnum!
+  date: String!
+  location: String
+  isRemote: Boolean!
+  currency: String!
+  minSalary: Int!
+  maxSalary: Int!
+  createdBy: Profile!
+  status: JobStatusEnum!
+  field: FieldEnum!
+  experience: ExperienceEnum!
+  referenceQuestions: [ReferenceQuestionnaire!]!
+  numberOfApplications: Int!
+  editable: Boolean!
+}
+
+type UserAndProfile {
+  user: User!
+  profile: Profile!
+}
+
+type JobApplication {
+  id: ID!
+  date: String! # created
+  status: ApplicationStatusEnum!
+  notes: [ApplicationNote!]
+  hire: Hire
+  rejection: Rejection
+  fosterScore: Int!
+  candidate: CandidateProfile!
+  reference: Reference
+  jobAd: JobAd!
+}
+
+# Job information that only company can see
+type JobForCompany {
+  jobAd: JobAd!
+  applications: [JobApplication!]!
+  hires: [Hire!]
+}
+
+type JobForInternalRecruiter {
+  jobAd: JobAd!
+}
+
+# A reference from one person to another
+type Reference {
+  id: ID!
+  date: String!
+  referrer: Profile!
+  answers: [ReferenceAnswer!]!
+}
+
+type ReferenceAnswer {
+  id: ID!
+  question: ReferenceQuestionnaire!
+  application: JobApplication!
+  text: String!
+}
+
+type ReferenceQuestionnaire {
+  id: String!
+  text: String!
+}
+# Represents a person being rejected
+type Rejection {
+  note: ApplicationNote # Can include a note about why the candidate was rejected
+}
+
+type ApplicationNote {
+  id: ID!
+  date: String!
+  writtenBy: Profile!
+  text: String!
+}
+
+type JobForCandidate {
+  jobAd: JobAd!
+  application: JobApplication
+}
+
+# Represents a person being hired
+type Hire {
+  id: ID!
+  starting_date: String!
+  yearly_salary: Int!
+  application: JobApplication!
+}
+
+type Message {
+  id: ID!
+  from: Profile!
+  to: Profile!
+  date: String!
+  text: String!
+  read: Boolean!
+}
+
+type Conversation {
+  with: Profile!
+  messages: [Message!]!
+}
+
+type Notification {
+  id: ID!
+  type: NotificationTypeEnum!
+  date: String!
+  application: JobApplication
+  read: Boolean!
+  triggerUserProfile: Profile
+  info: String
+  linkID: String!
+}
+
+type UserSuggestion {
+  id: ID!
+  email: String!
+  name: String!
+  profile: Profile!
+}
+
+type ReferenceForCandidate {
+  reference: Reference!
+  referee: Profile
+  candidateName: String!
+  email: String!
+  linkedinUrl: String!
+  status: ReferenceStatus!
+  jobAd: JobAd!
+  applicationId: String # null when the application has not been created yet
+}
+
+type ReferenceForReferrer {
+  reference: Reference!
+  referee: Profile
+  candidateName: String!
+  email: String!
+  linkedinUrl: String!
+  status: ReferenceStatus!
+  jobAd: JobAd!
+  applicationId: String # null when the application has not been created yet
+}
+
+type ReferenceForRecruiter {
+  reference: Reference!
+  referee: Profile
+  candidateName: String!
+  email: String!
+  linkedinUrl: String!
+  status: ReferenceStatus!
+  jobAd: JobAd!
+  applicationId: String # null when the application has not been created yet
+}
+
+type HardSkillsInHighDemand {
+  ID: String!
+  Name: String!
+}
+
+type ReferralWithoutJobResponse {
+  id: ID!
+  date: String!
+  referrer: CandidateProfile!
+  name: String!
+  email: String!
+  linkedinUrl: String
+  githubUrl: String
+  relationshipWithCandidate: String!
+  standOut: String!
+  isIncognito: Boolean!
+  hardSkills: [String!]!
+}
+
+# Enums
+enum RoleEnum {
+  company_user
+  internal_recruiter
+  staker
+  candidate
+}
+
+enum GenderEnum {
+  male
+  female
+  other
+  non_binary_gender
+  does_not_disclose
+}
+
+# Errors
+enum ErrorMsg {
+  APPLICATION_NOT_FOUND
+  COMPANY_NOT_FOUND
+  JOB_AD_NOT_FOUND
+  JOB_APPLICATION_NOT_FOUND
+  NOTIFICATION_NOT_FOUND
+  USER_NOT_FOUND
+  COMPANY_HR_PROFILE_NOT_FOUND
+  PROFILE_NOT_FOUND
+  ROLE_NOT_FOUND
+  QUESTION_NOT_FOUND
+  REFERRAL_NOT_FOUND
+  INVALID_INPUT
+  INVALID_REFERRAL
+  INCORRECT_PASSWORD
+  UNAUTHORIZED
+  NOTE_NOT_FOUND
+  MESSAGE_NOT_FOUND
+  REGISTRATION_INCOMPLETE
+  CV_NOT_FOUND
+  EMAIL_ALREADY_EXIST
+  JOB_APPLICATION_ALREADY_EXISTS
+  PROFILE_ALREADY_EXISTS
+  REFERRAL_ALREADY_EXISTS
+  REQUEST_EXPIRED
+}
+
+enum ExperienceEnum {
+  early_career
+  mid_level
+  senior
+}
+
+enum BlockchainEnum {
+  solana
+  bitcoin
+  ethereum
+}
+
+enum JobStatusEnum {
+  active
+  finished
+}
+
+enum EmploymentStatusEnum {
+  Onboarding
+  Complete
+}
+
+enum SkillTypeEnum {
+  Tech
+  Soft
+}
+
+enum JobTypeEnum {
+  full_time
+  contractor
+  part_time
+  internship
+}
+
+enum FieldEnum {
+  engineering
+  security
+  operations
+  finance
+  product
+  sales
+  marketing
+  people
+}
+
+enum ReferralAcceptanceStatus {
+  pending
+  accepted
+  rejected
+}
+
+enum ApplicationStatusEnum {
+  pending
+  in_review
+  interviewing
+  technical_challenge
+  on_site
+  offer
+  canceled
+  rejected
+  hired
+  invalid
+}
+
+enum NotificationTypeEnum {
+  reference # A User referenced some candidate
+  reference_without_job
+  application # A User applied for a job
+  application_status_change # An Application status has changed
+  new_note # A note has been added for an Application
+  payment_due # It is time to make a payment
+  hire
+  rejection
+}
+
+enum ReferenceStatus {
+  pending
+  accepted
+  rejected
+}
+
+type Subscription {
+  messageCreated(jwtToken: String!): Message
+  notificationCreated(jwtToken: String!): Notification
+}

@@ -1,0 +1,6 @@
+mutation EditJobAd($jobAdId: ID!, $jobAdData: JobAdData!) {
+  editJobAd(jobAdId: $jobAdId, jobAdData: $jobAdData) {
+#    ...jobForCompanyJobAd
+    ...jobAdData
+  }
+}

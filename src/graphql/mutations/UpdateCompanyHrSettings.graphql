@@ -1,0 +1,16 @@
+mutation UpdateCompanyHrSettings($companyHrSettings: CompanyHrSettingsInput!) {
+    updateCompanyHrSettings(companyHrSettings: $companyHrSettings) {
+        id
+        name
+        photoUrl
+        role
+        location
+        jobTitle
+        company {
+            id
+            name
+            photoUrl
+        }
+        about
+    }
+}

@@ -1,0 +1,25 @@
+mutation UpdateCandidateSettings($candidateSettings: CandidateSettingsInput!) {
+    updateCandidateSettings(candidateSettings: $candidateSettings) {
+        id
+        name
+        photoUrl
+        role
+        location
+        field
+        jobTitle
+        companyName
+        experience
+        techSkills
+        softSkills
+        about
+        web
+        github
+        available
+        linkedin
+        walletInfo {
+            id
+            blockchain
+            walletAddress
+        }
+    }
+}

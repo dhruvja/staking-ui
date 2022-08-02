@@ -1,0 +1,10 @@
+mutation SwitchRole($newRole: RoleEnum!) {
+    switchRole(newRole: $newRole) {
+        user {
+            ...userData
+        }
+        profile {
+            ...FullProfile
+        }
+    }
+}

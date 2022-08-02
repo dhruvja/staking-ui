@@ -1,0 +1,200 @@
+fragment userData on User {
+  id
+  name
+  gender
+  email
+  activeRole
+  roles
+}
+
+fragment basicProfile on Profile {
+  ... on CompanyHrProfile {
+    id
+    name
+    photoUrl
+    linkedin
+    role
+  }
+  ... on InternalRecruiterProfile {
+    id
+    name
+    photoUrl
+    linkedin
+    role
+  }
+  ... on StakerProfile {
+    id
+    name
+    photoUrl
+    linkedin
+    role
+  }
+  ... on CandidateProfile {
+    id
+    name
+    photoUrl
+    linkedin
+    role
+  }
+}
+
+fragment conversationData on Conversation {
+  with {
+    id
+    name
+    photoUrl
+    role
+    ... on CompanyHrProfile {
+      location
+    }
+    ... on InternalRecruiterProfile {
+      location
+    }
+    ... on CandidateProfile {
+      location
+    }
+  }
+  messages {
+    id
+    from {
+      id
+      name
+      photoUrl
+      role
+    }
+    text
+    date
+    read
+  }
+}
+
+fragment applicationData on JobApplication {
+  id
+  status
+  hire {
+    id
+    starting_date
+    yearly_salary
+  }
+  candidate {
+    id
+    linkedin
+    photoUrl
+    location
+    name
+    web
+    github
+  }
+  reference {
+    id
+    referrer {
+      id
+      name
+      photoUrl
+      role
+    }
+    answers {
+      id
+      text
+      question {
+        id
+        text
+      }
+    }
+  }
+  fosterScore
+  date
+}
+
+fragment FullProfile on Profile {
+  id
+  name
+  photoUrl
+  role
+  ... on CompanyHrProfile {
+    location
+    jobTitle
+    company {
+      id
+      name
+      photoUrl
+      web
+      description
+    }
+    about
+    linkedin
+  }
+  ... on InternalRecruiterProfile {
+    location
+    jobTitle
+    about
+    linkedin
+    calendlyUrl
+  }
+  ... on StakerProfile {
+    jobTitle
+    walletsInfo: walletInfo {
+      id
+      blockchain
+      walletAddress
+    }
+    companyName
+    about
+    github
+    linkedin
+  }
+  ... on CandidateProfile {
+    location
+    field
+    jobTitle
+    companyName
+    experience
+    techSkills
+    softSkills
+    about
+    web
+    github
+    available
+    linkedin
+    walletInfo {
+      id
+      blockchain
+      walletAddress
+    }
+  }
+}
+
+fragment jobAdData on JobAd {
+  id
+  title
+  format
+  location
+  minSalary
+  maxSalary
+  company {
+    id
+    name
+    photoUrl
+    description
+  }
+  currency
+  minSalary
+  maxSalary
+  status
+  date
+  field
+  experience
+  description
+  responsibilities
+  requirements
+  preferred
+  benefits
+  referenceQuestions {
+    id
+    text
+  }
+  editable
+  numberOfApplications
+  isRemote
+  jobSkills
+}

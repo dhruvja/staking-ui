@@ -1,0 +1,51 @@
+fragment NotificationData on Notification {
+  id
+  type
+  date
+  application {
+    id
+    candidate {
+      id
+      name
+      photoUrl
+    }
+    reference {
+      referrer {
+        id
+        name
+        photoUrl
+        role
+      }
+    }
+    jobAd {
+      id
+      title
+      company {
+        photoUrl
+      }
+    }
+    notes {
+      id
+      writtenBy {
+        id
+        name
+        photoUrl
+      }
+    }
+    status
+  }
+  triggerUserProfile {
+    id
+    name
+    photoUrl
+  }
+  info
+  read
+  linkID
+}
+
+query GetNotifications {
+  notifications {
+    ...NotificationData
+  }
+}

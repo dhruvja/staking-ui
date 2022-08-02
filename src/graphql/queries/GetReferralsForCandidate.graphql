@@ -1,0 +1,60 @@
+fragment MyEndorsementsCandidateReferral on JobApplication {
+  ...applicationData
+  jobAd {
+    ...jobAdData
+  }
+}
+
+fragment MyEndorsementsMyReferralsWithoutJob on ReferralWithoutJobResponse {
+  id
+  date
+  name
+  email
+  linkedinUrl
+  githubUrl
+  relationshipWithCandidate
+  standOut
+  isIncognito
+  hardSkills
+}
+
+fragment MyEndorsementsMyPendingReferences on ReferenceForReferrer {
+  candidateName
+  email
+  linkedinUrl
+  referee {
+    id
+    name
+    photoUrl
+    ... on CandidateProfile {
+      location
+    }
+  }
+  jobAd {
+    id
+    title
+    company {
+      id
+      name
+      photoUrl
+    }
+    date
+  }
+  reference {
+    id
+    date
+  }
+  status
+}
+
+query GetReferralsForCandidate($filters: JobFilters) {
+  candidateReferrals(filters: $filters) {
+    ...MyEndorsementsCandidateReferral
+  }
+  myReferralsWithoutJob {
+    ...MyEndorsementsMyReferralsWithoutJob
+  }
+  myPendingReferences {
+    ...MyEndorsementsMyPendingReferences
+  }
+}

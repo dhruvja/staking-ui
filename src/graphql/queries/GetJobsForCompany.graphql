@@ -1,0 +1,30 @@
+fragment jobForCompanyJobAd on JobAd {
+  id
+  title
+  format
+  location
+  company {
+    id
+    name
+    photoUrl
+  }
+  currency
+  minSalary
+  maxSalary
+  status
+  date
+  field
+  experience
+  numberOfApplications
+  requirements
+  preferred
+  editable
+  isRemote
+  jobSkills
+}
+
+query GetJobsForCompany($filters: JobFilters, $sortBy: SortJobsBy) {
+  jobsForCompany(filters: $filters, sortBy: $sortBy) {
+    ...jobForCompanyJobAd
+  }
+}

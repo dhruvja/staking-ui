@@ -1,0 +1,11 @@
+subscription GetMessageCreated($jwtToken: String!) {
+    messageCreated(jwtToken: $jwtToken) {
+        id
+        from {
+            ... basicProfile
+        }
+        text
+        date
+        read
+    }
+}

@@ -1,0 +1,3 @@
+mutation HireCandidate($hireData: hireData!) {
+    hireCandidate(hireData: $hireData)
+}

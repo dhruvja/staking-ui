@@ -1,0 +1,21 @@
+query GetCandidate($id: ID!) {
+    getCandidate(candidateID: $id) {
+        id
+        name
+        photoUrl
+        field
+        jobTitle
+        github
+        location
+        linkedin
+        experience
+        techSkills
+        softSkills
+        candidateSkills
+        about
+        web
+        github
+        companyName
+        available
+    }
+}

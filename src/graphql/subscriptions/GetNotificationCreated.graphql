@@ -1,0 +1,49 @@
+subscription GetNotificationCreated($jwtToken: String!) {
+  notificationCreated(jwtToken: $jwtToken) {
+    __typename
+    id
+    type
+    date
+    application {
+      id
+      candidate {
+        id
+        name
+        photoUrl
+      }
+      reference {
+        referrer {
+          id
+          name
+          photoUrl
+          role
+        }
+      }
+      jobAd {
+        id
+        title
+        company {
+          photoUrl
+        }
+      }
+      notes {
+        id
+        writtenBy {
+          id
+          name
+          photoUrl
+          role
+        }
+      }
+      status
+    }
+    linkID
+    triggerUserProfile {
+      id
+      name
+      photoUrl
+    }
+    info
+    read
+  }
+}

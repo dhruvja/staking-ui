@@ -1,0 +1,60 @@
+query GetProfile($profileID: ID!) {
+  profile(profileID: $profileID) {
+    id
+    name
+    photoUrl
+    role
+    ... on CompanyHrProfile {
+      location
+      linkedin
+      about
+      jobTitle
+      company {
+        id
+        name
+        photoUrl
+        web
+        description
+      }
+    }
+    ... on InternalRecruiterProfile {
+      location
+      jobTitle
+      about
+      linkedin
+      calendlyUrl
+    }
+    ... on StakerProfile {
+      jobTitle
+      walletsInfo: walletInfo {
+        id
+        blockchain
+        walletAddress
+      }
+      linkedin
+      companyName
+      about
+      github
+
+    }
+    ... on CandidateProfile {
+      location
+      field
+      linkedin
+      jobTitle
+      companyName
+      experience
+      techSkills
+      softSkills
+      about
+      web
+      github
+      available
+      walletInfo {
+        id
+        blockchain
+        walletAddress
+      }
+    }
+  }
+}

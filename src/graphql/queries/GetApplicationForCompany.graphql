@@ -1,0 +1,57 @@
+query GetApplication($applicationId: ID!) {
+  application(applicationId: $applicationId) {
+    id
+    date
+    status
+    candidate {
+        id
+        name
+        role
+        photoUrl
+        jobTitle
+        companyName
+        location
+        web
+        linkedin
+        github
+        softSkills
+        techSkills
+        available
+        about
+        field
+        experience
+    }
+    reference {
+      id
+      referrer {
+        id
+        name
+        photoUrl
+        role
+      }
+      answers {
+        id
+        text
+        question {
+          id
+          text
+        }
+      }
+    }
+    notes {
+      id
+      text
+      date
+      writtenBy {
+        id
+        name
+        photoUrl
+      }
+    }
+    fosterScore
+      jobAd {
+          ...jobAdData
+      }
+  }
+
+}

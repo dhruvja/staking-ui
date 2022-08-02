@@ -1,0 +1,11 @@
+query GetUser($renewToken: String!) {
+    getUser(renewToken: $renewToken) {
+        user {
+            ... userData
+        }
+        profile {
+            ... FullProfile
+        }
+        token
+    }
+}

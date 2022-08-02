@@ -1,0 +1,3 @@
+mutation ReferCandidate($referenceData: ReferCandidateData!) {
+  referCandidate(referenceData: $referenceData)
+}

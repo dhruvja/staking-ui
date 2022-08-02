@@ -1,0 +1,17 @@
+overwrite: true
+schema: "https://persico-test.fly.dev/graphql"
+documents: "src/**/*.graphql"
+generates:
+  src/generated/graphql.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
+    config:
+      withResultType: true
+  ./graphql.schema.json:
+    plugins:
+      - "introspection"
+  ./src/fragmentTypes.json:
+    plugins:
+      - fragment-matcher

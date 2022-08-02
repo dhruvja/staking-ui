@@ -1,0 +1,30 @@
+fragment jobPublic on JobAd {
+  id
+  title
+  format
+  location
+  company {
+    id
+    name
+    photoUrl
+  }
+  currency
+  minSalary
+  maxSalary
+  status
+  date
+  field
+  experience
+  numberOfApplications
+  requirements
+  preferred
+  editable
+  isRemote
+  jobSkills
+}
+
+query GetJobsPublic($filters: JobFilters, $sortBy: SortJobsBy) {
+  jobsPublic(filters: $filters, sortBy: $sortBy) {
+    ...jobPublic
+  }
+}

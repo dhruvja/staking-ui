@@ -1,0 +1,12 @@
+mutation ContinueWithLinkedin($token: String!) {
+    continueWithLinkedin(token: $token) {
+        user {
+            ... userData
+        }
+        profile {
+            ... FullProfile
+        }
+        token
+        photoUrl
+    }
+}

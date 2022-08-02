@@ -1,0 +1,11 @@
+mutation SendMessage($toProfileId: ID!, $text: String!) {
+  sendMessage(toProfileID: $toProfileId, text: $text) {
+    id
+    date
+    text
+    read
+    from {
+      ... basicProfile
+    }
+  }
+}

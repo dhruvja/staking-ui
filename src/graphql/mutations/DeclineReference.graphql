@@ -1,0 +1,3 @@
+mutation DeclineReference($referenceId: String!) {
+    declineReference(referenceId: $referenceId)
+}

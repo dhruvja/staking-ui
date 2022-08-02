@@ -1,0 +1,12 @@
+query GetCandidates {
+    getCandidates {
+        id
+        name
+        photoUrl
+        field
+        jobTitle
+        github
+        available
+        experience
+    }
+}

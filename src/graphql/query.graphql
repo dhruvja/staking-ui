@@ -1,0 +1,75 @@
+input JobFilters {
+    fields: [FieldEnum!]
+    experiences: [ExperienceEnum!]
+    formats: [JobTypeEnum!]
+    isRemote: Boolean
+    minSalary: Int
+}
+
+input SortJobsBy {
+    key: SortJobsByKeyEnum
+    order: OrderEnum
+}
+
+enum OrderEnum {
+    asc
+    desc
+}
+
+enum SortJobsByKeyEnum {
+    date
+    minSalary
+    maxSalary
+    status
+    title
+    format
+    field
+    experience
+}
+
+type Query {
+    getUser(renewToken: String!): LoginResponse
+    # gives a profile based on a profile id
+    profile(profileID: ID!): Profile
+    activeProfile(userId: ID!): Profile
+    getCV(userId: ID!): String # bytes
+    # jobs
+    jobsForCompany(filters: JobFilters, sortBy: SortJobsBy): [JobAd!]!
+    jobForCompany(jobAdId: ID!): JobForCompany
+    jobForCandidate(jobAdId: ID!): JobForCandidate
+    jobsForCandidate(filters: JobFilters, sortBy: SortJobsBy): [JobForCandidate!]!
+    jobsForInternalRecruiter(
+        filters: JobFilters
+        sortBy: SortJobsBy
+    ): [JobForInternalRecruiter!]!
+    application(applicationId: ID!): JobApplication
+    candidateApplications(
+        filters: JobFilters
+        sortBy: SortJobsBy
+    ): [JobApplication!]!
+    candidateReferrals(
+        filters: JobFilters
+        sortBy: SortJobsBy
+    ): [JobApplication!]!
+    getReference(refreenceID: String!): Reference
+    myPendingReferences: [ReferenceForReferrer!]! # Gets all the references that have not yet been accepted
+    referenceForCandidate(referenceId: String!): ReferenceForCandidate
+    referenceForReferrer(referenceId: String!): ReferenceForReferrer
+    referenceForRecruiter(referenceId: String!): ReferenceForRecruiter
+    getInternalRecruitersAssignedToJob(jobId: ID!): [InternalRecruiterProfile!]!
+    getHardSkillsInHighDemand: [HardSkillsInHighDemand!]!
+    referralWithoutJob(referralWithoutJobId: String!): ReferralWithoutJobResponse
+    referralsWithoutJob: [ReferralWithoutJobResponse!]!
+
+    myReferralsWithoutJob: [ReferralWithoutJobResponse!]!
+
+    # Companies
+    companies: [Company!]!
+    # Chat
+    conversation(otherProfileID: ID!): Conversation
+    conversations: [Conversation!]!
+    # Notifications
+    notifications: [Notification!]!
+
+    userSuggestions(text: String!): [UserSuggestion!]!
+}

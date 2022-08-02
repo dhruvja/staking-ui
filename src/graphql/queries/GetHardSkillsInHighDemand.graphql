@@ -1,0 +1,6 @@
+query getHardSkillsInHighDemand {
+    getHardSkillsInHighDemand {
+        ID
+        Name
+    }
+}

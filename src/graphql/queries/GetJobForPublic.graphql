@@ -1,0 +1,5 @@
+query GetJobForPublic($jobAdId: ID!) {
+  jobForPublic(jobAdId: $jobAdId) {
+    ...jobAdData
+  }
+}

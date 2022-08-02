@@ -1,0 +1,8 @@
+query GetCandidateApplications($filters: JobFilters, $sortBy: SortJobsBy) {
+  candidateApplications(filters: $filters, sortBy: $sortBy) {
+    ...applicationData
+    jobAd {
+      ...jobAdData
+    }
+  }
+}

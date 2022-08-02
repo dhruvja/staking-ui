@@ -1,0 +1,5 @@
+query GetConversation($otherProfileId: ID!) {
+  conversation(otherProfileID: $otherProfileId) {
+    ... conversationData
+  }
+}

@@ -1,0 +1,13 @@
+query GetReferralsWithoutJobForInternalRecruiter {
+    referralsWithoutJob {
+        id
+        name
+        email
+        date
+        referrer {
+            id
+            name
+        }
+        hardSkills
+    }
+}

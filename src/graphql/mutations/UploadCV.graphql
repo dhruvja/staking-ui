@@ -1,0 +1,3 @@
+mutation UploadCV($cv: Upload!) {
+    uploadCV(cv: $cv)
+}

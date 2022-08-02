@@ -3,6 +3,10 @@ export const paths = {
     route: "/",
     resolve: () => "/",
   },
+  signin: {
+    route: "/signin",
+    resolve: () => "/signin",
+  },
   connect: {
     route: "/connect",
     resolve: () => "/connect",

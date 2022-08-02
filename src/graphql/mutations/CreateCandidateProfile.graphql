@@ -1,0 +1,11 @@
+mutation CreateCandidateProfile($candidateData: CreateCandidateProfileData!) {
+  createCandidateProfile(candidateData: $candidateData) {
+    user {
+      ...userData
+    }
+    profile {
+      ...FullProfile
+    }
+    token
+  }
+}

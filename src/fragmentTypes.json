@@ -1,0 +1,10 @@
+{
+  "possibleTypes": {
+    "Profile": [
+      "CandidateProfile",
+      "CompanyHrProfile",
+      "InternalRecruiterProfile",
+      "StakerProfile"
+    ]
+  }
+}

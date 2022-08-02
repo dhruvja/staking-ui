@@ -1,0 +1,3 @@
+mutation CreateJobAd($jobAdData: JobAdData!) {
+  createJobAd(jobAdData: $jobAdData)
+}

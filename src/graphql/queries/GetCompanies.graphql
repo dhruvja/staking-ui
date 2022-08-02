@@ -1,0 +1,9 @@
+query GetCompanies {
+    companies {
+        id
+        name
+        description
+        photoUrl
+        web
+    }
+}

@@ -1,0 +1,3 @@
+mutation AcceptReference($referenceId: ID!) {
+    acceptReference(referenceId: $referenceId)
+}

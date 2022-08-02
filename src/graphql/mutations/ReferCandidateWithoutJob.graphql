@@ -1,0 +1,3 @@
+mutation ReferCandidateWithoutJob($candidateData: CandidateData!) {
+    referCandidateWithoutJob(candidateData: $candidateData)
+}

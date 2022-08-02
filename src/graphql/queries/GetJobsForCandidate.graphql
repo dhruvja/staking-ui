@@ -1,0 +1,31 @@
+fragment jobAdForCandidate on JobAd {
+  id
+  title
+  format
+  location
+  currency
+  minSalary
+  maxSalary
+  company {
+    id
+    photoUrl
+    name
+  }
+  date
+  requirements
+  preferred
+  isRemote
+  jobSkills
+  experience
+}
+
+query GetJobsForCandidate($filters: JobFilters, $sortBy: SortJobsBy) {
+  jobsForCandidate(filters: $filters, sortBy: $sortBy) {
+    jobAd {
+      ...jobAdForCandidate
+    }
+    application {
+      id
+    }
+  }
+}

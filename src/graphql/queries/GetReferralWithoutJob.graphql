@@ -1,0 +1,17 @@
+query GetReferralWithoutJob($referralWithoutJobId: String!) {
+    referralWithoutJob(referralWithoutJobId: $referralWithoutJobId) {
+        id
+        name
+        email
+        linkedinUrl
+        githubUrl
+        hardSkills
+        isIncognito
+        relationshipWithCandidate
+        standOut
+        referrer {
+            id
+            name
+        }
+    }
+}

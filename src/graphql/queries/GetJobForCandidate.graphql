@@ -1,0 +1,23 @@
+fragment jobForCandidateApplication on JobApplication {
+  id
+  date
+  reference {
+    referrer {
+      id
+      name
+      photoUrl
+    }
+  }
+  status
+}
+
+query GetJobForCandidate($jobAdId: ID!) {
+  jobForCandidate(jobAdId: $jobAdId) {
+    jobAd {
+      ...jobAdData
+    }
+    application {
+      ...jobForCandidateApplication
+    }
+  }
+}

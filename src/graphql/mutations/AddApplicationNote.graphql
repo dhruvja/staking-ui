@@ -1,0 +1,3 @@
+mutation AddApplicationNote($applicationId: ID!, $text: String!) {
+  addApplicationNote(applicationId: $applicationId, text: $text)
+}

@@ -1,0 +1,190 @@
+"The `UploadFile, // b.txt` scalar type represents a multipart file upload."
+scalar Upload
+
+input InputQuestion {
+    text: String!
+}
+
+input JobAdData {
+    companyId: String!
+    title: String!
+    location: String!
+    isRemote: Boolean!
+    field: FieldEnum!
+    minSalary: Int!
+    maxSalary: Int!
+    experience: ExperienceEnum!
+    format: JobTypeEnum!
+    description: String!
+    responsibilities: String!
+    requirements: String!
+    preferred: String!
+    benefits: String!
+    currency: String!
+    editable: Boolean!
+    referenceQuestions: [InputQuestion!]!
+}
+
+input CreateCandidateProfileData {
+    name: String!
+    location: String!
+    linkedin: String!
+    github: String
+    field: [FieldEnum!]!
+    blockchainAddress: String
+    blockchain: BlockchainEnum
+    companyName: String # might not exist in the platform
+    jobTitle: String!
+    about: String
+    experience: ExperienceEnum!
+    techSkills: [String!]!
+    softSkills: [String!]!
+    photoUrl: String
+}
+
+input InputAnswer {
+    questionId: ID!
+    text: String!
+}
+
+input ReferCandidateData {
+    jobId: ID!
+    name: String!
+    email: String!
+    linkedin: String!
+    answers: [InputAnswer!]!
+}
+
+input CandidateSettingsInput {
+    location: String!
+    linkedin: String!
+    experience: ExperienceEnum!
+    field: [FieldEnum!]!
+    blockchainAddress: String
+    blockchain: BlockchainEnum
+    techSkills: [String!]!
+    softSkills: [String!]!
+    web: String
+    github: String
+    jobTitle: String
+    companyName: String
+    about: String
+    available: Boolean
+}
+
+input CompanyHrSettingsInput {
+    companyHrProfileID: String!
+    location: String!
+    jobTitle: String!
+    photoUrl: String
+    about: String
+}
+
+input hireData {
+    jobId: String!
+    applicationId: String!
+    startingDate: String!
+    yearlySalary: Int!
+    keepOpen: Boolean!
+}
+
+input AddInternalRecruiterToJobInput {
+    jobId: String!
+    internalRecruiterId: [ID!]!
+}
+
+input CandidateData {
+    name: String!
+    email: String!
+    linkedinUrl: String
+    githubUrl: String
+    endorsementWithoutJob: EndorsementWithoutJob!
+}
+
+input EndorsementWithoutJob {
+    relationship: String! # How do they know each other
+    stand_out: String! # Tell me why this candidate stands out (be specific)
+    skills: HardSkillsHighDemand!
+    incognitoMode: Boolean!
+}
+
+input HardSkillsHighDemand {
+    skillIDs: [ID!]!
+}
+type SignUpResponse {
+    user: User!
+    token: String!
+}
+
+type regeneratePasswordResponse {
+    ID: String!
+    ValidUntil: String!
+}
+
+type Mutation {
+    login(email: String!, password: String!): LoginResponse
+    continueWithLinkedin(token: String!): LoginResponse
+    signup(
+        email: String!
+        password: String!
+        repeatedPassword: String!
+    ): SignUpResponse
+    regeneratePasswordRequest(email: String!): regeneratePasswordResponse
+    requestEmailVerification(email: String!): Boolean!
+    emailVerification(emailVerificationID: String!): LoginResponse
+    regeneratePassword(
+        regeneratePasswordRequest: ID!
+        password: String!
+        repeatedPassword: String!
+    ): Boolean!
+
+    #Profile
+    switchRole(newRole: RoleEnum!): UserAndProfile
+
+    #Candidates
+    createCandidateProfile(
+        candidateData: CreateCandidateProfileData
+    ): LoginResponse!
+
+    # Job related
+    createJobAd(jobAdData: JobAdData!): ID
+    deleteJobAd(jobAdId: ID!): Boolean
+    uploadCV(cv: Upload!): Boolean!
+    uploadProfilePicture(profilePicture: Upload!): String
+    referCandidate(referenceData: ReferCandidateData!): ID!
+    deleteReference(referenceId: ID!): Boolean
+    editJobAd(jobAdId: ID!, jobAdData: JobAdData!): JobAd
+    changeJobAdStatus(jobAdId: ID!, status: JobStatusEnum!): Boolean!
+    changeApplicationStatus(
+        applicationId: ID!
+        status: ApplicationStatusEnum!
+    ): ApplicationStatusEnum
+    addApplicationNote(applicationId: ID!, text: String!): Boolean
+    deleteApplicationNote(applicationNoteId: ID!): Boolean
+    declineReference(referenceId: String!): Boolean
+    applyToJob(jobAdId: ID!): ID # return application ID or null
+    deleteApplication(applicationId: ID!): Boolean
+    acceptReference(referenceId: ID!): ID # return applicationId or null
+    hireCandidate(hireData: hireData!): ID # ID refers to the Profile ID of the candidate hired
+    addInternalRecruiterToJob(input: AddInternalRecruiterToJobInput!): Boolean!
+    # This mutation is used when we want to refer someone, but there is no job in the platform that
+    # matches the person's competences. We want to still collect this data point, and later on,
+    # when we can find something that's right for the referee, make the match using a newly crafted referal.
+    referCandidateWithoutJob(candidateData: CandidateData!): Boolean!
+
+    # Chat
+    sendMessage(toProfileID: ID!, text: String!): Message
+    readMessage(messageId: ID!): Boolean
+    deleteMessage(messageId: ID!): Boolean
+
+    # Settings
+    updateCandidateSettings(
+        candidateSettings: CandidateSettingsInput!
+    ): CandidateProfile!
+    updateCompanyHrSettings(
+        companyHrSettings: CompanyHrSettingsInput!
+    ): CompanyHrProfile!
+
+    # Notifications
+    readNotification(notificationId: ID!): Boolean
+}

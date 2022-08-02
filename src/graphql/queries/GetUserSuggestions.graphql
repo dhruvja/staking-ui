@@ -1,0 +1,12 @@
+query GetUserSuggestions($text: String!) {
+    userSuggestions(text: $text) {
+        id
+        name
+        email
+        profile {
+            ... on CandidateProfile {
+                linkedin
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+query ReferenceForReferrer($referenceId: String!) {
+    referenceForReferrer(referenceId: $referenceId) {
+        jobAd {
+            ...jobAdData
+        }
+        reference {
+            id
+            answers {
+                id
+                question {
+                    id
+                    text
+                }
+                text
+            }
+        }
+        referee {
+            id
+            name
+            photoUrl
+            ... on CandidateProfile {
+                available
+                field
+                experience
+            }
+        }
+        email
+        status
+        applicationId
+    }
+}

@@ -1,0 +1,10 @@
+mutation EmailVerification($emailVerificationID: String!) {
+    emailVerification(emailVerificationID: $emailVerificationID) {
+        user {
+            email,
+            name,
+
+        },
+        token
+    }
+}

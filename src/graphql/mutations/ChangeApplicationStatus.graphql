@@ -1,0 +1,6 @@
+mutation ChangeApplicationStatus(
+  $applicationId: ID!
+  $status: ApplicationStatusEnum!
+) {
+  changeApplicationStatus(applicationId: $applicationId, status: $status)
+}

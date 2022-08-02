@@ -1,0 +1,13 @@
+fragment InternalRecruiterAssignedToJob on InternalRecruiterProfile {
+    id
+    name
+    photoUrl
+    calendlyUrl
+    location
+}
+
+query GetInternalRecruitersAssignedToJob($jobId: ID!) {
+    getInternalRecruitersAssignedToJob(jobId: $jobId) {
+        ...InternalRecruiterAssignedToJob
+    }
+}

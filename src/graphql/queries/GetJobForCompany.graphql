@@ -1,0 +1,26 @@
+query GetJobForCompany($jobAdId: ID!) {
+  jobForCompany(jobAdId: $jobAdId) {
+    jobAd {
+      ...jobAdData
+    }
+    applications {
+      ...applicationData
+    }
+    hires {
+      id
+      application {
+        ...applicationData
+        jobAd {
+          id
+          title
+          company {
+            id
+            name
+          }
+        }
+      }
+      starting_date
+      yearly_salary
+    }
+  }
+}
