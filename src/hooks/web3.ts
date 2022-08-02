@@ -103,7 +103,7 @@ export const useStakeWeb3 = () => {
       spl.ASSOCIATED_TOKEN_PROGRAM_ID
     );
 
-    const deposit = new anchor.BN(amount / 10 ** 6);
+    const deposit = new anchor.BN(amount * 10 ** 6);
 
     try {
       const state =
