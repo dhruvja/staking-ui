@@ -1,15 +1,15 @@
 import Img from "react-cool-img";
 import { Link } from "react-router-dom";
-import { Application } from "src/types/models";
 import jobPlaceholderImage from "src/images/jobPlaceholder.jpeg";
 import { useStakedApplication } from "src/hooks/stake";
 import { useApplicationStakeInfo } from "src/hooks/web3";
+import { JobApplicationForStaker } from "src/types/models";
 
 const ApplicationStakeCard = ({
   application,
   goToLink,
 }: {
-  application: Application;
+  application: JobApplicationForStaker;
   goToLink: string;
 }) => {
   const staked = useStakedApplication(application.id);

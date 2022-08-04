@@ -89,6 +89,19 @@ export type CandidateProfile = Profile & {
   web?: Maybe<Scalars['String']>;
 };
 
+export type CandidateProfileForStaker = {
+  __typename?: 'CandidateProfileForStaker';
+  about?: Maybe<Scalars['String']>;
+  available?: Maybe<Scalars['Boolean']>;
+  companyName?: Maybe<Scalars['String']>;
+  experience?: Maybe<ExperienceEnum>;
+  field: Array<Scalars['String']>;
+  jobTitle: Scalars['String'];
+  location: Scalars['String'];
+  softSkills?: Maybe<Array<Scalars['String']>>;
+  techSkills?: Maybe<Array<Scalars['String']>>;
+};
+
 export type CandidateSettingsInput = {
   about?: InputMaybe<Scalars['String']>;
   available?: InputMaybe<Scalars['Boolean']>;
@@ -340,6 +353,19 @@ export type JobApplication = {
   status: ApplicationStatusEnum;
 };
 
+export type JobApplicationForStaker = {
+  __typename?: 'JobApplicationForStaker';
+  candidate: CandidateProfileForStaker;
+  date: Scalars['String'];
+  fosterScore: Scalars['Int'];
+  hire?: Maybe<Hire>;
+  id: Scalars['ID'];
+  jobAd: JobAd;
+  reference?: Maybe<Reference>;
+  rejection?: Maybe<Rejection>;
+  status: ApplicationStatusEnum;
+};
+
 export type JobFilters = {
   experiences?: InputMaybe<Array<ExperienceEnum>>;
   fields?: InputMaybe<Array<FieldEnum>>;
@@ -426,6 +452,7 @@ export type Mutation = {
   login?: Maybe<LoginResponse>;
   readMessage?: Maybe<Scalars['Boolean']>;
   readNotification?: Maybe<Scalars['Boolean']>;
+  recordApplicationStaking?: Maybe<Scalars['Boolean']>;
   referCandidate: Scalars['ID'];
   referCandidateWithoutJob: Scalars['Boolean'];
   regeneratePassword: Scalars['Boolean'];
@@ -562,6 +589,11 @@ export type MutationReadNotificationArgs = {
 };
 
 
+export type MutationRecordApplicationStakingArgs = {
+  jobApplicationID: Scalars['String'];
+};
+
+
 export type MutationReferCandidateArgs = {
   referenceData: ReferCandidateData;
 };
@@ -675,6 +707,8 @@ export type Query = {
   companies: Array<Company>;
   conversation?: Maybe<Conversation>;
   conversations: Array<Conversation>;
+  getActiveApplicationsForStakers?: Maybe<Array<JobApplicationForStaker>>;
+  getApplicationForStakers?: Maybe<JobApplicationForStaker>;
   getCV?: Maybe<Scalars['String']>;
   getCandidate?: Maybe<CandidateProfile>;
   getCandidateBySkills?: Maybe<Array<CandidateProfile>>;
@@ -703,6 +737,7 @@ export type Query = {
   referenceForReferrer?: Maybe<ReferenceForReferrer>;
   referralWithoutJob?: Maybe<ReferralWithoutJobResponse>;
   referralsWithoutJob: Array<ReferralWithoutJobResponse>;
+  stakedApplications?: Maybe<Array<JobApplicationForStaker>>;
   userSuggestions: Array<UserSuggestion>;
 };
 
@@ -731,6 +766,11 @@ export type QueryCandidateReferralsArgs = {
 
 export type QueryConversationArgs = {
   otherProfileID: Scalars['ID'];
+};
+
+
+export type QueryGetApplicationForStakersArgs = {
+  applicationId: Scalars['ID'];
 };
 
 
@@ -1325,12 +1365,24 @@ export type UploadProfilePictureMutationVariables = Exact<{
 
 export type UploadProfilePictureMutation = { __typename?: 'Mutation', uploadProfilePicture?: string | null };
 
+export type GetActiveApplicationsForStakersQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetActiveApplicationsForStakersQuery = { __typename?: 'Query', getActiveApplicationsForStakers?: Array<{ __typename?: 'JobApplicationForStaker', id: string, date: string, status: ApplicationStatusEnum, fosterScore: number, candidate: { __typename?: 'CandidateProfileForStaker', field: Array<string>, location: string, jobTitle: string, companyName?: string | null, experience?: ExperienceEnum | null, techSkills?: Array<string> | null, softSkills?: Array<string> | null, about?: string | null, available?: boolean | null }, jobAd: { __typename?: 'JobAd', id: string, title: string, description: string, responsibilities: string, requirements: string, jobSkills?: Array<string> | null, preferred: string, benefits: string, format: JobTypeEnum, date: string, location?: string | null, isRemote: boolean, currency: string, minSalary: number, maxSalary: number, status: JobStatusEnum, field: FieldEnum, experience: ExperienceEnum, company: { __typename?: 'Company', id: string, name: string, photoUrl?: string | null, web?: string | null, description?: string | null } } }> | null };
+
 export type GetApplicationQueryVariables = Exact<{
   applicationId: Scalars['ID'];
 }>;
 
 
 export type GetApplicationQuery = { __typename?: 'Query', application?: { __typename?: 'JobApplication', id: string, date: string, status: ApplicationStatusEnum, fosterScore: number, candidate: { __typename?: 'CandidateProfile', id: string, name: string, role: RoleEnum, photoUrl?: string | null, jobTitle: string, companyName?: string | null, location: string, web?: string | null, linkedin?: string | null, github?: string | null, softSkills?: Array<string> | null, techSkills?: Array<string> | null, available?: boolean | null, about?: string | null, field: Array<string>, experience?: ExperienceEnum | null }, reference?: { __typename?: 'Reference', id: string, referrer: { __typename?: 'CandidateProfile', id: string, name: string, photoUrl?: string | null, role: RoleEnum } | { __typename?: 'CompanyHrProfile', id: string, name: string, photoUrl?: string | null, role: RoleEnum } | { __typename?: 'InternalRecruiterProfile', id: string, name: string, photoUrl?: string | null, role: RoleEnum } | { __typename?: 'StakerProfile', id: string, name: string, photoUrl?: string | null, role: RoleEnum }, answers: Array<{ __typename?: 'ReferenceAnswer', id: string, text: string, question: { __typename?: 'ReferenceQuestionnaire', id: string, text: string } }> } | null, notes?: Array<{ __typename?: 'ApplicationNote', id: string, text: string, date: string, writtenBy: { __typename?: 'CandidateProfile', id: string, name: string, photoUrl?: string | null } | { __typename?: 'CompanyHrProfile', id: string, name: string, photoUrl?: string | null } | { __typename?: 'InternalRecruiterProfile', id: string, name: string, photoUrl?: string | null } | { __typename?: 'StakerProfile', id: string, name: string, photoUrl?: string | null } }> | null, jobAd: { __typename?: 'JobAd', id: string, title: string, format: JobTypeEnum, location?: string | null, minSalary: number, maxSalary: number, currency: string, status: JobStatusEnum, date: string, field: FieldEnum, experience: ExperienceEnum, description: string, responsibilities: string, requirements: string, preferred: string, benefits: string, editable: boolean, numberOfApplications: number, isRemote: boolean, jobSkills?: Array<string> | null, company: { __typename?: 'Company', id: string, name: string, photoUrl?: string | null, description?: string | null }, referenceQuestions: Array<{ __typename?: 'ReferenceQuestionnaire', id: string, text: string }> } } | null };
+
+export type GetApplicationForStakerQueryVariables = Exact<{
+  applicationId: Scalars['ID'];
+}>;
+
+
+export type GetApplicationForStakerQuery = { __typename?: 'Query', getApplicationForStakers?: { __typename?: 'JobApplicationForStaker', id: string, date: string, status: ApplicationStatusEnum, fosterScore: number, candidate: { __typename?: 'CandidateProfileForStaker', field: Array<string>, location: string, jobTitle: string, companyName?: string | null, experience?: ExperienceEnum | null, techSkills?: Array<string> | null, softSkills?: Array<string> | null, about?: string | null, available?: boolean | null }, jobAd: { __typename?: 'JobAd', id: string, title: string, description: string, responsibilities: string, requirements: string, jobSkills?: Array<string> | null, preferred: string, benefits: string, format: JobTypeEnum, date: string, location?: string | null, isRemote: boolean, currency: string, minSalary: number, maxSalary: number, status: JobStatusEnum, field: FieldEnum, experience: ExperienceEnum, company: { __typename?: 'Company', id: string, name: string, photoUrl?: string | null, web?: string | null, description?: string | null } } } | null };
 
 export type GetCandidateQueryVariables = Exact<{
   id: Scalars['ID'];
@@ -2924,6 +2976,81 @@ export function useUploadProfilePictureMutation(baseOptions?: Apollo.MutationHoo
 export type UploadProfilePictureMutationHookResult = ReturnType<typeof useUploadProfilePictureMutation>;
 export type UploadProfilePictureMutationResult = Apollo.MutationResult<UploadProfilePictureMutation>;
 export type UploadProfilePictureMutationOptions = Apollo.BaseMutationOptions<UploadProfilePictureMutation, UploadProfilePictureMutationVariables>;
+export const GetActiveApplicationsForStakersDocument = gql`
+    query GetActiveApplicationsForStakers {
+  getActiveApplicationsForStakers {
+    id
+    date
+    status
+    fosterScore
+    candidate {
+      field
+      location
+      jobTitle
+      companyName
+      experience
+      techSkills
+      softSkills
+      about
+      available
+    }
+    jobAd {
+      id
+      company {
+        id
+        name
+        photoUrl
+        web
+        description
+      }
+      title
+      description
+      responsibilities
+      requirements
+      jobSkills
+      preferred
+      benefits
+      format
+      date
+      location
+      isRemote
+      currency
+      minSalary
+      maxSalary
+      status
+      field
+      experience
+    }
+  }
+}
+    `;
+
+/**
+ * __useGetActiveApplicationsForStakersQuery__
+ *
+ * To run a query within a React component, call `useGetActiveApplicationsForStakersQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetActiveApplicationsForStakersQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetActiveApplicationsForStakersQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useGetActiveApplicationsForStakersQuery(baseOptions?: Apollo.QueryHookOptions<GetActiveApplicationsForStakersQuery, GetActiveApplicationsForStakersQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<GetActiveApplicationsForStakersQuery, GetActiveApplicationsForStakersQueryVariables>(GetActiveApplicationsForStakersDocument, options);
+      }
+export function useGetActiveApplicationsForStakersLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetActiveApplicationsForStakersQuery, GetActiveApplicationsForStakersQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<GetActiveApplicationsForStakersQuery, GetActiveApplicationsForStakersQueryVariables>(GetActiveApplicationsForStakersDocument, options);
+        }
+export type GetActiveApplicationsForStakersQueryHookResult = ReturnType<typeof useGetActiveApplicationsForStakersQuery>;
+export type GetActiveApplicationsForStakersLazyQueryHookResult = ReturnType<typeof useGetActiveApplicationsForStakersLazyQuery>;
+export type GetActiveApplicationsForStakersQueryResult = Apollo.QueryResult<GetActiveApplicationsForStakersQuery, GetActiveApplicationsForStakersQueryVariables>;
 export const GetApplicationDocument = gql`
     query GetApplication($applicationId: ID!) {
   application(applicationId: $applicationId) {
@@ -3010,6 +3137,82 @@ export function useGetApplicationLazyQuery(baseOptions?: Apollo.LazyQueryHookOpt
 export type GetApplicationQueryHookResult = ReturnType<typeof useGetApplicationQuery>;
 export type GetApplicationLazyQueryHookResult = ReturnType<typeof useGetApplicationLazyQuery>;
 export type GetApplicationQueryResult = Apollo.QueryResult<GetApplicationQuery, GetApplicationQueryVariables>;
+export const GetApplicationForStakerDocument = gql`
+    query GetApplicationForStaker($applicationId: ID!) {
+  getApplicationForStakers(applicationId: $applicationId) {
+    id
+    date
+    status
+    fosterScore
+    candidate {
+      field
+      location
+      jobTitle
+      companyName
+      experience
+      techSkills
+      softSkills
+      about
+      available
+    }
+    jobAd {
+      id
+      company {
+        id
+        name
+        photoUrl
+        web
+        description
+      }
+      title
+      description
+      responsibilities
+      requirements
+      jobSkills
+      preferred
+      benefits
+      format
+      date
+      location
+      isRemote
+      currency
+      minSalary
+      maxSalary
+      status
+      field
+      experience
+    }
+  }
+}
+    `;
+
+/**
+ * __useGetApplicationForStakerQuery__
+ *
+ * To run a query within a React component, call `useGetApplicationForStakerQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetApplicationForStakerQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetApplicationForStakerQuery({
+ *   variables: {
+ *      applicationId: // value for 'applicationId'
+ *   },
+ * });
+ */
+export function useGetApplicationForStakerQuery(baseOptions: Apollo.QueryHookOptions<GetApplicationForStakerQuery, GetApplicationForStakerQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<GetApplicationForStakerQuery, GetApplicationForStakerQueryVariables>(GetApplicationForStakerDocument, options);
+      }
+export function useGetApplicationForStakerLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetApplicationForStakerQuery, GetApplicationForStakerQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<GetApplicationForStakerQuery, GetApplicationForStakerQueryVariables>(GetApplicationForStakerDocument, options);
+        }
+export type GetApplicationForStakerQueryHookResult = ReturnType<typeof useGetApplicationForStakerQuery>;
+export type GetApplicationForStakerLazyQueryHookResult = ReturnType<typeof useGetApplicationForStakerLazyQuery>;
+export type GetApplicationForStakerQueryResult = Apollo.QueryResult<GetApplicationForStakerQuery, GetApplicationForStakerQueryVariables>;
 export const GetCandidateDocument = gql`
     query GetCandidate($id: ID!) {
   getCandidate(candidateID: $id) {

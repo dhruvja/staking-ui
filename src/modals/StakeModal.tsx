@@ -1,7 +1,10 @@
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { ReactComponent as UsdcIcon } from "src/images/usdcIcon.svg";
-import { Application, ApplicationStakeInfo } from "src/types/models";
+import {
+  ApplicationStakeInfo,
+  JobApplicationForStaker,
+} from "src/types/models";
 import { useStakeApplication } from "src/hooks/stake";
 import {
   useConfirmStakeModal,
@@ -16,7 +19,7 @@ enum StakeModalStep {
 }
 
 export default function StakeModal(props: {
-  application: Application;
+  application: JobApplicationForStaker;
   children: (open: () => void) => React.ReactNode;
 }) {
   const [amount, setAmount] = useState<number | "">("");

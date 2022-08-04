@@ -98,7 +98,7 @@ const SignIn = (): JSX.Element => {
             <div className="mt-[61px] flex flex-col items-center justify-center w-full">
               <button
                 onClick={onSubmit}
-                className="h-[54px] w-[327px] rounded-full bg-primary hover:opacity-80 transition-opacity duration-200 flex items-center justify-center"
+                className="h-[54px] w-[327px] rounded-full bg-blue-500 hover:opacity-80 transition-opacity duration-200 flex items-center justify-center"
               >
                 <p className="font-mono font-[500]">SIGN IN</p>
               </button>

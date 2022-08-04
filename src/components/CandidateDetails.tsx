@@ -2,14 +2,18 @@ import Img from "react-cool-img";
 import { Link } from "react-router-dom";
 import jobPlaceholderImage from "src/images/jobPlaceholder.jpeg";
 import { ReactComponent as BackArrowIcon } from "src/images/backArrow.svg";
-import { Application, Candidate, StakedApplication } from "src/types/models";
+import {
+  CandidateForStaker,
+  JobApplicationForStaker,
+  StakedApplication,
+} from "src/types/models";
 import candidateNft from "src/images/candidateNft.svg";
 import StakeModal from "src/modals/StakeModal";
 import UnstakeModal from "src/modals/UnstakeModal";
 import { useGetStakeModalIsConfirmed } from "src/hooks/stakeModal";
 
 const CandidateDetails = (props: {
-  application: Application;
+  application: JobApplicationForStaker;
   stakedData: StakedApplication | undefined;
   goBackLink: string;
 }) => {
@@ -84,7 +88,7 @@ const CandidateDetails = (props: {
             Experience
           </span>
           <span className="font-medium text-sm capitalize">
-            {application.candidate.experience.replaceAll("_", " ")}
+            {application.candidate.experience?.replaceAll("_", " ")}
           </span>
         </div>
 
@@ -101,41 +105,43 @@ const CandidateDetails = (props: {
       <div className="mt-10 flex flex-col gap-4">
         <CandidateTags candidate={application.candidate} />
 
-        {application.candidate.softSkills.length > 0 && (
-          <div className="flex gap-2 items-center">
-            <span className="text-sm font-normal font-sora text-[#D0C9D6]">
-              Soft skills:
-            </span>
-            <div className="flex flex-nowrap overflow-scroll uppercase gap-[6px] text-[12px] leading-[16px] font-roboto">
-              {application.candidate.softSkills.map((skill) => (
-                <div
-                  key={skill}
-                  className="flex whitespace-nowrap items-center justify-center h-[18px] px-2 text-center bg-[#5362E9] rounded-sm"
-                >
-                  {skill}
-                </div> /* Auto layout */
-              ))}
+        {application.candidate.softSkills &&
+          application.candidate.softSkills?.length > 0 && (
+            <div className="flex gap-2 items-center">
+              <span className="text-sm font-normal font-sora text-[#D0C9D6]">
+                Soft skills:
+              </span>
+              <div className="flex flex-nowrap overflow-scroll uppercase gap-[6px] text-[12px] leading-[16px] font-roboto">
+                {application.candidate.softSkills.map((skill) => (
+                  <div
+                    key={skill}
+                    className="flex whitespace-nowrap items-center justify-center h-[18px] px-2 text-center bg-[#5362E9] rounded-sm"
+                  >
+                    {skill}
+                  </div> /* Auto layout */
+                ))}
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
-        {application.candidate.techSkills.length > 0 && (
-          <div className="flex gap-2 items-center">
-            <span className="text-sm font-normal font-sora text-[#D0C9D6]">
-              Tech skills:
-            </span>
-            <div className="flex flex-nowrap overflow-scroll uppercase gap-[6px] text-[12px] leading-[16px] font-roboto">
-              {application.candidate.techSkills.map((skill) => (
-                <div
-                  key={skill}
-                  className="flex whitespace-nowrap items-center justify-center h-[18px] px-2 text-center bg-[#5362E9] rounded-sm"
-                >
-                  {skill}
-                </div> /* Auto layout */
-              ))}
+        {application.candidate.techSkills &&
+          application.candidate.techSkills.length > 0 && (
+            <div className="flex gap-2 items-center">
+              <span className="text-sm font-normal font-sora text-[#D0C9D6]">
+                Tech skills:
+              </span>
+              <div className="flex flex-nowrap overflow-scroll uppercase gap-[6px] text-[12px] leading-[16px] font-roboto">
+                {application.candidate.techSkills.map((skill) => (
+                  <div
+                    key={skill}
+                    className="flex whitespace-nowrap items-center justify-center h-[18px] px-2 text-center bg-[#5362E9] rounded-sm"
+                  >
+                    {skill}
+                  </div> /* Auto layout */
+                ))}
+              </div>
             </div>
-          </div>
-        )}
+          )}
       </div>
 
       <div className="mt-11 flex flex-col gap-6">
@@ -151,7 +157,7 @@ const CandidateDetails = (props: {
 export default CandidateDetails;
 
 type CandidateTagsProps = {
-  candidate: Partial<Candidate>;
+  candidate: Partial<CandidateForStaker>;
 };
 
 const CandidateTags = ({ candidate }: CandidateTagsProps): JSX.Element => {

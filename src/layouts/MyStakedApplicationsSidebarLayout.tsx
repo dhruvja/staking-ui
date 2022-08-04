@@ -1,12 +1,10 @@
 import { useRef, useEffect } from "react";
 import { Outlet, useParams } from "react-router-dom";
 import ApplicationStakeCard from "src/components/ApplicationStakeCard";
+import { ApplicationStatusEnum } from "src/generated/graphql";
 import { useStakedApplicationsWithApplications } from "src/hooks/stake";
 import { paths } from "src/pagesPaths";
-import {
-  ApplicationStatus,
-  StakedApplicationWithApplication,
-} from "src/types/models";
+import { StakedApplicationWithApplication } from "src/types/models";
 
 const MyStakedApplicationsSidebarLayout = () => {
   const selectedApplicationId = useParams().applicationId;
@@ -22,18 +20,18 @@ const MyStakedApplicationsSidebarLayout = () => {
 
   const pendingApplications = stakedApplications.filter(
     (stakedApplication) =>
-      stakedApplication.application.status !== ApplicationStatus.Hired &&
-      stakedApplication.application.status !== ApplicationStatus.Rejected
+      stakedApplication.application.status !== ApplicationStatusEnum.Hired &&
+      stakedApplication.application.status !== ApplicationStatusEnum.Rejected
   );
 
   const hiredApplications = stakedApplications.filter(
     (stakedApplication) =>
-      stakedApplication.application.status === ApplicationStatus.Hired
+      stakedApplication.application.status === ApplicationStatusEnum.Hired
   );
 
   const rejectedApplications = stakedApplications.filter(
     (stakedApplication) =>
-      stakedApplication.application.status === ApplicationStatus.Rejected
+      stakedApplication.application.status === ApplicationStatusEnum.Rejected
   );
 
   return (

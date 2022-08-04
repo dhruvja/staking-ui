@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
-import { Application, ApplicationStakeInfo } from "./../types/models";
+import {
+  ApplicationStakeInfo,
+  JobApplicationForStaker,
+} from "./../types/models";
 import { useAnchorWallet, useConnection } from "@solana/wallet-adapter-react";
 import { AnchorProvider } from "@project-serum/anchor";
 import { PublicKey } from "@solana/web3.js";
@@ -38,7 +41,10 @@ export const useStakeWeb3 = () => {
   const wallet = useWallet();
   const provider = useProvider();
 
-  const stake = async (application: Application, amount: number) => {
+  const stake = async (
+    application: JobApplicationForStaker,
+    amount: number
+  ) => {
     const applicationProgram = getApplicationProgram(provider);
     const jobProgram = getJobProgram(provider);
     const generalProgram = getGeneralProgram(provider);
@@ -184,7 +190,10 @@ export const useUnstakeWeb3 = () => {
   const wallet = useWallet();
   const provider = useProvider();
 
-  const unstake = async (application: Application, amount: number) => {
+  const unstake = async (
+    application: JobApplicationForStaker,
+    amount: number
+  ) => {
     const applicationProgram = getApplicationProgram(provider);
     const jobProgram = getJobProgram(provider);
     const generalProgram = getGeneralProgram(provider);
@@ -350,7 +359,9 @@ export const useBalance = () => {
   return { balance, isLoading };
 };
 
-export const useApplicationStakeInfo = (applicationId: Application["id"]) => {
+export const useApplicationStakeInfo = (
+  applicationId: JobApplicationForStaker["id"]
+) => {
   const provider = useProvider();
   const applicationProgram = getApplicationProgram(provider);
 

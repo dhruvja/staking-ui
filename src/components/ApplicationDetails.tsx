@@ -1,17 +1,16 @@
 import Img from "react-cool-img";
 import { Link } from "react-router-dom";
 import jobPlaceholderImage from "src/images/jobPlaceholder.jpeg";
-import { paths } from "src/pagesPaths";
 import candidateNft from "src/images/candidateNft.svg";
 import StakeModal from "src/modals/StakeModal";
-import { Application, StakedApplication } from "src/types/models";
+import { JobApplicationForStaker, StakedApplication } from "src/types/models";
 import UnstakeModal from "src/modals/UnstakeModal";
 import { ReactComponent as QuestionMarkIcon } from "src/images/questionMark.svg";
 import { useGetStakeModalIsConfirmed } from "src/hooks/stakeModal";
 import { useApplicationStakeInfo } from "src/hooks/web3";
 
 const ApplicationDetails = (props: {
-  application: Application;
+  application: JobApplicationForStaker;
   stakedData: StakedApplication | undefined;
   candidatePageLink: string;
   jobPageLink: string;

@@ -1,19 +1,22 @@
-import data from "src/mock/main";
-import { Application } from "src/types/models";
+import {
+  useGetActiveApplicationsForStakersQuery,
+  useGetApplicationForStakerQuery,
+} from "src/generated/graphql";
 
 export const useApplications = () => {
-  const applications = data.reduce((acc, elem) => {
-    return [...acc, ...elem.applications];
-  }, [] as Application[]);
+  const { data, loading } = useGetActiveApplicationsForStakersQuery();
+  // const applications = data.reduce((acc, elem) => {
+  //   return [...acc, ...elem.applications];
+  // }, [] as Application[]);
 
-  return applications;
+  return data?.getActiveApplicationsForStakers || [];
 };
 
 export const useApplication = (id: string) => {
-  const applications = data.reduce((acc, elem) => {
-    return [...acc, ...elem.applications];
-  }, [] as Application[]);
-
-  const application = applications.find((application) => application.id === id);
-  return application;
+  const { data, loading } = useGetApplicationForStakerQuery({
+    variables: {
+      applicationId: id,
+    },
+  });
+  return data?.getApplicationForStakers || undefined;
 };

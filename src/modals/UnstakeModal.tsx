@@ -1,10 +1,10 @@
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import { Application } from "src/types/models";
 import { useUnstakeApplication } from "src/hooks/stake";
+import { JobApplicationForStaker } from "src/types/models";
 
 export default function UnstakeModal(props: {
-  application: Application;
+  application: JobApplicationForStaker;
   amount: number;
   children: (open: () => void) => React.ReactNode;
 }) {

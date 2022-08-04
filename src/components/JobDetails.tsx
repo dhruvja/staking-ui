@@ -2,13 +2,17 @@ import Img from "react-cool-img";
 import { Link } from "react-router-dom";
 import jobPlaceholderImage from "src/images/jobPlaceholder.jpeg";
 import { ReactComponent as BackArrowIcon } from "src/images/backArrow.svg";
-import { Application, JobAd, StakedApplication } from "src/types/models";
+import {
+  JobAdForStaker,
+  JobApplicationForStaker,
+  StakedApplication,
+} from "src/types/models";
 import StakeModal from "src/modals/StakeModal";
 import UnstakeModal from "src/modals/UnstakeModal";
 import { useGetStakeModalIsConfirmed } from "src/hooks/stakeModal";
 
 const JobDetails = (props: {
-  application: Application;
+  application: JobApplicationForStaker;
   stakedData: StakedApplication | undefined;
   goBackLink: string;
 }) => {
@@ -180,7 +184,7 @@ const JobDetails = (props: {
 export default JobDetails;
 
 type JobTagsProps = {
-  jobAd: Partial<JobAd>;
+  jobAd: Partial<JobAdForStaker>;
 };
 
 const JobTags = ({ jobAd }: JobTagsProps): JSX.Element => {

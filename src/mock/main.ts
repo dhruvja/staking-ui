@@ -1,4 +1,5 @@
-import { JobAndApplications } from "src/types/models";
-import data from "./jobsFullParsed.json";
+// import { JobAndApplications } from "src/types/models";
+// import data from "./jobsFullParsed.json";
 
-export default data as JobAndApplications[];
+// export default data as JobAndApplications[];
+export {};

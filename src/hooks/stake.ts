@@ -1,7 +1,7 @@
 import { useStakeWeb3, useUnstakeWeb3 } from "src/hooks/web3";
-import { Application } from "src/types/models";
 import { useApplications } from "src/hooks/applications";
 import {
+  JobApplicationForStaker,
   StakedApplication,
   StakedApplicationWithApplication,
 } from "src/types/models";
@@ -94,7 +94,7 @@ export const useUnstakeApplication = () => {
   const unstake = useUnstakeWeb3();
 
   const unstakeApplication = async (
-    application: Application,
+    application: JobApplicationForStaker,
     amount: number
   ) => {
     try {
@@ -114,7 +114,10 @@ export const useStakeApplication = () => {
 
   const stake = useStakeWeb3();
 
-  const stakeApplication = async (application: Application, amount: number) => {
+  const stakeApplication = async (
+    application: JobApplicationForStaker,
+    amount: number
+  ) => {
     const tx = await stake(application, amount);
 
     if (tx) {
