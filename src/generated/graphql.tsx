@@ -1554,6 +1554,11 @@ export type GetReferralsWithoutJobForInternalRecruiterQueryVariables = Exact<{ [
 
 export type GetReferralsWithoutJobForInternalRecruiterQuery = { __typename?: 'Query', referralsWithoutJob: Array<{ __typename?: 'ReferralWithoutJobResponse', id: string, name: string, email: string, date: string, hardSkills: Array<string>, referrer: { __typename?: 'CandidateProfile', id: string, name: string } }> };
 
+export type GetStakedApplicationsQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetStakedApplicationsQuery = { __typename?: 'Query', stakedApplications?: Array<{ __typename?: 'JobApplicationForStaker', id: string, date: string, status: ApplicationStatusEnum, fosterScore: number, candidate: { __typename?: 'CandidateProfileForStaker', field: Array<string>, location: string, jobTitle: string, companyName?: string | null, experience?: ExperienceEnum | null, techSkills?: Array<string> | null, softSkills?: Array<string> | null, about?: string | null, available?: boolean | null }, jobAd: { __typename?: 'JobAd', id: string, title: string, description: string, responsibilities: string, requirements: string, jobSkills?: Array<string> | null, preferred: string, benefits: string, format: JobTypeEnum, date: string, location?: string | null, isRemote: boolean, currency: string, minSalary: number, maxSalary: number, status: JobStatusEnum, field: FieldEnum, experience: ExperienceEnum, company: { __typename?: 'Company', id: string, name: string, photoUrl?: string | null, web?: string | null, description?: string | null } } }> | null };
+
 export type GetUserQueryVariables = Exact<{
   renewToken: Scalars['String'];
 }>;
@@ -4229,6 +4234,81 @@ export function useGetReferralsWithoutJobForInternalRecruiterLazyQuery(baseOptio
 export type GetReferralsWithoutJobForInternalRecruiterQueryHookResult = ReturnType<typeof useGetReferralsWithoutJobForInternalRecruiterQuery>;
 export type GetReferralsWithoutJobForInternalRecruiterLazyQueryHookResult = ReturnType<typeof useGetReferralsWithoutJobForInternalRecruiterLazyQuery>;
 export type GetReferralsWithoutJobForInternalRecruiterQueryResult = Apollo.QueryResult<GetReferralsWithoutJobForInternalRecruiterQuery, GetReferralsWithoutJobForInternalRecruiterQueryVariables>;
+export const GetStakedApplicationsDocument = gql`
+    query GetStakedApplications {
+  stakedApplications {
+    id
+    date
+    status
+    fosterScore
+    candidate {
+      field
+      location
+      jobTitle
+      companyName
+      experience
+      techSkills
+      softSkills
+      about
+      available
+    }
+    jobAd {
+      id
+      company {
+        id
+        name
+        photoUrl
+        web
+        description
+      }
+      title
+      description
+      responsibilities
+      requirements
+      jobSkills
+      preferred
+      benefits
+      format
+      date
+      location
+      isRemote
+      currency
+      minSalary
+      maxSalary
+      status
+      field
+      experience
+    }
+  }
+}
+    `;
+
+/**
+ * __useGetStakedApplicationsQuery__
+ *
+ * To run a query within a React component, call `useGetStakedApplicationsQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetStakedApplicationsQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetStakedApplicationsQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useGetStakedApplicationsQuery(baseOptions?: Apollo.QueryHookOptions<GetStakedApplicationsQuery, GetStakedApplicationsQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<GetStakedApplicationsQuery, GetStakedApplicationsQueryVariables>(GetStakedApplicationsDocument, options);
+      }
+export function useGetStakedApplicationsLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetStakedApplicationsQuery, GetStakedApplicationsQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<GetStakedApplicationsQuery, GetStakedApplicationsQueryVariables>(GetStakedApplicationsDocument, options);
+        }
+export type GetStakedApplicationsQueryHookResult = ReturnType<typeof useGetStakedApplicationsQuery>;
+export type GetStakedApplicationsLazyQueryHookResult = ReturnType<typeof useGetStakedApplicationsLazyQuery>;
+export type GetStakedApplicationsQueryResult = Apollo.QueryResult<GetStakedApplicationsQuery, GetStakedApplicationsQueryVariables>;
 export const GetUserDocument = gql`
     query GetUser($renewToken: String!) {
   getUser(renewToken: $renewToken) {
