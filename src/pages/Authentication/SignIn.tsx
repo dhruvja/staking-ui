@@ -43,7 +43,7 @@ const SignIn = (): JSX.Element => {
   };
 
   return (
-    <div className="h-screen w-screen">
+    <div className="h-screen w-screen text-white">
       <SignupHeader />
       <div className="grid grid-cols-[1fr,310px,1fr] sm:grid-cols-[1fr,420px,1fr] md:grid-cols-[1fr,472px,1fr]">
         <div />
@@ -55,7 +55,7 @@ const SignIn = (): JSX.Element => {
               alt="Dorse Logo"
             />
           </div>
-          <h2 className="hidden md:block mt-[209px] font-sora font-[700] text-[31px]">
+          <h2 className="text-white mt-[209px] font-sora font-[700] text-[31px]">
             Hi, Welcome to dorse!
           </h2>
           <form onSubmit={onSubmit} className="mt-[180px] md:mt-[54px]">
@@ -98,7 +98,7 @@ const SignIn = (): JSX.Element => {
             <div className="mt-[61px] flex flex-col items-center justify-center w-full">
               <button
                 onClick={onSubmit}
-                className="h-[54px] w-[327px] rounded-full bg-blue-500 hover:opacity-80 transition-opacity duration-200 flex items-center justify-center"
+                className="h-[54px] w-[327px] rounded-full bg-blue-700 text-white hover:opacity-80 transition-opacity duration-200 flex items-center justify-center"
               >
                 <p className="font-mono font-[500]">SIGN IN</p>
               </button>
