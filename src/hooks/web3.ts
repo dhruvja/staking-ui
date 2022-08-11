@@ -83,7 +83,7 @@ export const useStakeWeb3 = () => {
         candidateStakingProgram.programId
       );
 
-      const [walletPDA, walletBump] =
+    const [walletPDA, walletBump] =
       await anchor.web3.PublicKey.findProgramAddress(
         [
           Buffer.from("wallet"),
@@ -275,30 +275,27 @@ export const useUnstakeWeb3 = () => {
     try {
       const tx = await candidateStakingProgram.methods
         .unstake(
-          jobAdId,
-          applicationId,
           candidateBump,
-          generalBump,
           applicationBump,
-          jobBump,
           walletBump,
-          new anchor.BN(deposit)
+          applicationId,
+          jobAdId,
+          jobBump
         )
         .accounts({
           baseAccount: candidatePDA,
           jobAccount: jobPDA,
           authority: wallet.publicKey,
           tokenMint: USDCMint,
-          generalAccount: generalPDA,
           applicationAccount: applicationPDA,
-          generalProgram: generalProgram.programId,
           applicationProgram: applicationProgram.programId,
-          jobProgram: jobProgram.programId,
           escrowWalletState: walletPDA,
-          walletToWithdrawFrom: userTokenAccount,
+          walletToDepositTo: userTokenAccount,
+          jobProgram: jobProgram.programId,
           systemProgram: anchor.web3.SystemProgram.programId,
           tokenProgram: spl.TOKEN_PROGRAM_ID,
           rent: anchor.web3.SYSVAR_RENT_PUBKEY,
+          instruction: anchor.web3.SYSVAR_INSTRUCTIONS_PUBKEY,
         })
         .rpc();
       // await getBalance(wallet);
