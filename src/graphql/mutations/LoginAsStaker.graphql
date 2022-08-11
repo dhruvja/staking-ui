@@ -1,0 +1,20 @@
+mutation LoginAsStaker($loginData: StakerProfileData) {
+  loginAsStaker(loginData: $loginData) {
+    user {
+      id
+      email
+      name
+      roles
+      activeRole
+      gender
+    }
+    profile {
+      id
+      name
+      role
+      photoUrl
+    }
+    token
+    photoUrl
+  }
+}

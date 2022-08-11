@@ -1,17 +1,14 @@
 import { useRef, useEffect } from "react";
 import { Outlet, useParams } from "react-router-dom";
 import ApplicationStakeCard from "src/components/ApplicationStakeCard";
-import {
-  ApplicationStatusEnum,
-  useGetStakedApplicationsQuery,
-} from "src/generated/graphql";
+import { ApplicationStatusEnum } from "src/generated/graphql";
+import { useStakedApplications } from "src/hooks/applications";
 import { paths } from "src/pagesPaths";
 import { JobApplicationForStaker } from "src/types/models";
 
 const MyStakedApplicationsSidebarLayout = () => {
   const selectedApplicationId = useParams().applicationId;
-  const { data } = useGetStakedApplicationsQuery();
-  const stakedApplications = data?.stakedApplications || [];
+  const stakedApplications = useStakedApplications();
   const selectedRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {

@@ -1,3 +1,4 @@
+import { useWallet } from "@solana/wallet-adapter-react";
 import { Navigate, useLocation } from "react-router-dom";
 
 import Loading from "src/components/Loading";
@@ -9,15 +10,11 @@ type Props = {
 };
 
 const RequireAuth = ({ children }: Props): JSX.Element => {
-  const { user, userProfile, token, isOnboarding } = useAuth();
+  const { isLoggedIn } = useAuth();
   const location = useLocation();
+  useWallet();
 
-  if (user && userProfile && token) return children;
-
-  if (!token)
-    return <Navigate to="/signin" state={{ from: location }} replace />;
-
-  if (isOnboarding) return <Navigate to="/signup/profile" />;
+  if (isLoggedIn) return children;
 
   return <Loading />;
 };

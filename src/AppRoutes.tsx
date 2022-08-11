@@ -15,7 +15,6 @@ import MyStakesPage from "src/pages/MyStakesPage";
 import MyStakedApplicationPage from "src/pages/MyStakedApplicationPage";
 import MyStakedApplicationJobPage from "src/pages/MyStakedApplicationJobPage";
 import MyStakedApplicationCandidatePage from "src/pages/MyStakedApplicationCandidatePage";
-import SignIn from "src/pages/Authentication/SignIn";
 
 import "react-toastify/dist/ReactToastify.css";
 import useGetUserOnStart from "./hooks/useGetUserOnStart";
@@ -26,70 +25,67 @@ const AppRoutes = () => {
   return (
     <div className="bg-app">
       <Routes>
-        <Route path={paths.signin.route} element={<SignIn />} />
         <Route path={paths.connect.route} element={<ConnectPage />} />
 
-        <Route element={<ProtectedLayout />}>
-          <Route element={<Web3ConnectedLayout />}>
-            <Route element={<AppLayout />}>
-              <Route path={paths.home.route} element={<HomePage />} />
+        <Route element={<Web3ConnectedLayout />}>
+          {/* <Route element={<ProtectedLayout />}> */}
+          <Route element={<AppLayout />}>
+            <Route path={paths.home.route} element={<HomePage />} />
 
-              <Route element={<ApplicationsSidebarLayout />}>
-                <Route
-                  path={paths.applications.route}
-                  element={<ApplicationsPage />}
-                />
-                <Route
-                  path={paths.application.route}
-                  element={<ApplicationPage />}
-                />
+            <Route element={<ApplicationsSidebarLayout />}>
+              <Route
+                path={paths.applications.route}
+                element={<ApplicationsPage />}
+              />
+              <Route
+                path={paths.application.route}
+                element={<ApplicationPage />}
+              />
 
-                <Route
-                  path={paths.applicationJob.route}
-                  element={<ApplicationJobPage />}
-                />
+              <Route
+                path={paths.applicationJob.route}
+                element={<ApplicationJobPage />}
+              />
 
-                <Route
-                  path={paths.applicationCandidate.route}
-                  element={<ApplicationCandidatePage />}
-                />
-              </Route>
+              <Route
+                path={paths.applicationCandidate.route}
+                element={<ApplicationCandidatePage />}
+              />
+            </Route>
 
-              <Route element={<MyStakedApplicationsSidebarLayout />}>
-                <Route
-                  path={paths.myStakedApplications.route}
-                  element={<MyStakesPage />}
-                />
-                <Route
-                  path={paths.myStakedApplication.route}
-                  element={<MyStakedApplicationPage />}
-                />
+            <Route element={<MyStakedApplicationsSidebarLayout />}>
+              <Route
+                path={paths.myStakedApplications.route}
+                element={<MyStakesPage />}
+              />
+              <Route
+                path={paths.myStakedApplication.route}
+                element={<MyStakedApplicationPage />}
+              />
 
-                <Route
-                  path={paths.myStakedApplicationJob.route}
-                  element={<MyStakedApplicationJobPage />}
-                />
+              <Route
+                path={paths.myStakedApplicationJob.route}
+                element={<MyStakedApplicationJobPage />}
+              />
 
-                <Route
-                  path={paths.myStakedApplicationCandidate.route}
-                  element={<MyStakedApplicationCandidatePage />}
-                />
-              </Route>
+              <Route
+                path={paths.myStakedApplicationCandidate.route}
+                element={<MyStakedApplicationCandidatePage />}
+              />
             </Route>
           </Route>
         </Route>
+        {/* </Route> */}
       </Routes>
     </div>
   );
 };
 
 function Main() {
-  const canEnter = useGetUserOnStart();
-
   return (
     <>
-      <div className="App">
-        {canEnter ? <AppRoutes /> : <div>Loading...</div>}
+      <div>
+        <AppRoutes />
       </div>
 
       <ToastContainer
