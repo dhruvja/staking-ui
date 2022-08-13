@@ -1,13 +1,12 @@
 import { useParams } from "react-router-dom";
-import { useApplication } from "src/hooks/applications";
+import { useApplication, useStakedData } from "src/hooks/applications";
 import { paths } from "src/pagesPaths";
 import { Helmet } from "react-helmet";
-import { useStakedApplication } from "src/hooks/stake";
 import CandidateDetails from "src/components/CandidateDetails";
 
 const ApplicationCandidatePage = () => {
   const applicationId = useParams().applicationId ?? "";
-  const stakedApplication = useStakedApplication(applicationId);
+  const stakedApplication = useStakedData(applicationId);
   const application = useApplication(applicationId);
 
   if (!application) {

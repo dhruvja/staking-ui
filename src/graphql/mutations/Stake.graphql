@@ -1,0 +1,7 @@
+mutation Stake($transactionId: ID!, $amount: Int!, $jobApplicationId: String!) {
+  stake(
+    transactionID: $transactionId
+    amount: $amount
+    jobApplicationID: $jobApplicationId
+  )
+}

@@ -1,14 +1,13 @@
 import { useParams } from "react-router-dom";
-import { useApplication } from "src/hooks/applications";
+import { useApplication, useStakedData } from "src/hooks/applications";
 import { paths } from "src/pagesPaths";
 import { Helmet } from "react-helmet";
-import { useStakedApplication } from "src/hooks/stake";
 import JobDetails from "src/components/JobDetails";
 
 const ApplicationJobPage = () => {
   const applicationId = useParams().applicationId ?? "";
   const application = useApplication(applicationId);
-  const stakedApplication = useStakedApplication(applicationId);
+  const stakedApplication = useStakedData(applicationId);
 
   if (!application) {
     throw new Error(`Application ${applicationId} not found`);

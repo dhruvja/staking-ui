@@ -1,0 +1,11 @@
+mutation Unstake(
+  $transactionId: ID!
+  $amount: Int!
+  $jobApplicationId: String!
+) {
+  unStake(
+    transactionID: $transactionId
+    amount: $amount
+    jobApplicationID: $jobApplicationId
+  )
+}

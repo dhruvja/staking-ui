@@ -8,7 +8,9 @@ const ApplicationsPage = () => {
       <Helmet>
         <title>Dorse - Applications</title>
       </Helmet>
-      <div className="text-3xl">Select an application to start staking</div>
+      <div className="text-3xl text-center">
+        Select an application to start staking
+      </div>
     </div>
   );
 };

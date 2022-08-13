@@ -2,6 +2,7 @@ import {
   useGetActiveApplicationsForStakersQuery,
   useGetApplicationForStakerQuery,
   useGetStakedApplicationsQuery,
+  useGetStakedDataQuery,
 } from "src/generated/graphql";
 import { JobApplicationForStaker } from "src/types/models";
 
@@ -18,6 +19,7 @@ export const useApplications = () => {
 
 export const useApplication = (id: string) => {
   const { data, loading } = useGetApplicationForStakerQuery({
+    fetchPolicy: "cache-and-network",
     variables: {
       applicationId: id,
     },
@@ -32,4 +34,14 @@ export const useStakedApplications = () => {
   return data?.stakedApplications || [];
 
   // return [] as JobApplicationForStaker[];
+};
+
+export const useStakedData = (applicationId: string) => {
+  const { data } = useGetStakedDataQuery({
+    variables: {
+      id: applicationId,
+    },
+  });
+
+  return data?.getStakedData || undefined;
 };

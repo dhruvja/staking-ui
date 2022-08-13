@@ -222,6 +222,7 @@ export enum ErrorMsg {
   SkillsAlreadyExist = 'SKILLS_ALREADY_EXIST',
   SkillsDoesNotExist = 'SKILLS_DOES_NOT_EXIST',
   SkillsNotFound = 'SKILLS_NOT_FOUND',
+  StakeNotFound = 'STAKE_NOT_FOUND',
   SystemError = 'SYSTEM_ERROR',
   Unauthorized = 'UNAUTHORIZED',
   UserDoesNotHavePermissions = 'USER_DOES_NOT_HAVE_PERMISSIONS',
@@ -464,8 +465,10 @@ export type Mutation = {
   requestEmailVerification: Scalars['Boolean'];
   sendMessage?: Maybe<Message>;
   signup?: Maybe<SignUpResponse>;
+  stake?: Maybe<Scalars['Boolean']>;
   submitFeedback?: Maybe<Scalars['String']>;
   switchRole?: Maybe<UserAndProfile>;
+  unStake?: Maybe<Scalars['Boolean']>;
   updateCandidateSettings: CandidateProfile;
   updateCompanyHrSettings: CompanyHrProfile;
   uploadCV: Scalars['Boolean'];
@@ -649,6 +652,13 @@ export type MutationSignupArgs = {
 };
 
 
+export type MutationStakeArgs = {
+  amount: Scalars['Int'];
+  jobApplicationID: Scalars['String'];
+  transactionID: Scalars['ID'];
+};
+
+
 export type MutationSubmitFeedbackArgs = {
   feedback: Scalars['String'];
 };
@@ -656,6 +666,13 @@ export type MutationSubmitFeedbackArgs = {
 
 export type MutationSwitchRoleArgs = {
   newRole: RoleEnum;
+};
+
+
+export type MutationUnStakeArgs = {
+  amount: Scalars['Int'];
+  jobApplicationID: Scalars['String'];
+  transactionID: Scalars['ID'];
 };
 
 
@@ -735,6 +752,7 @@ export type Query = {
   getListOfCandidateSkills?: Maybe<Array<Scalars['String']>>;
   getListOfJobSkills?: Maybe<Array<Scalars['String']>>;
   getReference?: Maybe<Reference>;
+  getStakedData?: Maybe<StakedData>;
   getUser?: Maybe<LoginResponse>;
   jobForCandidate?: Maybe<JobForCandidate>;
   jobForCompany?: Maybe<JobForCompany>;
@@ -821,6 +839,11 @@ export type QueryGetJobsBySkillsArgs = {
 
 export type QueryGetReferenceArgs = {
   refreenceID: Scalars['String'];
+};
+
+
+export type QueryGetStakedDataArgs = {
+  applicationId: Scalars['ID'];
 };
 
 
@@ -1052,6 +1075,13 @@ export enum SortJobsByKeyEnum {
   MinSalary = 'minSalary',
   Title = 'title'
 }
+
+export type StakedData = {
+  __typename?: 'StakedData';
+  amount: Scalars['Int'];
+  applicationId: Scalars['String'];
+  dateStaked: Scalars['String'];
+};
 
 export type StakerProfile = Profile & {
   __typename?: 'StakerProfile';
@@ -1309,6 +1339,13 @@ export type ReadNotificationMutationVariables = Exact<{
 
 export type ReadNotificationMutation = { __typename?: 'Mutation', readNotification?: boolean | null };
 
+export type RecordApplicationStakingMutationVariables = Exact<{
+  id: Scalars['String'];
+}>;
+
+
+export type RecordApplicationStakingMutation = { __typename?: 'Mutation', recordApplicationStaking?: boolean | null };
+
 export type ReferCandidateMutationVariables = Exact<{
   referenceData: ReferCandidateData;
 }>;
@@ -1363,12 +1400,30 @@ export type SignupMutationVariables = Exact<{
 
 export type SignupMutation = { __typename?: 'Mutation', signup?: { __typename?: 'SignUpResponse', token: string, user: { __typename?: 'User', id: string, name: string, gender: GenderEnum, email: string, activeRole?: RoleEnum | null, roles?: Array<RoleEnum> | null } } | null };
 
+export type StakeMutationVariables = Exact<{
+  transactionId: Scalars['ID'];
+  amount: Scalars['Int'];
+  jobApplicationId: Scalars['String'];
+}>;
+
+
+export type StakeMutation = { __typename?: 'Mutation', stake?: boolean | null };
+
 export type SwitchRoleMutationVariables = Exact<{
   newRole: RoleEnum;
 }>;
 
 
 export type SwitchRoleMutation = { __typename?: 'Mutation', switchRole?: { __typename?: 'UserAndProfile', user: { __typename?: 'User', id: string, name: string, gender: GenderEnum, email: string, activeRole?: RoleEnum | null, roles?: Array<RoleEnum> | null }, profile: { __typename?: 'CandidateProfile', location: string, field: Array<string>, jobTitle: string, companyName?: string | null, experience?: ExperienceEnum | null, techSkills?: Array<string> | null, softSkills?: Array<string> | null, about?: string | null, web?: string | null, github?: string | null, available?: boolean | null, linkedin?: string | null, id: string, name: string, photoUrl?: string | null, role: RoleEnum, walletInfo?: { __typename?: 'WalletInfo', id: string, blockchain: BlockchainEnum, walletAddress: string } | null } | { __typename?: 'CompanyHrProfile', location: string, jobTitle: string, about?: string | null, linkedin?: string | null, id: string, name: string, photoUrl?: string | null, role: RoleEnum, company: { __typename?: 'Company', id: string, name: string, photoUrl?: string | null, web?: string | null, description?: string | null } } | { __typename?: 'InternalRecruiterProfile', location: string, jobTitle: string, about?: string | null, linkedin?: string | null, calendlyUrl: string, id: string, name: string, photoUrl?: string | null, role: RoleEnum } | { __typename?: 'StakerProfile', jobTitle: string, companyName?: string | null, about?: string | null, github?: string | null, linkedin?: string | null, id: string, name: string, photoUrl?: string | null, role: RoleEnum, walletsInfo: Array<{ __typename?: 'WalletInfo', id: string, blockchain: BlockchainEnum, walletAddress: string }> } } | null };
+
+export type UnstakeMutationVariables = Exact<{
+  transactionId: Scalars['ID'];
+  amount: Scalars['Int'];
+  jobApplicationId: Scalars['String'];
+}>;
+
+
+export type UnstakeMutation = { __typename?: 'Mutation', unStake?: boolean | null };
 
 export type UpdateCandidateSettingsMutationVariables = Exact<{
   candidateSettings: CandidateSettingsInput;
@@ -1591,6 +1646,13 @@ export type GetStakedApplicationsQueryVariables = Exact<{ [key: string]: never; 
 
 
 export type GetStakedApplicationsQuery = { __typename?: 'Query', stakedApplications?: Array<{ __typename?: 'JobApplicationForStaker', id: string, date: string, status: ApplicationStatusEnum, fosterScore: number, candidate: { __typename?: 'CandidateProfileForStaker', field: Array<string>, location: string, jobTitle: string, companyName?: string | null, experience?: ExperienceEnum | null, techSkills?: Array<string> | null, softSkills?: Array<string> | null, about?: string | null, available?: boolean | null }, jobAd: { __typename?: 'JobAd', id: string, title: string, description: string, responsibilities: string, requirements: string, jobSkills?: Array<string> | null, preferred: string, benefits: string, format: JobTypeEnum, date: string, location?: string | null, isRemote: boolean, currency: string, minSalary: number, maxSalary: number, status: JobStatusEnum, field: FieldEnum, experience: ExperienceEnum, company: { __typename?: 'Company', id: string, name: string, photoUrl?: string | null, web?: string | null, description?: string | null } } }> | null };
+
+export type GetStakedDataQueryVariables = Exact<{
+  id: Scalars['ID'];
+}>;
+
+
+export type GetStakedDataQuery = { __typename?: 'Query', getStakedData?: { __typename?: 'StakedData', dateStaked: string, amount: number, applicationId: string } | null };
 
 export type GetUserQueryVariables = Exact<{
   renewToken: Scalars['String'];
@@ -2622,6 +2684,37 @@ export function useReadNotificationMutation(baseOptions?: Apollo.MutationHookOpt
 export type ReadNotificationMutationHookResult = ReturnType<typeof useReadNotificationMutation>;
 export type ReadNotificationMutationResult = Apollo.MutationResult<ReadNotificationMutation>;
 export type ReadNotificationMutationOptions = Apollo.BaseMutationOptions<ReadNotificationMutation, ReadNotificationMutationVariables>;
+export const RecordApplicationStakingDocument = gql`
+    mutation RecordApplicationStaking($id: String!) {
+  recordApplicationStaking(jobApplicationID: $id)
+}
+    `;
+export type RecordApplicationStakingMutationFn = Apollo.MutationFunction<RecordApplicationStakingMutation, RecordApplicationStakingMutationVariables>;
+
+/**
+ * __useRecordApplicationStakingMutation__
+ *
+ * To run a mutation, you first call `useRecordApplicationStakingMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useRecordApplicationStakingMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [recordApplicationStakingMutation, { data, loading, error }] = useRecordApplicationStakingMutation({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useRecordApplicationStakingMutation(baseOptions?: Apollo.MutationHookOptions<RecordApplicationStakingMutation, RecordApplicationStakingMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<RecordApplicationStakingMutation, RecordApplicationStakingMutationVariables>(RecordApplicationStakingDocument, options);
+      }
+export type RecordApplicationStakingMutationHookResult = ReturnType<typeof useRecordApplicationStakingMutation>;
+export type RecordApplicationStakingMutationResult = Apollo.MutationResult<RecordApplicationStakingMutation>;
+export type RecordApplicationStakingMutationOptions = Apollo.BaseMutationOptions<RecordApplicationStakingMutation, RecordApplicationStakingMutationVariables>;
 export const ReferCandidateDocument = gql`
     mutation ReferCandidate($referenceData: ReferCandidateData!) {
   referCandidate(referenceData: $referenceData)
@@ -2864,6 +2957,43 @@ export function useSignupMutation(baseOptions?: Apollo.MutationHookOptions<Signu
 export type SignupMutationHookResult = ReturnType<typeof useSignupMutation>;
 export type SignupMutationResult = Apollo.MutationResult<SignupMutation>;
 export type SignupMutationOptions = Apollo.BaseMutationOptions<SignupMutation, SignupMutationVariables>;
+export const StakeDocument = gql`
+    mutation Stake($transactionId: ID!, $amount: Int!, $jobApplicationId: String!) {
+  stake(
+    transactionID: $transactionId
+    amount: $amount
+    jobApplicationID: $jobApplicationId
+  )
+}
+    `;
+export type StakeMutationFn = Apollo.MutationFunction<StakeMutation, StakeMutationVariables>;
+
+/**
+ * __useStakeMutation__
+ *
+ * To run a mutation, you first call `useStakeMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useStakeMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [stakeMutation, { data, loading, error }] = useStakeMutation({
+ *   variables: {
+ *      transactionId: // value for 'transactionId'
+ *      amount: // value for 'amount'
+ *      jobApplicationId: // value for 'jobApplicationId'
+ *   },
+ * });
+ */
+export function useStakeMutation(baseOptions?: Apollo.MutationHookOptions<StakeMutation, StakeMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<StakeMutation, StakeMutationVariables>(StakeDocument, options);
+      }
+export type StakeMutationHookResult = ReturnType<typeof useStakeMutation>;
+export type StakeMutationResult = Apollo.MutationResult<StakeMutation>;
+export type StakeMutationOptions = Apollo.BaseMutationOptions<StakeMutation, StakeMutationVariables>;
 export const SwitchRoleDocument = gql`
     mutation SwitchRole($newRole: RoleEnum!) {
   switchRole(newRole: $newRole) {
@@ -2903,6 +3033,43 @@ export function useSwitchRoleMutation(baseOptions?: Apollo.MutationHookOptions<S
 export type SwitchRoleMutationHookResult = ReturnType<typeof useSwitchRoleMutation>;
 export type SwitchRoleMutationResult = Apollo.MutationResult<SwitchRoleMutation>;
 export type SwitchRoleMutationOptions = Apollo.BaseMutationOptions<SwitchRoleMutation, SwitchRoleMutationVariables>;
+export const UnstakeDocument = gql`
+    mutation Unstake($transactionId: ID!, $amount: Int!, $jobApplicationId: String!) {
+  unStake(
+    transactionID: $transactionId
+    amount: $amount
+    jobApplicationID: $jobApplicationId
+  )
+}
+    `;
+export type UnstakeMutationFn = Apollo.MutationFunction<UnstakeMutation, UnstakeMutationVariables>;
+
+/**
+ * __useUnstakeMutation__
+ *
+ * To run a mutation, you first call `useUnstakeMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUnstakeMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [unstakeMutation, { data, loading, error }] = useUnstakeMutation({
+ *   variables: {
+ *      transactionId: // value for 'transactionId'
+ *      amount: // value for 'amount'
+ *      jobApplicationId: // value for 'jobApplicationId'
+ *   },
+ * });
+ */
+export function useUnstakeMutation(baseOptions?: Apollo.MutationHookOptions<UnstakeMutation, UnstakeMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<UnstakeMutation, UnstakeMutationVariables>(UnstakeDocument, options);
+      }
+export type UnstakeMutationHookResult = ReturnType<typeof useUnstakeMutation>;
+export type UnstakeMutationResult = Apollo.MutationResult<UnstakeMutation>;
+export type UnstakeMutationOptions = Apollo.BaseMutationOptions<UnstakeMutation, UnstakeMutationVariables>;
 export const UpdateCandidateSettingsDocument = gql`
     mutation UpdateCandidateSettings($candidateSettings: CandidateSettingsInput!) {
   updateCandidateSettings(candidateSettings: $candidateSettings) {
@@ -4390,6 +4557,43 @@ export function useGetStakedApplicationsLazyQuery(baseOptions?: Apollo.LazyQuery
 export type GetStakedApplicationsQueryHookResult = ReturnType<typeof useGetStakedApplicationsQuery>;
 export type GetStakedApplicationsLazyQueryHookResult = ReturnType<typeof useGetStakedApplicationsLazyQuery>;
 export type GetStakedApplicationsQueryResult = Apollo.QueryResult<GetStakedApplicationsQuery, GetStakedApplicationsQueryVariables>;
+export const GetStakedDataDocument = gql`
+    query GetStakedData($id: ID!) {
+  getStakedData(applicationId: $id) {
+    dateStaked
+    amount
+    applicationId
+  }
+}
+    `;
+
+/**
+ * __useGetStakedDataQuery__
+ *
+ * To run a query within a React component, call `useGetStakedDataQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetStakedDataQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetStakedDataQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useGetStakedDataQuery(baseOptions: Apollo.QueryHookOptions<GetStakedDataQuery, GetStakedDataQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<GetStakedDataQuery, GetStakedDataQueryVariables>(GetStakedDataDocument, options);
+      }
+export function useGetStakedDataLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetStakedDataQuery, GetStakedDataQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<GetStakedDataQuery, GetStakedDataQueryVariables>(GetStakedDataDocument, options);
+        }
+export type GetStakedDataQueryHookResult = ReturnType<typeof useGetStakedDataQuery>;
+export type GetStakedDataLazyQueryHookResult = ReturnType<typeof useGetStakedDataLazyQuery>;
+export type GetStakedDataQueryResult = Apollo.QueryResult<GetStakedDataQuery, GetStakedDataQueryVariables>;
 export const GetUserDocument = gql`
     query GetUser($renewToken: String!) {
   getUser(renewToken: $renewToken) {

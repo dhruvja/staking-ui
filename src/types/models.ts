@@ -1,3 +1,4 @@
+import { GetStakedDataQuery } from "./../generated/graphql";
 import { LoginAsStakerMutation } from "src/generated/graphql";
 import { DeepExtractTypeSkipArrays } from "src/utils/type-utils";
 import type { GetActiveApplicationsForStakersQuery } from "src/generated/graphql";
@@ -107,15 +108,16 @@ export type CandidateForStaker = DeepExtractTypeSkipArrays<
   ["getActiveApplicationsForStakers", "candidate"]
 >;
 
-export interface StakedApplication {
-  applicationId: string;
-  date: string;
-  amount: number;
-}
+// export interface StakedApplication {
+//   applicationId: string;
+//   date: string;
+//   amount: number;
+// }
 
-export interface StakedApplicationWithApplication extends StakedApplication {
-  application: JobApplicationForStaker;
-}
+export type StakedData = DeepExtractTypeSkipArrays<
+  GetStakedDataQuery,
+  ["getStakedData"]
+>;
 
 export type ApplicationStakeInfo = {
   maxAllowedStaked: number;

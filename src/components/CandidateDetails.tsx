@@ -5,7 +5,7 @@ import { ReactComponent as BackArrowIcon } from "src/images/backArrow.svg";
 import {
   CandidateForStaker,
   JobApplicationForStaker,
-  StakedApplication,
+  StakedData,
 } from "src/types/models";
 import candidateNft from "src/images/candidateNft.svg";
 import StakeModal from "src/modals/StakeModal";
@@ -14,7 +14,7 @@ import { useGetStakeModalIsConfirmed } from "src/hooks/stakeModal";
 
 const CandidateDetails = (props: {
   application: JobApplicationForStaker;
-  stakedData: StakedApplication | undefined;
+  stakedData: StakedData | undefined;
   goBackLink: string;
 }) => {
   const isConfirmedModal = useGetStakeModalIsConfirmed();

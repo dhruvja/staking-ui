@@ -1,0 +1,3 @@
+mutation RecordApplicationStaking($id: String!) {
+  recordApplicationStaking(jobApplicationID: $id)
+}

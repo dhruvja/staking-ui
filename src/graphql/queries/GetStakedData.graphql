@@ -1,0 +1,8 @@
+query GetStakedData($id: ID!) {
+  getStakedData(applicationId: $id) {
+    dateStaked
+    # dateUnstaked
+    amount
+    applicationId
+  }
+}

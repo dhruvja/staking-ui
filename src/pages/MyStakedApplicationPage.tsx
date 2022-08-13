@@ -1,23 +1,26 @@
 import { Navigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { useStakedApplication } from "src/hooks/stake";
-import { useApplication } from "src/hooks/applications";
+import { useApplication, useStakedData } from "src/hooks/applications";
 import ApplicationDetails from "src/components/ApplicationDetails";
 import { paths } from "src/pagesPaths";
 import { useSetNavBarTitle } from "src/hooks/navbar";
 
 const MyStakedApplicationPage = () => {
   const applicationId = useParams().applicationId ?? "";
-  const stakedApplication = useStakedApplication(applicationId);
+  const stakedApplication = useStakedData(applicationId);
   const application = useApplication(applicationId);
   useSetNavBarTitle("My Stakes");
 
+  // if (!application) {
+  //   throw new Error(`Application ${applicationId} not found`);
+  // }
+
   if (!application) {
-    throw new Error(`Application ${applicationId} not found`);
+    return <div>loading</div>;
   }
 
   if (!stakedApplication) {
-    return <Navigate to={paths.myStakedApplications.resolve()} />;
+    return <div>loading</div>;
   }
 
   return (

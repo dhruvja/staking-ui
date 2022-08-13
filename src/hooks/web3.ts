@@ -309,6 +309,8 @@ export const useUnstakeWeb3 = () => {
         .rpc();
       // await getBalance(wallet);
       console.log(tx);
+
+      return tx;
     } catch (error) {
       console.log(error);
     }
@@ -385,8 +387,8 @@ export const useApplicationStakeInfo = (
       console.log({ state });
 
       setInfo({
-        maxAllowedStaked: state.maxAllowedStaked as number,
-        stakedAmount: state.stakedAmount as number,
+        maxAllowedStaked: (state.maxAllowedStaked as anchor.BN).toNumber(),
+        stakedAmount: (state.stakedAmount as anchor.BN).toNumber(),
       });
       setIsLoading(false);
     };

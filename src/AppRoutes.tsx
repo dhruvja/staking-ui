@@ -20,6 +20,8 @@ import "react-toastify/dist/ReactToastify.css";
 import useGetUserOnStart from "./hooks/useGetUserOnStart";
 import ProtectedLayout from "./layouts/ProtectedLayout";
 import AppLayout from "./layouts/AppLayout";
+import { useEffect } from "react";
+import { TOKEN_KEY } from "./app-constants";
 
 const AppRoutes = () => {
   return (
@@ -82,6 +84,10 @@ const AppRoutes = () => {
 };
 
 function Main() {
+  useEffect(() => {
+    localStorage.removeItem(TOKEN_KEY);
+  }, []);
+
   return (
     <>
       <div>
