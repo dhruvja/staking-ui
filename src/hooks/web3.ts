@@ -238,9 +238,13 @@ export const useUnstakeWeb3 = () => {
         candidateStakingProgram.programId
       );
 
-    const [walletPDA, walletBump] =
+      const [walletPDA, walletBump] =
       await anchor.web3.PublicKey.findProgramAddress(
-        [Buffer.from("wallet"), wallet.publicKey.toBuffer()],
+        [
+          Buffer.from("wallet"),
+          Buffer.from(jobAdId.substring(0, 18)),
+          Buffer.from(jobAdId.substring(18, 36)),
+        ],
         candidateStakingProgram.programId
       );
 
