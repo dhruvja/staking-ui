@@ -238,7 +238,7 @@ export const useUnstakeWeb3 = () => {
         candidateStakingProgram.programId
       );
 
-      const [walletPDA, walletBump] =
+    const [walletPDA, walletBump] =
       await anchor.web3.PublicKey.findProgramAddress(
         [
           Buffer.from("wallet"),
@@ -391,8 +391,9 @@ export const useApplicationStakeInfo = (
       console.log({ state });
 
       setInfo({
-        maxAllowedStaked: (state.maxAllowedStaked as anchor.BN).toNumber(),
-        stakedAmount: (state.stakedAmount as anchor.BN).toNumber(),
+        maxAllowedStaked:
+          (state.maxAllowedStaked as anchor.BN).toNumber() / 10 ** 6,
+        stakedAmount: (state.stakedAmount as anchor.BN).toNumber() / 10 ** 6,
       });
       setIsLoading(false);
     };
