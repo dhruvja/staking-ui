@@ -329,6 +329,11 @@
       "code": 6005,
       "name": "RewardAmountOverflow",
       "msg": "Reward amount overflow"
+    },
+    {
+      "code": 6006,
+      "name": "AlreadyUnstaked",
+      "msg": "You have already unstaked"
     }
   ],
   "metadata": {
