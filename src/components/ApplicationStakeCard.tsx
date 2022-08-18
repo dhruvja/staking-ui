@@ -40,7 +40,9 @@ const ApplicationStakeCard = ({
 
       <div className="flex flex-col gap-2 items-end ml-auto">
         {info?.stakedAmount && (
-          <div className="font-medium text-sm">{info.stakedAmount} USDC</div>
+          <div className="font-medium text-sm whitespace-nowrap">
+            {info.stakedAmount} USDC
+          </div>
         )}
         {!isStaked && <div className="btn-blue text-xs">STAKE</div>}
       </div>
