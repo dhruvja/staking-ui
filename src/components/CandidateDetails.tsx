@@ -130,7 +130,7 @@ const CandidateDetails = (props: {
               <span className="text-sm font-normal font-sora text-[#D0C9D6]">
                 Tech skills:
               </span>
-              <div className="flex flex-nowrap overflow-scroll uppercase gap-[6px] text-[12px] leading-[16px] font-roboto">
+              <div className="flex flex-nowrap uppercase gap-[6px] text-[12px] leading-[16px] font-roboto">
                 {application.candidate.techSkills.map((skill) => (
                   <div
                     key={skill}
@@ -170,7 +170,7 @@ const CandidateTags = ({ candidate }: CandidateTagsProps): JSX.Element => {
       <span className="text-sm font-normal font-sora text-[#D0C9D6]">
         Tags:
       </span>
-      <div className="overflow-scroll flex uppercase gap-[6px] text-[12px] leading-[16px] font-roboto">
+      <div className="flex uppercase gap-[6px] text-[12px] leading-[16px] font-roboto">
         {[available ? "Available" : null, ...fields, experience]
           .filter(Boolean)
           .map((tag) => {
