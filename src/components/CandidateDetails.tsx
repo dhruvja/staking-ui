@@ -111,7 +111,7 @@ const CandidateDetails = (props: {
               <span className="text-sm font-normal font-sora text-[#D0C9D6]">
                 Soft skills:
               </span>
-              <div className="flex flex-nowrap overflow-scroll uppercase gap-[6px] text-[12px] leading-[16px] font-roboto">
+              <div className="flex flex-nowrap uppercase gap-[6px] text-[12px] leading-[16px] font-roboto">
                 {application.candidate.softSkills.map((skill) => (
                   <div
                     key={skill}
