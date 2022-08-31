@@ -160,6 +160,10 @@
             "type": "publicKey"
           },
           {
+            "name": "mint",
+            "type": "publicKey"
+          },
+          {
             "name": "jobAdId",
             "type": "string"
           },
@@ -210,9 +214,14 @@
       "code": 6002,
       "name": "TotalRewardAmountOverflow",
       "msg": "Total reward amount overflow"
+    },
+    {
+      "code": 6003,
+      "name": "InvalidTokenMint",
+      "msg": "The token mint should should match to the one which was deposited"
     }
   ],
   "metadata": {
-    "address": "69dteSt8rK7HLvku1kqXhw4UsmanCGa8sDcqxgeeYUS8"
+    "address": "69dteSt8rK7HLvku1kqXhw4UsmanCGa8sDcqxgeeYUS7"
   }
 }
